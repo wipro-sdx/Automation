@@ -1,0 +1,75 @@
+---
+- name: Attach new volume to a new host in a FlashArray
+  hosts: localhost
+  gather_facts: no
+  vars:
+    arrayurl: 172.17.65.140
+    array_token: f191d609-0144-824c-4a2d-63885c6fc158
+    api_version: "1.11"
+#    volname: "{{ volname}}"
+#    size: "{{ size}}"
+#    iqn: "{{ iqn }}"
+#    hostname: "{{ hostname }}"
+    volname: bingo
+    size: 15G
+    iqn: iqn.1998-01.com.vmware:cwl2-774564ed
+    hostname: bingohost
+ 
+  tasks:
+    - name: open RestAPI session
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/auth/session
+        method: POST
+        validate_certs: no
+        return_content: yes
+        body:
+          api_token: "{{ array_token }}"
+        body_format: json
+      register: session
+
+    - name: create new volume
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/volume/{{ volname }}
+        method: POST
+        validate_certs: no
+        HEADER_Cookie: "{{session.set_cookie}}"
+        return_content: yes
+        body:
+          size: "{{ size }}"
+        body_format: json
+      ignore_errors: yes
+
+    - name: create new host
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/host/{{ hostname }}
+        method: POST
+        validate_certs: no
+        HEADER_Cookie: "{{session.set_cookie}}"
+        return_content: yes
+        body:
+          iqnlist: ["{{ iqn }}"]
+        body_format: json
+      ignore_errors: yes    
+
+    - name: attach volume to host
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/host/{{ hostname }}/volume/{{ volname }}
+        method: POST
+        validate_certs: no
+        HEADER_Cookie: "{{session.set_cookie}}"
+        return_content: yes
+      ignore_errors: yes
+
+    - name: List all hosts
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/host
+        method: GET
+        validate_certs: no
+        HEADER_Cookie: "{{session.set_cookie}}"      
+        return_contents: yes
+        body_format: json
+      ignore_errors: yes
+      register: hosts
+
+    - name: Show hosts data
+      debug: msg="{{ hosts.json}}"

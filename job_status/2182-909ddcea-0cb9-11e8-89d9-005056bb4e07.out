@@ -1,0 +1,60 @@
+SSH password: 
+[KeyJ1dWlkIjogImY1MzU3NTQ1LWE0NWYtNDg5NC1hZjc5LWE5OGEyODc3NTZlNyJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQyOWZkYzMxLTE3ODMtNDQwMy1hNWIyLTFmYzFiZjdhYWIxYiJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjczYmE5M2MzLWFjY2ItNDVhNC1iMzFlLTdlNWQwMzA1YTBhOCJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAwNyJ9[64D[K
+PLAY [nagios_client] ***********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAwYyJ9[64D[K
+TASK [windowshost : include_vars] **********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImFmN2UyYWE2LTc0NzMtNDlmOS04YWVjLTMyMmQ2MTRkNTA4NSJ9[64D[K[0;32mok: [172.17.65.173][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAwZSJ9[64D[K
+TASK [windowshost : copying NSCP Packege to host.] *****************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImZiYTVmNjY2LWJhOTYtNGFjYy1iNjRiLThlZmEwNzI5YjJlZCJ9[64D[K[0;33mchanged: [172.17.65.173][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAxMCJ9[64D[K
+TASK [windowshost : installing NSCP package] ***********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjg5MmZmNDlmLTQyMDEtNDM2YS04MmE0LWFmOTUwNGJkYzZjNSJ9[64D[K[0;31mfatal: [172.17.65.173]: FAILED! => {"changed": false, "exit_code": 0, "failed": true, "msg": "Package from C:\\Users\\Administrator\\Desktop\\NSCP-0.4.1.73-x64.msi was installed, but the specified ProductId and/or Name does not match package details", "name": "C:\\Users\\Administrator\\Desktop\\NSCP-0.4.1.73-x64.msi"}[0m
+[0;36m...ignoring[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAxMiJ9[64D[K
+TASK [windowshost : deleting old nsclient.ini] *********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjhhMzk4NTM2LWNmMzctNGQ1OC1hZTA2LWM4M2ZhMWEyOTUwMiJ9[64D[K[0;33mchanged: [172.17.65.173][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAxNCJ9[64D[K
+TASK [windowshost : copying .ini file.] ****************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjg5NjFiMjdhLWEzYzAtNDA0Ny05OWFhLTBmZjM3YzdmMTQxMCJ9[64D[K[0;33mchanged: [172.17.65.173][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAxNiJ9[64D[K
+TASK [windowshost : Restarting NSCP service] ***********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImQ5MDc3ODA4LWJkMTYtNDM4NS05MWIzLWZmYWQ2MDA3NmM1OCJ9[64D[K[0;33mchanged: [172.17.65.173][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAxNyJ9[64D[K
+PLAY [nagiosserver] ************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAxYyJ9[64D[K
+TASK [nagios_windows : file] ***************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImJhZDU2Y2EzLWZjNTYtNDJjMy05MTZhLTJhODZhZTY5MjVhZiJ9[64D[K[0;33mchanged: [172.17.65.214][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAxZSJ9[64D[K
+TASK [nagios_windows : adding host in host file.] ******************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjZmY2QwNTU1LTQyYjYtNDYzOC04YTkwLTlhNTAzNTM2MDI2ZSJ9[64D[K[0;33mchanged: [172.17.65.214][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAyMCJ9[64D[K
+TASK [nagios_windows : appending the files] ************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImQ0NTdkNDgxLTliMzktNDVhMy1iOGRiLWVmZmY3NWI3MTFmMCJ9[64D[K[0;33mchanged: [172.17.65.214][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAyMiJ9[64D[K
+TASK [nagios_windows : removing tmp] *******************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjEwMzcyMTM3LTczMGUtNGVhZi1iYzZkLTIxYTNiOWQ5NmQxNCJ9[64D[K[0;33mchanged: [172.17.65.214][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAyNCJ9[64D[K
+TASK [nagios_windows : adding host to group] ***********************************
+[Ke30=[4D[K[1;35m [WARNING]: Consider using template or lineinfile module rather than running[0m
+[1;35msed[0m
+[1;35m[0m
+[KeyJ1dWlkIjogImMxNGQ3MWE2LTcwODItNDk2Yi1iNmYzLTU1Mzk0NDdjM2ZjZSJ9[64D[K[0;33mchanged: [172.17.65.214][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDc5My1jOWJhLTAwMDAwMDAwMDAyNiJ9[64D[K
+TASK [nagios_windows : Restart nagios service.] ********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjA0NWVlMzk2LTRjZTQtNGQ5Ni1hMmYxLTM2NjhkNzIzOWYxZCJ9[64D[K[0;33mchanged: [172.17.65.214][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImZmODQ2YTNkLTVjNTEtNGYwMi1hMmQ2LWRiNDc3OGM3MGE2YiJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m127.0.0.1[0m                  : [0;32mok=2   [0m [0;33mchanged=2   [0m unreachable=0    failed=0   
+[0;33m172.17.65.173[0m              : [0;32mok=6   [0m [0;33mchanged=4   [0m unreachable=0    failed=0   
+[0;33m172.17.65.214[0m              : [0;32mok=6   [0m [0;33mchanged=6   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

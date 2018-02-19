@@ -1,0 +1,78 @@
+SSH password: 
+[KeyJ1dWlkIjogIjNjNmU5ODUzLWRjOGItNGFiYS04MjgyLWNjMWZiMDI3YjYxZSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImIzNDU1MmE2LWE3NDgtNGRjYi1iZTUxLTUwODI4OGMzYzc2ZiJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAwNSJ9[64D[K
+PLAY [nagios_client] ***********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDA1NCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImFkOGFlZWVkLTAwM2UtNDliOS1iYjRiLTA2NzJjYmNjOTVlNSJ9[64D[K[0;32mok: [172.17.65.197][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAwYSJ9[64D[K
+TASK [linuxhost : create folder] ***********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjk4YTNjZDVlLWIyZDAtNGUxNi1iZWUxLWI2NjA1OTZlNzA3YyJ9[64D[K[0;33mchanged: [172.17.65.197][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAwYyJ9[64D[K
+TASK [linuxhost : copy file to client hosts] ***********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImY2ZjllOGE2LWNmZDQtNDZkMC05ZjFkLTBkYThkYzIyMjUyMiJ9[64D[K[0;33mchanged: [172.17.65.197 -> 172.17.65.22][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAwZSJ9[64D[K
+TASK [linuxhost : Creating Nagios User.] ***************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQ5OGU4NGFmLTM4MmYtNDVhNC1iZDU2LTlmY2MwZTg4MDA5MCJ9[64D[K[0;32mok: [172.17.65.197][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAxMCJ9[64D[K
+TASK [linuxhost : installing Packages.] ****************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjIxMjBjNWM5LTcwMGYtNDI2NC04MjBmLWIxNzUyZGY0MDY4OCJ9[64D[K[0;31mfailed: [172.17.65.197] (item=[u'gcc', u'glibc', u'glibc-common', u'openssl', u'openssl-devel', u'perl', u'wget', u'gd', u'gd-devel', u'make', u'net-snmp']) => {"changed": false, "failed": true, "item": ["gcc", "glibc", "glibc-common", "openssl", "openssl-devel", "perl", "wget", "gd", "gd-devel", "make", "net-snmp"], "msg": "No package matching 'gd-devel' found available, installed or updated", "rc": 126, "results": ["gcc-4.8.5-16.el7_4.1.x86_64 providing gcc is already installed", "glibc-2.17-196.el7_4.2.x86_64 providing glibc is already installed", "glibc-common-2.17-196.el7_4.2.x86_64 providing glibc-common is already installed", "openssl-1:1.0.2k-8.el7.x86_64 providing openssl is already installed", "openssl-devel-1:1.0.2k-8.el7.x86_64 providing openssl-devel is already installed", "perl-4:5.16.3-292.el7.x86_64 providing perl is already installed", "wget-1.14-15.el7_4.1.x86_64 providing wget is already installed", "gd-2.0.35-26.el7.x86_64 providing gd is already installed", "No package matching 'gd-devel' found available, installed or updated"]}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImMzYThhNWE4LWNmNjAtNDY1Yi1hNTljLThiYzljZmI3NWMzMCJ9[64D[K[0;36m...ignoring[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAxMiJ9[64D[K
+TASK [linuxhost : installing nagios plugins] ***********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjc3M2IyZDVmLTkyMmItNDIxNC04MTc5LWFlMjgxNzAzMjAzNiJ9[64D[K[0;33mchanged: [172.17.65.197] => (item=./configure)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjIyOTNmOTFhLWNkZDMtNDcxMC1iZDk2LWE1MTExYzI1MDM0YiJ9[64D[K[0;33mchanged: [172.17.65.197] => (item=make)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjg3OTcwNzE4LTVmMmEtNGEyMi1hMmIyLWRlNjI0NGMwMjhmNCJ9[64D[K[0;33mchanged: [172.17.65.197] => (item=make install)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImU1MGQwNzJkLWQwMTItNDZlYy04MmNiLTQwNDM0ODEyZjkwOCJ9[64D[K[0;33mchanged: [172.17.65.197] => (item=chown nagios.nagios /usr/local/nagios)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjI0YzVmYjAyLWQwNmQtNGJiYS05YmI1LWRlZWYwY2ZlZWYzYSJ9[64D[K[0;33mchanged: [172.17.65.197] => (item=chown -R nagios.nagios /usr/local/nagios/libexec)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImRmZTk5ZmIzLTgyNDItNDAyMi05NGJkLTM2MzFlMGFkYzQyYSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAxNCJ9[64D[K
+TASK [linuxhost : installing xinetd Packages.] *********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjUyODVjOGM5LTJmMzktNGNmYy1iNzEyLTA1ZTI2Zjk0ZDIyMSJ9[64D[K[0;32mok: [172.17.65.197][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAxNiJ9[64D[K
+TASK [linuxhost : installing NRPE.] ********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImM3MTY1OTMyLWI5ZWItNDJlOS1hNmM4LThkNzBlZmI0ODc0MSJ9[64D[K[0;33mchanged: [172.17.65.197] => (item=./configure --enable-command-args)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjYxYTljYTAzLTM5ZTUtNGM0NS05NTg1LTNjZGE0OTA2YTExMSJ9[64D[K[0;33mchanged: [172.17.65.197] => (item=make all)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjdiZTJhNjZkLTM2Y2QtNGFhZS1hOGQxLTc4NmM4OWQxYjYxYiJ9[64D[K[0;33mchanged: [172.17.65.197] => (item=make install)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjM5Zjk0OWE4LWU3ZjEtNDMxNS04MmJlLTVkY2YwMDVjYTM5OSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogImY4MjQ1OGRjLTkyYTktNDYxMi1hYmRlLTMyMjczMjAyOTM1OSJ9[64D[K[0;33mchanged: [172.17.65.197] => (item=make install-config)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAxOCJ9[64D[K
+TASK [linuxhost : adding port.] ************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjE0ZGNlNzk3LWNlNTEtNGZjMC1iMmU4LWFiYTlmNDE1YTcwNCJ9[64D[K[0;33mchanged: [172.17.65.197][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAxYSJ9[64D[K
+TASK [linuxhost : starting NRPE Services] **************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjRjZTYwYjdlLWU4MWEtNGZjMy1iN2E1LTBiNGZiMTBiMGU1NiJ9[64D[K[0;33mchanged: [172.17.65.197] => (item=make install-init)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjIzMTkxNThkLTI0OGItNDhhZS05OWUzLTg5OWExNDQ5NWNhZiJ9[64D[K[0;33mchanged: [172.17.65.197] => (item=systemctl enable nrpe.service)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjlhYmZmYmVjLWVkM2QtNGI0Ni1hOTZmLTk2ODU4ZmNhNGQ0OCJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAxYyJ9[64D[K
+TASK [linuxhost : firewall configuration for port 5666.] ***********************
+[Ke30=[4D[K[KeyJ1dWlkIjogImFkOWVjOGQwLWY5OWMtNDQ1YS1iN2Q2LWE5MTlkNmVhOTY3ZSJ9[64D[K[0;33mchanged: [172.17.65.197] => (item=firewall-cmd --zone=public --add-port=5666/tcp)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjMyNWEyNmU5LTMzNDUtNDZjNS04OWE1LTVjYTU5MmQxNjZiMyJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjZkNWZmYThiLTI3ZDktNGE4Yy04ZGViLTBjNjY0NmIxZjQ2YiJ9[64D[K[0;33mchanged: [172.17.65.197] => (item=firewall-cmd --zone=public --add-port=5666/tcp --permanent)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAxZSJ9[64D[K
+TASK [linuxhost : configuring NRPE file.] **************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjc1MmVlZWU1LThkNzYtNDBjYS1hN2ZkLWJhMGNhOGI3YTg5NiJ9[64D[K[0;33mchanged: [172.17.65.197] => (item=cp /usr/local/nagios/etc/nrpe.cfg /usr/local/nagios/etc/nrpe.cfg.bkp)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjU3ZWUzMGQ5LTVhNDQtNGJjOC1hYTJkLWIzYTI5ZDgwMWYyYiJ9[64D[K[0;33mchanged: [172.17.65.197] => (item=sed -i '/^allowed_hosts=/s/$/,172.17.65.214/' /usr/local/nagios/etc/nrpe.cfg)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjYzYWEyZDUzLTJjYzUtNDAzNC1iOGQ1LTU4MDlhOGVjNjhhNyJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjA2MWVkMzMzLThmOTAtNDk5MS05OWZjLWY2Y2UwODVlMWZjYSJ9[64D[K[0;33mchanged: [172.17.65.197] => (item=sed -i 's/^dont_blame_nrpe=.*/dont_blame_nrpe=1/g' /usr/local/nagios/etc/nrpe.cfg)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAyMCJ9[64D[K
+TASK [linuxhost : Starting NRPE Services] **************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjg0ZmRlZDFjLWJkMjUtNDliMC1hMzM5LTIxOThmNWI5NDlkYyJ9[64D[K[0;33mchanged: [172.17.65.197][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAyMiJ9[64D[K
+TASK [linuxhost : checking NRPE Versio] ****************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjFmZDE5ZjAzLTk1MjEtNGUyMi04ZDFkLTMzMDAxYTFkMGUwMSJ9[64D[K[0;33mchanged: [172.17.65.197][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAyNCJ9[64D[K
+TASK [linuxhost : debug] *******************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImZlYTlkYzU4LWI3MGMtNGU3OS05Y2ViLWEyZTMyYTZmMjcxMiJ9[64D[K[0;32mok: [172.17.65.197] => {[0m
+[0;32m    "NRPE_Version.stdout_lines": [[0m
+[0;32m        "NRPE v3.2.1"[0m
+[0;32m    ][0m
+[0;32m}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTAxMC01NzVlLTAwMDAwMDAwMDAyNSJ9[64D[K
+PLAY [nagiosserver] ************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjZjYWM1NThmLTk5ZmEtNDVkYS1hNmUzLTQ2YjU3OTZlNzMwYyJ9[64D[K[0;36mskipping: no hosts matched[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjgwNDZiOGM1LTgxNTItNDlhNC05OTIyLTE5ODZiYTUzNTRjZiJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m127.0.0.1[0m                  : [0;32mok=1   [0m [0;33mchanged=1   [0m unreachable=0    failed=0   
+[0;33m172.17.65.197[0m              : [0;32mok=15  [0m [0;33mchanged=10  [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

@@ -1,0 +1,8 @@
+---
+#api_version: "1.11"
+#array_token: f191d609-0144-824c-4a2d-63885c6fc158
+#arrayurl: 172.17.65.140
+size: 10G
+volname: purevol3110
+hostname: Automation-test
+iqn: iqn.1998-01.com.vmware:cwl2-774564ed

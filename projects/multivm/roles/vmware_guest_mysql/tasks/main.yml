@@ -1,0 +1,42 @@
+---
+#- hosts: 172.17.66.156
+#  tasks:
+- name: Create a VM from a template
+  vmware_guest:
+    hostname: 172.17.66.156
+    username: administrator@vsphere.local
+    password: Wipro@123
+    validate_certs: no
+    datacenter: Devops
+    name: alfa
+    state: poweredon
+    template: RHEL7.3_temp
+    disk:
+    - size_gb: 50
+      type: thin
+      datastore: datastore1
+    hardware:
+      memory_mb: 2048
+      num_cpus: 1
+      scsi: paravirtual
+    networks:
+    - name: VM Network
+      device_type: vmxnet3
+      type: static
+      ip : 172.17.65.110
+      netmask: 255.255.255.0
+      gateway: 172.17.65.1
+    wait_for_ip_address: no
+  delegate_to: localhost
+  register: deploy
+      
+- name: Connecting........ to 172.17.65.110
+  wait_for_connection:
+    timeout: 120
+
+- pause: 
+    seconds: 45
+- hosts: 172.17.65.110
+  tasks:
+  - name: Include mysql deployment
+    include: mysql.yml

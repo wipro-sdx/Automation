@@ -1,0 +1,10 @@
+# Deploy scaleio servers from redhat template
+- name: deploy scaleio hosts
+  hosts: localhost
+
+  gather_facts: no
+  sudo: yes
+
+  roles:
+  - vm_creation
+

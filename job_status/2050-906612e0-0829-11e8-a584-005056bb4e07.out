@@ -1,0 +1,19 @@
+SSH password: 
+[KeyJ1dWlkIjogIjJiNjY3Y2NmLTczOTEtNGEyNC04ZTIwLWRkNTg4Y2ZlMjFkNSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMDdmNi1mZTg4LTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMDdmNi1mZTg4LTAwMDAwMDAwMDAxMiJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjY5YmMwNGJmLThlYTMtNDg2Ni04ODhlLTA2YTM1NDkxMWRiNSJ9[64D[K[0;32mok: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMDdmNi1mZTg4LTAwMDAwMDAwMDAwNyJ9[64D[K
+TASK [cobbler_multi : multi servers os installation via expro provisioning] ****
+[Ke30=[4D[K[KeyJ1dWlkIjogIjVlMjI1MmMzLTU3NGQtNDM1Ny04ODM5LTlhNmUxZDBjZDJlYSJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMDdmNi1mZTg4LTAwMDAwMDAwMDAwOSJ9[64D[K
+TASK [cobbler_multi : pause] ***************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImFkZTY0MzkwLTIyMGYtNDYzNi04MWI2LTc0M2ExY2I5OWU5MCJ9[64D[KPausing for 1000 seconds
+[Ke30=[4D[K[KeyJ1dWlkIjogIjhkMzcwNDhiLTBiY2YtNGNhOS05ZWUzLTAwYWM0NDBjMzA4YSJ9[64D[K(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+[Ke30=[4D[K[KeyJ1dWlkIjogImQwY2E1M2Y4LTI2ZWEtNDI5OC1iYjA4LTkwYTFjYjJjYTgyYSJ9[64D[K[0;32mok: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImYxMDUwYTI1LTM0MmQtNDRjNC05ODQ2LTMyZDg1MzExYWM4YyJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m127.0.0.1[0m                  : [0;32mok=3   [0m [0;33mchanged=1   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

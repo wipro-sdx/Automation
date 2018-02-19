@@ -1,0 +1,29 @@
+---
+- name: Deploy guest from template
+  vsphere_guest:
+    vcenter_hostname: 172.16.8.16
+    username: administrator@vsphere.opendc
+    password: Wipro@123
+    guest: "{{ servername }}{{ item }}"
+    from_template: yes
+    template_src: Temp1
+    cluster: Nutanix-DC
+    vm_disk:
+      disk1:
+        size_gb: 30
+        type: thin
+        datastore: storage001
+    vm_nic:
+      nic1:
+        type: vmxnet3
+        network: VM Network
+        network_type: standard
+    vm_hardware:
+      memory_mb: 1024
+      num_cpus: 2
+    esxi:
+      datacenter: opendc-dc1
+      hostname: 172.16.47.20
+#  with_items: "{{ serverlist }}"
+  with_sequence: count="{{ countvar|int }}"
+    

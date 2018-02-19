@@ -1,0 +1,52 @@
+    1.277 INFO     Updating inventory 56: CF-113-CoE-NEW
+    1.299 INFO     Reading executable JSON source: /var/lib/awx/venv/tower/lib/python2.7/site-packages/awx/plugins/inventory/ec2.py
+  144.563 ERROR    Failed to load JSON from: 
+Traceback (most recent call last):
+  File "/usr/bin/tower-manage", line 9, in <module>
+    load_entry_point('ansible-tower==3.1.4', 'console_scripts', 'tower-manage')()
+  File "/lib/python2.7/site-packages/awx/__init__.py", line 105, in manage
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/django/core/management/__init__.py", line 354, in execute_from_command_line
+    utility.execute()
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/django/core/management/__init__.py", line 346, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/django/core/management/base.py", line 394, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/django/core/management/base.py", line 445, in execute
+    output = self.handle(*args, **options)
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/django/core/management/base.py", line 661, in handle
+    return self.handle_noargs(**options)
+  File "/lib/python2.7/site-packages/awx/main/management/commands/inventory_import.py", line 1290, in handle_noargs
+  File "/lib/python2.7/site-packages/awx/main/management/commands/inventory_import.py", line 503, in load_inventory_source
+  File "/lib/python2.7/site-packages/awx/main/management/commands/inventory_import.py", line 392, in load
+  File "/lib/python2.7/site-packages/awx/main/management/commands/inventory_import.py", line 380, in command_to_json
+RuntimeError: ['/var/lib/awx/venv/tower/lib/python2.7/site-packages/awx/plugins/inventory/ec2.py', '--list'] failed (rc=1) with output: Traceback (most recent call last):
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/awx/plugins/inventory/ec2.py", line 1510, in <module>
+    Ec2Inventory()
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/awx/plugins/inventory/ec2.py", line 188, in __init__
+    self.do_api_calls_update_cache()
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/awx/plugins/inventory/ec2.py", line 487, in do_api_calls_update_cache
+    self.get_instances_by_region(region)
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/awx/plugins/inventory/ec2.py", line 540, in get_instances_by_region
+    reservations = conn.get_all_instances()
+  File "/var/lib/awx/venv/ansible/lib/python2.7/site-packages/boto/ec2/connection.py", line 585, in get_all_instances
+    max_results=max_results)
+  File "/var/lib/awx/venv/ansible/lib/python2.7/site-packages/boto/ec2/connection.py", line 681, in get_all_reservations
+    [('item', Reservation)], verb='POST')
+  File "/var/lib/awx/venv/ansible/lib/python2.7/site-packages/boto/connection.py", line 1171, in get_list
+    body = response.read()
+  File "/var/lib/awx/venv/ansible/lib/python2.7/site-packages/boto/connection.py", line 410, in read
+    self._cached_response = http_client.HTTPResponse.read(self)
+  File "/usr/lib64/python2.7/httplib.py", line 578, in read
+    return self._read_chunked(amt)
+  File "/usr/lib64/python2.7/httplib.py", line 636, in _read_chunked
+    value.append(self._safe_read(chunk_left))
+  File "/usr/lib64/python2.7/httplib.py", line 693, in _safe_read
+    chunk = self.fp.read(min(amt, MAXAMOUNT))
+  File "/usr/lib64/python2.7/socket.py", line 380, in read
+    data = self._sock.recv(left)
+  File "/usr/lib64/python2.7/ssl.py", line 759, in recv
+    return self.read(buflen)
+  File "/usr/lib64/python2.7/ssl.py", line 653, in read
+    v = self._sslobj.read(len or 1024)
+ssl.SSLError: ('The read operation timed out',)
+

@@ -1,0 +1,9 @@
+---
+sid: orcl
+server_name: oradbserverupload
+orainv_loc: /home/oracle/app/oraInventory
+oraclehome: /home/oracle/app/oracle/product/11.2.0/dbhome_1
+oraclebase: /home/oracle/app/oracle
+dbmemorylimit: 1536
+orapassword: Wipro@123
+portno: 1524

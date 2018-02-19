@@ -1,0 +1,14 @@
+---
+- hosts: 172.17.65.175
+  tasks:
+    - name: coping file from linux to windows
+      win_copy:
+        src: /root/googlechrome53_0_2785_113_x64.exe
+        dest: C:\Users\Administrator\Desktop\software\
+    - name: install the package
+      win_package:
+        path: C:\Users\Administrator\Desktop\software\googlechrome53_0_2785_113_x64.exe
+        state: present
+        productid: auto
+          
+

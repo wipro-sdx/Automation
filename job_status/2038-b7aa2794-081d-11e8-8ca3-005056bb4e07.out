@@ -1,0 +1,19 @@
+SSH password: 
+[KeyJ1dWlkIjogIjEzOTE1YmUzLWM3NzgtNDE2NC04ZGU1LWE2MGFkMDdlMzQ1MSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYWQzZS1kNmRmLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYWQzZS1kNmRmLTAwMDAwMDAwMDAxMiJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjg3NmNiNTQzLWRlYzItNDc0OS05MWEyLTUxMzk4OGNmMmFmZiJ9[64D[K[0;32mok: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYWQzZS1kNmRmLTAwMDAwMDAwMDAwNyJ9[64D[K
+TASK [vmware_multi_server_deploy : multi vm servers deployment with os] ********
+[Ke30=[4D[K[KeyJ1dWlkIjogIjA0YWQ0MGM5LTRlZGQtNDQzOS1iNjE5LTVlYTU1MTU1YjI0OCJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYWQzZS1kNmRmLTAwMDAwMDAwMDAwOSJ9[64D[K
+TASK [vmware_multi_server_deploy : pause] **************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImQxYzhjZmU2LTBmM2UtNDE4MS04NzM4LThhNmRlMWQxNmExYSJ9[64D[KPausing for 60 seconds
+[Ke30=[4D[K[KeyJ1dWlkIjogImM2ODQxZTI4LWQwYTktNDZmOC04ZTZhLWU5NmQ1NjI4N2YzNCJ9[64D[K(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+[Ke30=[4D[K[KeyJ1dWlkIjogImY2ZjQyMDYzLTcwNWMtNGU0Yy1hZGQ4LWViYzZiYjQ1Y2I4YiJ9[64D[K[0;32mok: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImExY2NiNTYzLTk0MmUtNDgyNC04MzkxLTM0ODg4ODE5YThjMSJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m127.0.0.1[0m                  : [0;32mok=3   [0m [0;33mchanged=1   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

@@ -1,0 +1,14 @@
+---
+- hosts: 172.17.65.33
+  vars: 
+    server_name: ABCD
+  tasks:
+    - name: editing windows file
+      win_lineinfile:
+        path: C:\test\hosts.txt
+        line: 0.0.0.0 windows.hosts
+    - name: Appending /etc/hosts file in backup server
+      win_lineinfile:
+        path: C:\Windows\System32\drivers\etc\hosts
+        line: 172.17.65.91  {{ server_name }}
+

@@ -1,0 +1,11 @@
+---
+
+- hosts: leaf
+  connection: local
+
+  tasks:
+    - name: configuring feature
+      nxos_feature:
+         feature: lacp
+         state: enabled
+

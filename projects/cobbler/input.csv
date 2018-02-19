@@ -1,0 +1,3 @@
+systemname1,profile1,interface1,mac1,ipaddr1,netmask1,gw1,powaddr1,powuser1,powpass1
+alfaesx,ESXI-6.0-x86_64,eno1,a8:1e:84:7b:c2:ee,172.17.66.144,255.255.255.0,172.17.66.1,172.17.64.31,admin,admin
+centosserver,CentOS-7-x86_64,eno1,a8:1e:84:73:d8:d0,172.17.66.104,255.255.255.0,172.17.66.1,172.17.64.34,admin,admin

@@ -1,0 +1,11 @@
+---
+
+- hosts: poddeploy
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  roles:
+  - python
+
+

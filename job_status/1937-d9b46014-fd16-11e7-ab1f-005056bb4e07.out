@@ -1,0 +1,14 @@
+SSH password: 
+[KeyJ1dWlkIjogImI5Mzc4MTgyLTlkODEtNGMyNS1hYTExLWU3ODM3ZjE3ZGE1YyJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTNiMy1iZDRlLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [poddeploy] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTNiMy1iZDRlLTAwMDAwMDAwMDAxMCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImRhNTMwNTllLWY2MDQtNDI5YS1iYWNhLWZkM2I1YTI4YWIyZSJ9[64D[K[0;32mok: [172.17.73.19][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTNiMy1iZDRlLTAwMDAwMDAwMDAwNyJ9[64D[K
+TASK [openshift-php-postgres : Deployment of two tire application on Openshift] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogIjBlOTZhM2U0LTUyZTMtNGYzMi04NDEzLWU2ZDAzNGI1ZmM1OCJ9[64D[K[0;33mchanged: [172.17.73.19][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjhhYjNiY2M5LTk1M2ItNDdiOC1iYjRhLTBkZGJmZWJjYzNmYiJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m172.17.73.19[0m               : [0;32mok=2   [0m [0;33mchanged=1   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

@@ -1,0 +1,52 @@
+SSH password: 
+[KeyJ1dWlkIjogImQ5MmFkY2NiLTMxZTQtNDMzYS04OGU2LWViYTgyZDJmYTEwNyJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzc2My1hYzk3LTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzc2My1hYzk3LTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQ1OGNjYzc1LTE0NzktNDA1ZC04OWE0LThmZjM5NzgzZjYyMyJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzc2My1hYzk3LTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImYzOTE0YWFhLTdhYTctNGUyZS04N2UwLTgxM2I5MDI0ZWY5MCJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzc2My1hYzk3LTAwMDAwMDAwMDAwNyJ9[64D[K
+PLAY [source_server] ***********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzc2My1hYzk3LTAwMDAwMDAwMDA0MSJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjBiZmM4NjcyLWU3ZGEtNGRjMS1hZGExLWE3YzM0Mzc2ZjM1OCJ9[64D[K[0;32mok: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzc2My1hYzk3LTAwMDAwMDAwMDAwYyJ9[64D[K
+TASK [sourcekvm : shuting down vm] *********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjI2ZTU2MGUyLTg0OGUtNDgzMC04MTcxLTUxNDNlMjk4ZDQwMyJ9[64D[K[0;33mchanged: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzc2My1hYzk3LTAwMDAwMDAwMDAwZSJ9[64D[K
+TASK [sourcekvm : collecting dumpxml of vm] ************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImUxMTM2NTA4LTk1ZTgtNGJlNC1iMzkyLTY3ZDBjZGU3YjQ2OSJ9[64D[K[0;33mchanged: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzc2My1hYzk3LTAwMDAwMDAwMDAxMCJ9[64D[K
+TASK [sourcekvm : adding security limits for nproc] ****************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImQwMzk3OTg5LTRhNDgtNGQyZi05NmJlLWJiZDM5ZDA4NTc5ZSJ9[64D[K[0;33mchanged: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzc2My1hYzk3LTAwMDAwMDAwMDAxMSJ9[64D[K
+PLAY [target_server] ***********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzc2My1hYzk3LTAwMDAwMDAwMDA2NCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImIzMmFmNTM0LWIxNGUtNGU4OS05MjI2LWYyOWZjZTY4Nzk4ZiJ9[64D[K[0;32mok: [172.17.66.104][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzc2My1hYzk3LTAwMDAwMDAwMDAxNiJ9[64D[K
+TASK [targetkvm : copy dump xml to target] *************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImYwNmUxZmE0LTEzNzktNDY3OS1iZmE2LTU1YjU0MmFiMjFlYyJ9[64D[K[0;33mchanged: [172.17.66.104 -> 172.17.65.22][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzc2My1hYzk3LTAwMDAwMDAwMDAxOCJ9[64D[K
+TASK [targetkvm : copy vm dsk to target] ***************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImFjNTRkNTBmLTU5ZDMtNGIyNi04ZTk5LWM1NmMxNDNjY2FlNiJ9[64D[K[0;33mchanged: [172.17.66.104 -> 172.17.65.22][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzc2My1hYzk3LTAwMDAwMDAwMDAxYSJ9[64D[K
+TASK [targetkvm : define vm at taget machine] **********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjI1MTc4NDRhLTNkYjQtNGNjMi1iOThkLTIxZTdiZGVkN2U3YSJ9[64D[K[0;33mchanged: [172.17.66.104][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzc2My1hYzk3LTAwMDAwMDAwMDAxYyJ9[64D[K
+TASK [targetkvm : pause] *******************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImVjZTFhMThhLTg4ZjUtNDAxMy1iODcxLTk4ZThiOWUzZDQyNyJ9[64D[KPausing for 30 seconds
+[Ke30=[4D[K[KeyJ1dWlkIjogImUzODMxNDg4LTg3OWUtNDI2OC05M2MxLWMxNTA0NzYxOGFkNSJ9[64D[K(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+[Ke30=[4D[K[KeyJ1dWlkIjogImEzOGNmYTliLTQwZjctNDIwMC04MGM0LTg2MzRlNmJkMzk0YSJ9[64D[K[0;32mok: [172.17.66.104][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzc2My1hYzk3LTAwMDAwMDAwMDAxZSJ9[64D[K
+TASK [targetkvm : starting vm] *************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjYwNmMwYzA1LTQwMWItNDY5YS05ZjA4LTU4M2IwM2E3OGQ3MSJ9[64D[K[0;31mfatal: [172.17.66.104]: FAILED! => {"changed": true, "cmd": "virsh start manageiq", "delta": "0:00:00.174326", "end": "2018-02-07 05:29:54.183825", "failed": true, "rc": 1, "start": "2018-02-07 05:29:54.009499", "stderr": "error: Failed to start domain manageiq\nerror: Cannot access storage file '/var/iso/manageiq-ovirt-fine-4.qcow2' (as uid:107, gid:107): No such file or directory", "stderr_lines": ["error: Failed to start domain manageiq", "error: Cannot access storage file '/var/iso/manageiq-ovirt-fine-4.qcow2' (as uid:107, gid:107): No such file or directory"], "stdout": "", "stdout_lines": []}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjA3OWFiYzUwLTRjZmQtNDFhYi1iNDczLTEyMTA4MmM5MjNmNSJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m127.0.0.1[0m                  : [0;32mok=2   [0m [0;33mchanged=2   [0m unreachable=0    failed=0   
+[0;33m172.17.66.103[0m              : [0;32mok=4   [0m [0;33mchanged=3   [0m unreachable=0    failed=0   
+[0;31m172.17.66.104[0m              : [0;32mok=5   [0m [0;33mchanged=3   [0m unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

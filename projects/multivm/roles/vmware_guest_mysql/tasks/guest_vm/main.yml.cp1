@@ -1,0 +1,47 @@
+---
+  # vim: set ft=ansible et ts=2 sw=2:
+  #
+  # Create a new VM from a template using the new vmware_guest module
+- hosts: windows
+  gather_facts: false
+  connection: local
+  vars:
+    vcenter_hostname: 172.17.66.156
+    esxhost: 172.17.65.11
+    datastore: datastore1
+    network: "VMnetwork"
+    vmtemplate: RHEL7.3_temp
+    vmcluster: Openshift
+    notes: Created by Ansible
+    dumpfacts: False
+    vcenter_user: Administrator
+    vcenter_pass: Wipro@123
+    name: Alfa
+  tasks:
+    - name: Create VM from template
+      vmware_guest:
+        validate_certs: False
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_user }}"
+        password: "{{ vcenter_pass }}"
+        esxi_hostname: "{{ esxhost }}"
+        datacenter: Devops
+        name: "{{ name }}"
+        template: "{{ vmtemplate }}"
+        disk:
+          - size_gb: 10
+            type: thin
+            datastore: "{{ datastore }}"
+        nic:
+          - type: vmxnet3
+            network: "{{ network }}"
+        hardware:
+          memory_mb: "{{ vm_memory | default(1024) }}"
+        wait_for_ip_address: False
+#       state: present
+#     register: newvm
+        
+#   - name: IP address info
+#     debug:
+#       msg: "{{ newvm.instance.ipv4 }} {{ name }}"
+

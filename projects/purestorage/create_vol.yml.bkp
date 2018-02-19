@@ -1,0 +1,10 @@
+---
+- name: Attach new volume to a new host in a FlashArray
+  hosts: localhost
+  gather_facts: no
+  vars:
+    api_version: "1.11"
+    array_token: f191d609-0144-824c-4a2d-63885c6fc158
+    arrayurl: 172.17.65.140
+  roles:
+    - purestorage

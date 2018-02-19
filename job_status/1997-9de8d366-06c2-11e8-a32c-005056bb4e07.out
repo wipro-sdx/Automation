@@ -1,0 +1,9 @@
+SSH password: 
+[KeyJ1dWlkIjogImEzMTI0YTI3LTI3OGEtNGI5NS04NjUzLTlhMTJhM2IxNjM4NSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODBlNy0zNDkzLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [oracle_new] **************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODBlNy0zNDkzLTAwMDAwMDAwMDAwNyJ9[64D[K
+TASK [commvault_new_esx : Copy commvault.rb file] ******************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjk0OWIxMDMyLTgxYTYtNDRjOC1hMzdkLWIxNmY2YjEzMzQzNSJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODBlNy0zNDkzLTAwMDAwMDAwMDAwOSJ9[64D[K
+TASK [commvault_new_esx : copy Commvault directory] ****************************
+[Ke30=[4D[K

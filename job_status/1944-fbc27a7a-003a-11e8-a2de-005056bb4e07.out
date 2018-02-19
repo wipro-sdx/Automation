@@ -1,0 +1,26 @@
+SSH password: 
+[KeyJ1dWlkIjogIjZkMmJlYjI3LWY4YTEtNDljMC1iNWY5LTk2ZDlmYzY2ZDliZCJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODM4Ni1iMjYxLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [cobbler] *****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODM4Ni1iMjYxLTAwMDAwMDAwMDAxOCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImFlOGUwMDdmLTY1MjAtNDVjZS05ZTVjLWI3ODJmNDA5ZTJiMSJ9[64D[K[0;32mok: [172.17.73.100][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODM4Ni1iMjYxLTAwMDAwMDAwMDAwNyJ9[64D[K
+TASK [cobbler : adding cobbler system] *****************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjZiMzZhZTJhLWMzNGUtNDUwYi05Yjk3LTA1YTQ4YzZjN2JjNSJ9[64D[K[0;33mchanged: [172.17.73.100][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODM4Ni1iMjYxLTAwMDAwMDAwMDAwOSJ9[64D[K
+TASK [cobbler : assigning interface to systen] *********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjM5YTFiZjQ1LTRiZTAtNDA2Yy1hZWM5LTM3MWYyMzNjOWI4OSJ9[64D[K[0;33mchanged: [172.17.73.100][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODM4Ni1iMjYxLTAwMDAwMDAwMDAwYiJ9[64D[K
+TASK [cobbler : adding gw to cobbler system] ***********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImM3OGNmMDE2LWM5NWEtNDY1MS04YzZkLTRkNzM4MzdkNDQ4YyJ9[64D[K[0;33mchanged: [172.17.73.100][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODM4Ni1iMjYxLTAwMDAwMDAwMDAwZCJ9[64D[K
+TASK [cobbler : adding fencing details] ****************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQwYzcwOWEzLTRlNmQtNDhhYi04MmRjLWEyOGJhMTdmZDVmNiJ9[64D[K[0;33mchanged: [172.17.73.100][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODM4Ni1iMjYxLTAwMDAwMDAwMDAwZiJ9[64D[K
+TASK [cobbler : power on server] ***********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImQwMWYxYTgxLTI3MmYtNDEzMi04MzQxLWQwYjgxYzY2NTU5NyJ9[64D[K[0;33mchanged: [172.17.73.100][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjI0MmFmMGQzLTZhYWQtNDBhMS05ZWZiLTJjMDMzYmU3OTAyYyJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m172.17.73.100[0m              : [0;32mok=6   [0m [0;33mchanged=5   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

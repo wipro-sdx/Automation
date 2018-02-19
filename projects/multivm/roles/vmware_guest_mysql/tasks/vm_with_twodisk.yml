@@ -1,0 +1,38 @@
+---
+- hosts: '{{ hosts }}'
+
+  tasks:
+  - name: Clone VM and customize
+    vmware_guest:
+      hostname: our_vcenter_server
+      username: our_user
+      password: some_password
+      validate_certs: no
+      datacenter: our_datacenter
+      cluster: our_cluster
+      name: sas-jenkins-001
+      template: our_template
+      networks:
+      - name: our_network
+        ip: 10.122.x.30
+        netmask: 255.255.255.0
+        gateway: 10.122.x.1
+      customization:
+        dns_servers:
+        - 10.122.x.y
+        - 10.124.x.y
+        dns_suffix: our.domain, our.domain.dmz
+        domain: our.domain
+        password: new_vm_password
+      hardware:
+        memory_mb: 4096
+        num_cpus: 2
+      disk:
+      - size_gb: 60
+        type: thin
+        autoselect_datastore: True
+      - size_gb: 60
+        type: thin
+        autoselect_datastore: True
+    delegate_to: localhost
+    register: vm_results

@@ -1,0 +1,11 @@
+---
+- hosts: leaf
+  connection: local
+
+  vars:
+   vlan_id: "{{vlan_id}}"
+  tasks:
+   - name: VLAN Deletion
+     nxos_vlan:
+       vlan_id: "{{vlan_id}}"
+       state: absent

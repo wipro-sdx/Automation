@@ -1,0 +1,9 @@
+---
+- name: ntpserver package installation
+  yum: name=ntp state=latest
+  tags: ntp
+- name: copy ntp file
+  template: src=ntp.conf dest=/etc/ntp.conf
+  tags: ntp
+  notify: restart ntp
+     

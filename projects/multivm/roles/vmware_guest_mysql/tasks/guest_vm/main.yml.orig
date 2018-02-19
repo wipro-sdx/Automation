@@ -1,0 +1,14 @@
+---
+
+- name: create a VM from a template
+   vmware_guest:
+    vcenter_hostname: 172.17.66.156
+    username: administrator@vsphere.local
+    password: Wipro@123
+    guest: test1
+    from_template: yes
+    template_src: RHEL7.3_temp
+    cluster: Openshift 
+    vm_extra_config:
+      folder: /Devops/Testvms
+

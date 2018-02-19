@@ -1,0 +1,14 @@
+SSH password: 
+[KeyJ1dWlkIjogImFjYzE4ZDAxLWE1OGQtNGRkNy04ZDRkLTA2ZWNiYjg2MjgwZiJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNzM5MS04ZTBmLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNzM5MS04ZTBmLTAwMDAwMDAwMDAxMCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQ0MGI5MWRjLTFlYzktNGEwNS1hOWNiLTYzMmFkZTZkNjk3MiJ9[64D[K[0;32mok: [172.17.65.22][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNzM5MS04ZTBmLTAwMDAwMDAwMDAwNyJ9[64D[K
+TASK [aws_rds_oracle : Create Database] ****************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjUzYmU0YjhkLTAzMjctNDYxMi04MzAxLThlNjE0M2I3YjJjNCJ9[64D[K[0;32mok: [172.17.65.22][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjg2NzYwNThiLThlMDQtNGMyMy1hMzhjLTVjYjBlNzkwZTBiZSJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;32m172.17.65.22[0m               : [0;32mok=2   [0m changed=0    unreachable=0    failed=0   
+
+[Ke30=[4D[K

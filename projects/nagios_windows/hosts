@@ -1,0 +1,6 @@
+[localhost]
+127.0.0.1
+[nagiosserver]
+172.17.65.214
+[windows]
+172.17.65.173

@@ -1,0 +1,4 @@
+Dear User, 
+
+DB-Server-withip has been spinned up. Please find below the DB Server Details
+

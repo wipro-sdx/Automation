@@ -1,0 +1,10 @@
+[osnodes]
+osmaster1.opendc.com
+osmaster2.opendc.com
+osmaster3.opendc.com
+workernode_1.opendc.com 
+workernode_2.opendc.com 
+infranode1.opendc.com
+infranode2.opendc.com
+nfsserver1.opendc.com
+lbnode1.opendc.com

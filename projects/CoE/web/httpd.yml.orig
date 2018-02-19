@@ -1,0 +1,26 @@
+- name: install and configure webservers
+  hosts: all
+  sudo: yes
+
+  tasks:
+    - name: Install/verify apache httpd
+      yum: name=httpd state=latest
+    - name: Check if welcome.conf exists
+      stat: path=/etc/httpd/conf.d/welcome.conf
+      register: welcome_stat
+    - name: Move welcome.conf to welcome.conf.old
+      command: mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.old
+      when: welcome_stat.stat.exists
+    - name: Ensure apache is running
+      service: name=httpd state=running enabled=yes
+    - name: copy files to document root and extract over there
+      unarchive: src=httpd.tar dest=/var/www/html
+      notify: restart apache
+
+  handlers:
+    - name: restart apache
+      service: name=httpd state=restarted
+
+
+
+

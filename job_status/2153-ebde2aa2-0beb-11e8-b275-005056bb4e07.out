@@ -1,0 +1,29 @@
+SSH password: 
+[KeyJ1dWlkIjogIjA3NTY1NWQ2LWI1OGEtNGRlZS1hNTdmLTE0MzYzMWYzNGIxNSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzcxMC02YzA5LTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzcxMC02YzA5LTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImE2MDYwMDE1LTZmNmItNDc0OS04YTI4LWM1ZmIxYjA0NTU2NyJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzcxMC02YzA5LTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjUyMDFjYTY3LTBiMGItNGE5OC1iNTg4LTAwMmUyNGYwNDM0YyJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzcxMC02YzA5LTAwMDAwMDAwMDAwNyJ9[64D[K
+PLAY [source_server] ***********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzcxMC02YzA5LTAwMDAwMDAwMDA0MSJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImZhNTE0NzU3LWQzM2EtNDgzNS1hMGJmLThhZDEzNThmMGY1YiJ9[64D[K[0;32mok: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzcxMC02YzA5LTAwMDAwMDAwMDAwYyJ9[64D[K
+TASK [sourcekvm : shuting down vm] *********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjFlMWQ2ZmEzLWI0MjAtNDBlMC04MGM0LTE2MTA2NTBmYWJjZSJ9[64D[K[0;33mchanged: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzcxMC02YzA5LTAwMDAwMDAwMDAwZSJ9[64D[K
+TASK [sourcekvm : collecting dumpxml of vm] ************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImE2ODUxMzRhLTEwZmQtNGVhZi1hOTQ1LTM4NTZiMDg1ZTY5NyJ9[64D[K[0;33mchanged: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzcxMC02YzA5LTAwMDAwMDAwMDAxMCJ9[64D[K
+TASK [sourcekvm : adding security limits for nproc] ****************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjY4M2U1MGYyLWU1YjctNGMxNS1iMGU5LTg1YTFlZDA0ZmY5NSJ9[64D[K[0;31mfatal: [172.17.66.103]: FAILED! => {"changed": true, "cmd": "cp /var/lib/libvirt/images/manageiq.dsk /share/manageiq.dsk", "delta": "0:00:00.007098", "end": "2018-02-07 15:18:24.218584", "failed": true, "rc": 1, "start": "2018-02-07 15:18:24.211486", "stderr": "cp: cannot stat ‘/var/lib/libvirt/images/manageiq.dsk’: No such file or directory", "stderr_lines": ["cp: cannot stat ‘/var/lib/libvirt/images/manageiq.dsk’: No such file or directory"], "stdout": "", "stdout_lines": []}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImNiZTYzNTgyLTU1NDYtNDA0ZC05ZTA4LTllYzRhMGJlYjQ0ZSJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m127.0.0.1[0m                  : [0;32mok=2   [0m [0;33mchanged=2   [0m unreachable=0    failed=0   
+[0;31m172.17.66.103[0m              : [0;32mok=3   [0m [0;33mchanged=2   [0m unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

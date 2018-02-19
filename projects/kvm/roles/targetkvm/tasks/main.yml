@@ -1,0 +1,17 @@
+---
+- name: copy dump xml to target
+  synchronize:
+    src:  /imageskvm/{{ vm_name }}.xml
+    dest: /tmp/
+  delegate_to: 172.17.65.22
+- name: copy vm dsk to target
+  synchronize:
+    src:  /imageskvm/
+    dest: /var/lib/libvirt/images/
+  delegate_to: 172.17.65.22
+- name: define vm at taget machine
+  shell: virsh define /tmp/{{ vm_name }}.xml
+- pause:
+    seconds: 30
+- name: starting vm
+  shell: virsh start {{ vm_name }}

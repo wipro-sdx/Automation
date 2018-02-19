@@ -1,0 +1,25 @@
+---
+- name: Create token for FlashArray
+  hosts: localhost
+  gather_facts: no
+  vars:
+    arrayurl: 172.17.65.140
+    api_version: "1.8"
+    username: pureuser
+    password: pureuser # insert your password here
+ 
+  tasks:
+    - name: open session
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/auth/apitoken
+        method: POST
+        validate_certs: no
+        return_content: yes
+        body:
+          username: "{{ username }}"
+          password: "{{password }}"
+        body_format: json
+      register: token
+ 
+    - name: display token
+      debug: msg="{{ token.json }}"

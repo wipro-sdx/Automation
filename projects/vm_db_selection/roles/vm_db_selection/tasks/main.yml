@@ -1,0 +1,5 @@
+---
+- name: Redhat servers  implementation
+  when:  db == "mysql"
+- name: Centos servers implementation
+  when: db == "oracle"

@@ -1,0 +1,5 @@
+Node_Name,IP_Addr,Node_State
+WEB-Server-A,10.0.0.2,enabled
+WEB-Server-B,10.0.0.3,enabled
+APP-Server-A,10.0.0.4,enabled
+APP-Server-B,10.0.0.5,enabled

@@ -1,0 +1,52 @@
+---
+- hosts: localhost
+
+  vars: 
+    vm_name: "{{vm_name}}"
+
+  tasks:
+   - name: Deploy Application Server
+     vmware_guest:
+          validate_certs: False
+          hostname: 172.16.8.15
+          username: administrator@vsphere.opendc
+          password: W3lc0me!7
+          esxi_hostname: 172.16.4.29
+          datacenter: opendc-dc1
+          name: "{{vm_name }}"
+          template: rhel73template
+          state: poweredon
+     
+   - name: Adding to APP PortGroup
+     vsphere_guest:
+        validate_certs: False
+        vcenter_hostname: 172.16.8.15
+        username: administrator@vsphere.opendc
+        password: W3lc0me!7
+        guest: "{{vm_name}}"
+        state: reconfigured
+        vm_nic:
+          nic1:
+           type: vmxnet3
+           network: Devops|Devops-APP|app
+           network_type: dvs
+        esxi:
+          datacenter: opendc-dc1
+          hostname: 172.16.4.29
+
+   - name: Deploy Application Server
+     vmware_guest:
+         validate_certs: False
+         hostname: 172.16.8.15
+         username: administrator@vsphere.opendc
+         password: W3lc0me!7
+         esxi_hostname: 172.16.4.29
+         datacenter: opendc-dc1
+         name: "{{vm_name }}"
+         state: present 
+     register: newvm
+   - pause:
+       minutes: 2
+   - name: IP address info
+     debug:
+       msg: "{{ newvm.ansible_ip_addresses }} {{ vm_name }}"

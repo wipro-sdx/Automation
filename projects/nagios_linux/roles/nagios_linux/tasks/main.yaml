@@ -1,0 +1,29 @@
+---
+- name:
+  file:
+    path: /root/tmp
+    state: touch
+    mode: 0644
+- name: adding host in host file.
+  blockinfile:
+    path: /root/tmp
+    block: |
+      ## Default
+      define host{
+      use                             linux-box               ; Inherit default values from a template
+      host_name                       {{ client_hostname }}                  ; The name we're giving to this server
+      alias                           CentOS 7.3                ; A longer name for the server
+      address                         {{ nagios_clientIP }}            ; IP address of Remote Linux host
+      }
+- name: appending the files
+  shell: cat /root/tmp >> //usr/local/nagios/etc/hosts.cfg
+- name: removing tmp
+  file:
+    path: /root/tmp
+    state: absent
+- name: adding host to group
+  shell: sed -i 's/selinux/selinux,{{ client_hostname }}/' /usr/local/nagios/etc/hosts_group.cfg
+- name: Restart nagios service.
+  service:
+     name: nagios
+     state: restarted

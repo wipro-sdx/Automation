@@ -1,0 +1,23 @@
+---
+
+- hosts: all
+  connection: local
+
+  vars_prompt:
+    - name: "process_id"
+      prompt: "Enter the OSPF Process ID : "
+      private: no
+    - name: "area"
+      prompt: "Enter the OSPF area: "
+      private: no
+    - name: "cost"
+      prompt: "Enter the cost"
+      private: no
+    - name: "interface"
+      prompt: "Enter the Interface"
+      private: no
+
+
+  roles:
+  - OSPF
+

@@ -1,0 +1,12 @@
+---
+- hosts: 172.17.65.175
+  tasks:
+    - name: Firewall rule to allow SMTP on TCP port 25
+      win_firewall_rule:
+        name: SMTP
+        localport: 25
+        action: allow
+        direction: in
+        protocol: tcp
+        state: present
+        enabled: yes

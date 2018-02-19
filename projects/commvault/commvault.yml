@@ -1,0 +1,8 @@
+---
+- hosts: commvault 
+  become: yes
+  become_user: root
+  gather_facts: False
+
+  roles:
+  - commvault

@@ -1,0 +1,14 @@
+SSH password: 
+[KeyJ1dWlkIjogIjNkYWU1NDZkLTQ1ODAtNDZlOS05ZTNhLTYxYTU0NjJkYTU0ZSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYWFmMi02ZTM1LTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [all] *********************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYWFmMi02ZTM1LTAwMDAwMDAwMDAwZCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjMxYWI5YzI2LTcwZmMtNGUyYy05MDA4LTBmNDMyNWM0OTI1NCJ9[64D[K[0;32mok: [172.16.48.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYWFmMi02ZTM1LTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [Create Pool Member] ******************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjUyZDg3YmYyLTI0YzYtNDEwYy1iZDhhLTMxMGFkZTY5YjQ4MyJ9[64D[K[0;31mfatal: [172.16.48.93]: FAILED! => {"changed": false, "failed": true, "msg": "received exception: Server raised fault: 'Exception caught in LocalLB::urn:iControl:LocalLB/Pool::add_member_v2()\nException: Common::OperationFailed\n\tprimary_error_code   : 16908342 (0x01020036)\n\tsecondary_error_code : 0\n\terror_string         : 01020036:3: The requested node (/Common/Test-Server) was not found.'"}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjllNWMxZjg1LTVlOTUtNGZlZC1iODMyLTdkM2Q5YjU4OTA2NSJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;31m172.16.48.93[0m               : [0;32mok=1   [0m changed=0    unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

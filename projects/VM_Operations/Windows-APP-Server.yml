@@ -1,0 +1,42 @@
+---
+- hosts: localhost
+
+  vars: 
+    vm_name: "{{vm_name}}"
+
+  tasks:
+   - name: Deploy Application Server
+     vmware_guest:
+          validate_certs: False
+          hostname: 172.16.8.15
+          username: administrator@vsphere.opendc
+          password: W3lc0me!7
+          esxi_hostname: 172.16.4.29
+          datacenter: opendc-dc1
+          name: "{{vm_name }}"
+          template: IV-Clone-Temp 
+          state: poweredon
+   - name: Adding to APP PortGroup
+     vsphere_guest:
+       validate_certs: False
+       vcenter_hostname: 172.16.8.15
+       username: administrator@vsphere.opendc
+       password: W3lc0me!7
+       guest: "{{vm_name}}"
+       state: reconfigured
+       vm_nic:
+        nic1:
+          type: vmxnet3
+          network: Devops|Devops-APP|app
+          network_type: dvs
+       esxi:
+         datacenter: opendc-dc1
+         hostname: 172.16.4.29
+
+   - name: Fetch VM Details
+     shell: echo $'Dear User, \n\n{{vm_name}} has been spinned up. Please find below the APP Server Details\n' >> appipaddr.txt
+   - name: Fetch VM IP
+     shell: python /var/lib/awx/projects/VM_Operations/get-appvm-ipaddr.py >> /etc/ansible/hosts
+   - name: Email VM Details
+     shell: mail -s "VM Details" user@localhost.local < appipaddr.txt
+

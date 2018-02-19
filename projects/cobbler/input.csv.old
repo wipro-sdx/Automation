@@ -1,0 +1,4 @@
+systemname1,profile1,interface1,mac1,ipaddr1,netmask1,gw1,powaddr1,powuser1,powpass1
+#Laas-10,Redhat7.3-x86_64,eno2,a8:1e:84:7d:90:5e,172.17.66.84,255.255.255.0,172.17.66.1,172.17.64.32,admin,admin
+#Laas-11,Redhat7.3-x86_64,eno2,a8:1e:84:73:d8:d1,172.17.66.97,255.255.255.0,172.17.66.1,172.17.64.35,admin,admin
+Laas-15,Redhat7.3-x86_64,eno2,a8:1e:84:73:d3:87,172.17.66.99,255.255.255.0,172.17.66.1,172.17.64.36,admin,admin

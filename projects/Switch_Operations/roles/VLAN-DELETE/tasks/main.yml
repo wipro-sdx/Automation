@@ -1,0 +1,7 @@
+---
+
+- name: VLAN Deletion
+  nxos_vlan:
+    vlan_id: "{{vlan}}"
+    state: absent
+

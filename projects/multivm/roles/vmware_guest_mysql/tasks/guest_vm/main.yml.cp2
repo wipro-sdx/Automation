@@ -1,0 +1,38 @@
+---
+- hosts: localhost
+
+  vars:
+   vm_name: "{{vm_name}}"
+   server_type: "{{server_type}}"
+  tasks:
+   - name: Spin Centos_Small
+
+     vsphere_guest:
+       validate_certs: False
+       vcenter_hostname: 172.16.8.15
+       username: administrator@vsphere.opendc
+       password: W3lc0me!7
+       guest: "{{vm_name}}"
+       state: powered_on
+       template: Ttestvm
+       vm_extra_config:
+         vcpu.hotadd: yes
+         mem.hotadd:  yes
+       vm_disk:
+         disk1:
+          size_gb: 20
+          type: thin
+          datastore: openstack_datastore
+          folder: DevOps
+       vm_nic:
+         nic1:
+           type: vmxnet3
+           network: Devops|Devops-APP|app
+           network_type: dvs
+       vm_hardware:
+          memory_mb: 4096
+          num_cpus: 4
+          scsi: paravirtual
+       esxi:
+         datacenter: opendc-dc1
+         hostname: 172.16.4.29

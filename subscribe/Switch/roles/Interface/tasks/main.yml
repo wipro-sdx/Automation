@@ -1,0 +1,7 @@
+---
+
+
+- name: configuring feature
+  nxos_feature:
+    feature: lacp
+    state: enabled

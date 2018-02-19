@@ -1,0 +1,25 @@
+SSH password: 
+[KeyJ1dWlkIjogIjY4NmQ5ZWE4LWQ0NWQtNDAzZC1hN2JmLWZmNGFhYTRjNTY3MiJ9[64D[K[0;31mERROR! Syntax Error while loading YAML.[0m
+[0;31m[0m
+[0;31m[0m
+[0;31mThe error appears to have been in '/var/lib/awx/projects/aws_rds_oracle/roles/aws_rds_oracle/tasks/main.yml': line 12, column 16, but may[0m
+[0;31mbe elsewhere in the file depending on the exact syntax problem.[0m
+[0;31m[0m
+[0;31mThe offending line appears to be:[0m
+[0;31m[0m
+[0;31m    instance_type: db.t2.micro[0m
+[0;31m    username: {{ username }}[0m
+[0;31m               ^ here[0m
+[0;31mWe could be wrong, but this one looks like it might be an issue with[0m
+[0;31mmissing quotes.  Always quote template expression brackets when they[0m
+[0;31mstart a value. For instance:[0m
+[0;31m[0m
+[0;31m    with_items:[0m
+[0;31m      - {{ foo }}[0m
+[0;31m[0m
+[0;31mShould be written as:[0m
+[0;31m[0m
+[0;31m    with_items:[0m
+[0;31m      - "{{ foo }}"[0m
+[0;31m[0m
+[Ke30=[4D[K

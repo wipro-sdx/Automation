@@ -1,0 +1,16 @@
+---
+
+- name: create user
+  mysql_user:
+    name: "{{ db_user }}"
+    host: "{{ item }}"
+    password: "{{ db_password }}"
+    state: present
+
+  with_items:
+    - localhost
+    - 127.0.0.1
+    - ::1
+
+
+

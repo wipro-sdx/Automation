@@ -1,0 +1,21 @@
+SSH password: 
+SUDO password[defaults to SSH password]: 
+[KeyJ1dWlkIjogIjM3MzRhNGI3LWFmMmYtNGI4ZC05NDg4LTFmZjI1MjIxYjJlNSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTk0OS1iMTYwLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [oracle_new] **************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTk0OS1iMTYwLTAwMDAwMDAwMDAxMSJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjUxY2QyMzc4LTEyMzctNDE0MC1hZjcyLTM3NjQ2NTZkMmJjNyJ9[64D[K[0;32mok: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTk0OS1iMTYwLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [Running orainstRoot.sh as root] ******************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImFlNTkzNjBjLWVhMjktNDRhMS04YjNhLWFiN2Y3MDk1ZTFjYSJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTk0OS1iMTYwLTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [Running root.sh as root] *************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjI5NGM0MTdmLWNhZDQtNDYzMC1iYTkxLWYzMmUyYjg3MTE1ZSJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTk0OS1iMTYwLTAwMDAwMDAwMDAwOCJ9[64D[K
+TASK [Copy listner.ora] ********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjdmMDcxOTEzLTg0ZWMtNGU4ZS04NjMxLThlMzE5NGM4MTZiYyJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjdmYTdiNDI0LTVhYWEtNDYzOC04NGY1LWYzZjk5YjU5M2UyMSJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m172.16.103.200[0m             : [0;32mok=4   [0m [0;33mchanged=3   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

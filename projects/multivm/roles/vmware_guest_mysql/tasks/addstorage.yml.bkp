@@ -1,0 +1,8 @@
+---
+- hosts: 172.17.65.11
+  tasks:
+    - name: connect
+      command: esxcfg-rescan -A
+      
+
+

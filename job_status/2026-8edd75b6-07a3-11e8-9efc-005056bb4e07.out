@@ -1,0 +1,887 @@
+SSH password: 
+[KeyJ1dWlkIjogIjQ0NDM4ZGQ1LWEwZjUtNGY3My04N2ZmLTJiYjU5NTU0ODI4NCJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmVmMC01YzgxLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [Attach new volume to a new host in a FlashArray] *************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmVmMC01YzgxLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [open RestAPI session] ****************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjA4MjlhMGEyLTU3NDMtNDgxNS1hM2UyLTk2NWFjNmYzZmQxYyJ9[64D[K[0;32mok: [localhost][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmVmMC01YzgxLTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [list all hosts] **********************************************************
+[Ke30=[4D[K[0;35m[DEPRECATION WARNING]: Supplying headers via HEADER_* is deprecated and will be[0m
+[0;35m removed in a future version. Please use `headers` to supply headers for the [0m
+[0;35mrequest.[0m
+[0;35mThis feature will be removed in a future release. Deprecation warnings[0m
+[0;35m can be disabled by setting deprecation_warnings=False in ansible.cfg.[0m
+[KeyJ1dWlkIjogIjliZjAxYmUxLWMxYzgtNDE0Yy04NjcyLWY2ZDk3MzAyNzYwMCJ9[64D[K[0;32mok: [localhost][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmVmMC01YzgxLTAwMDAwMDAwMDAwOCJ9[64D[K
+TASK [show hosts data] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjMwY2IxMWYxLWQ4MTktNGI0Ni1iN2MxLWRjYzkzY2YxNDFkMSJ9[64D[K[0;32mok: [localhost] => {[0m
+[0;32m    "msg": [[0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1998-01.com.vmware:cwl2-774564ed"[0m
+[0;32m            ], [0m
+[0;32m            "name": "Automation-test", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1998-01.com.vmware:las-28853a2f"[0m
+[0;32m            ], [0m
+[0;32m            "name": "bosch", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1994-05.com.redhat:7ecc92e1e46"[0m
+[0;32m            ], [0m
+[0;32m            "name": "centos", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.2005-15.com.qct:uni10001"[0m
+[0;32m            ], [0m
+[0;32m            "name": "qct-sanboot", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [], [0m
+[0;32m            "name": "centos2", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1991-05.com.microsoft:win-31"[0m
+[0;32m            ], [0m
+[0;32m            "name": "Windows-iscsi", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1998-01.com.vmware:59ca920d-a5e7-608e-6de0-a81e8473d66f-533c243f"[0m
+[0;32m            ], [0m
+[0;32m            "name": "ESXi-Host73-10", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [], [0m
+[0;32m            "name": "Nimesa-ESXi-FC", [0m
+[0;32m            "wwn": [[0m
+[0;32m                "20000024ff8be380", [0m
+[0;32m                "21000024FF8BE380"[0m
+[0;32m            ][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1998-01.com.vmware:5a1d7187-cd3d-a855-431d-a81e847d8f22-0a2f7302"[0m
+[0;32m            ], [0m
+[0;32m            "name": "Nimesa-ESXi-iSCSI", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": "sdx-pure-hgroup", [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1991-05.com.microsoft:l-185007523.wipro.com"[0m
+[0;32m            ], [0m
+[0;32m            "name": "sdx-pure-host", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1998-01.com.vmware:5a01ee92-4862-23bd-496a-a81e8473d8d0-51611512"[0m
+[0;32m            ], [0m
+[0;32m            "name": "host1", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1998-01.com.vmware:5a2aa30f-196f-5b5e-2952-005056b53101-2cc64f43"[0m
+[0;32m            ], [0m
+[0;32m            "name": "NIM-ESXi-ISCSI-172-17-65-148-2017-12-08-15-27", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [], [0m
+[0;32m            "name": "newhost", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": "sdx-pure-fc-hgroup", [0m
+[0;32m            "iqn": [], [0m
+[0;32m            "name": "sdx-pure-fc-host", [0m
+[0;32m            "wwn": [[0m
+[0;32m                "6000C29934611042"[0m
+[0;32m            ][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": "Sdx-serviceTheater-hgrp1", [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1991-05.com.microsoft:win-hp7sbbk8ufi"[0m
+[0;32m            ], [0m
+[0;32m            "name": "Sdx-serviceTheater-host1", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [], [0m
+[0;32m            "name": "iqn", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.2010-08.org.illumos:02:1ca70045-a8c7-e073-ad97-a2683dab0c45"[0m
+[0;32m            ], [0m
+[0;32m            "name": "null", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.2010-08.org.illumos:02:1ca70045-a8c7-e073-ad97-a2683dab0c55"[0m
+[0;32m            ], [0m
+[0;32m            "name": "pure-host1", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }[0m
+[0;32m    ][0m
+[0;32m}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmVmMC01YzgxLTAwMDAwMDAwMDAwYSJ9[64D[K
+TASK [list all volumes] ********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjRkZThiOWE5LWFmY2ItNDBlZi1iZjYxLWU4OTAwYjhmMjhlYyJ9[64D[K[0;32mok: [localhost][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmVmMC01YzgxLTAwMDAwMDAwMDAwYyJ9[64D[K
+TASK [show volumes data] *******************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjgyMzcwNDJjLTJjZjktNGE0Yy1hZmM1LTU2NGE3MTA5ZGRhMyJ9[64D[K[0;32mok: [localhost] => {[0m
+[0;32m    "msg": [[0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-13T08:41:00Z", [0m
+[0;32m            "name": "Automatiom-test", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011010", [0m
+[0;32m            "size": 1610612736000, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-13T08:41:01Z", [0m
+[0;32m            "name": "bosch-vol", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011011", [0m
+[0;32m            "size": 1099511627776, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-13T08:41:01Z", [0m
+[0;32m            "name": "centos", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011012", [0m
+[0;32m            "size": 107374182400, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-13T08:41:01Z", [0m
+[0;32m            "name": "iscsi-test", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011013", [0m
+[0;32m            "size": 107374182400, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-13T08:41:02Z", [0m
+[0;32m            "name": "res", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011015", [0m
+[0;32m            "size": 139586437120, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-13T08:41:02Z", [0m
+[0;32m            "name": "test", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011016", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-13T08:41:03Z", [0m
+[0;32m            "name": "testlun", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011019", [0m
+[0;32m            "size": 10737418240, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-13T09:28:29Z", [0m
+[0;32m            "name": "ActiveSync-Test::activelun", [0m
+[0;32m            "serial": "459AAD57B8184B6B0001101A", [0m
+[0;32m            "size": 107374182400, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-16T06:42:09Z", [0m
+[0;32m            "name": "iscsi-boot-lun", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011329", [0m
+[0;32m            "size": 214748364800, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-17T06:08:32Z", [0m
+[0;32m            "name": "ActiveSync-Test::samplevol", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011434", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-27T11:37:19Z", [0m
+[0;32m            "name": "Datastore1", [0m
+[0;32m            "serial": "459AAD57B8184B6B000129DB", [0m
+[0;32m            "size": 1099511627776, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-11-06T07:38:57Z", [0m
+[0;32m            "name": "newvolumetesting", [0m
+[0;32m            "serial": "459AAD57B8184B6B00013EAB", [0m
+[0;32m            "size": 268435456000, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-11-06T12:02:30Z", [0m
+[0;32m            "name": "iscsi-replication::iscsi-lun2-pri", [0m
+[0;32m            "serial": "459AAD57B8184B6B00013F27", [0m
+[0;32m            "size": 322122547200, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-11-09T09:21:05Z", [0m
+[0;32m            "name": "windows-lun", [0m
+[0;32m            "serial": "459AAD57B8184B6B00014B74", [0m
+[0;32m            "size": 107374182400, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-11-09T09:23:47Z", [0m
+[0;32m            "name": "Windows-test::windows-testlun", [0m
+[0;32m            "serial": "459AAD57B8184B6B00014B75", [0m
+[0;32m            "size": 107374182400, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-11-10T06:08:02Z", [0m
+[0;32m            "name": "Datastore-replication::datastore1-pri", [0m
+[0;32m            "serial": "2510FCD895A54B4800014EF4", [0m
+[0;32m            "size": 322122547200, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-11-28T09:03:58Z", [0m
+[0;32m            "name": "Nimesa-ESXi-FC", [0m
+[0;32m            "serial": "459AAD57B8184B6B0001AD64", [0m
+[0;32m            "size": 1099511627776, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-11-28T11:06:41Z", [0m
+[0;32m            "name": "Nimesa-ESXi-iSCSI", [0m
+[0;32m            "serial": "459AAD57B8184B6B0001ADDD", [0m
+[0;32m            "size": 1099511627776, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-12-06T07:01:56Z", [0m
+[0;32m            "name": "purevol120617", [0m
+[0;32m            "serial": "459AAD57B8184B6B0001DB9A", [0m
+[0;32m            "size": 10737418240, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-12-08T10:21:38Z", [0m
+[0;32m            "name": "Nimesa-Replication-pod::critical-volume", [0m
+[0;32m            "serial": "459AAD57B8184B6B00021371", [0m
+[0;32m            "size": 85899345920, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-12-08T10:26:52Z", [0m
+[0;32m            "name": "Nimesa-Replication-pod::clone-17-12-08-16-00-10-132", [0m
+[0;32m            "serial": "459AAD57B8184B6B00021380", [0m
+[0;32m            "size": 85899345920, [0m
+[0;32m            "source": "Nimesa-Replication-pod::critical-volume"[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-12-08T13:23:50Z", [0m
+[0;32m            "name": "sdx_pure_vol_1", [0m
+[0;32m            "serial": "459AAD57B8184B6B00021479", [0m
+[0;32m            "size": 524288000, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-31T10:48:50Z", [0m
+[0;32m            "name": "sdx_pure_vol_02", [0m
+[0;32m            "serial": "459AAD57B8184B6B00022D62", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": "sdx_pure_vol_02"[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-12-12T10:07:16Z", [0m
+[0;32m            "name": "iscsi-replication::iscsi-lun2-data", [0m
+[0;32m            "serial": "459AAD57B8184B6B00023493", [0m
+[0;32m            "size": 53687091200, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-05T06:25:38Z", [0m
+[0;32m            "name": "Sdx-serviceTheater-pod::Sdx_st_vol1", [0m
+[0;32m            "serial": "459AAD57B8184B6B0002FE19", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-05T07:49:35Z", [0m
+[0;32m            "name": "Sdx-serviceTheater-pod::Sdx-serviceTheater-vol2", [0m
+[0;32m            "serial": "459AAD57B8184B6B0002FEA1", [0m
+[0;32m            "size": 2147483648, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-12T06:38:00Z", [0m
+[0;32m            "name": "sdx_pure_volume_0001", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003436B", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-29T06:50:37Z", [0m
+[0;32m            "name": "sdx_pure_volume_004", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003E1D9", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-29T06:55:15Z", [0m
+[0;32m            "name": "sdx_pure_volume_005", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003E1E3", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-29T06:57:09Z", [0m
+[0;32m            "name": "sdx_pure_volume_006", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003E1E4", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-29T07:39:54Z", [0m
+[0;32m            "name": "sdx_pure_volume_007", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003E22D", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-29T07:59:59Z", [0m
+[0;32m            "name": "sdx_pure_volume_008", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003E249", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-29T10:43:08Z", [0m
+[0;32m            "name": "test_vol_008", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003E358", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-31T07:29:04Z", [0m
+[0;32m            "name": "sdx_test_pure_vol1", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003F49D", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-31T07:30:31Z", [0m
+[0;32m            "name": "sdx_pure_volume_009", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003F49E", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-31T11:00:28Z", [0m
+[0;32m            "name": "test_demo_pure_vol1", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003F5FF", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-31T14:25:33Z", [0m
+[0;32m            "name": "sdx_pure_volume_012", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003F759", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-02-01T06:12:35Z", [0m
+[0;32m            "name": "roshith", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003FD6F", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }[0m
+[0;32m    ][0m
+[0;32m}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmVmMC01YzgxLTAwMDAwMDAwMDAwZSJ9[64D[K
+TASK [create new host] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjEyMGIwY2RmLTUyZTEtNDVkYS05MjcwLTU3YzZmMTQ0Y2ViOCJ9[64D[K[0;31mfatal: [localhost]: FAILED! => {"changed": false, "connection": "close", "content": "[{\"pure_err_key\": \"err.friendly\", \"code\": 0, \"ctx\": \"host1\", \"pure_err_code\": 1, \"msg\": \"Host already exists.\"}]", "content_length": "112", "content_type": "application/json", "date": "Thu, 01 Feb 2018 15:24:16 GMT", "failed": true, "json": [{"code": 0, "ctx": "host1", "msg": "Host already exists.", "pure_err_code": 1, "pure_err_key": "err.friendly"}], "msg": "Status code was not [200]: HTTP Error 400: BAD REQUEST", "redirected": false, "server": "nginx/1.4.6 (Ubuntu)", "set_cookie": "session=.eJxFzL0KgzAUQOFXKXeWYtToNdC97dhBo4skegXBn3KNgxXfvbYUOn-Hs0H1JB7MSKMD5XghD3ozu4qYJwYlpEiiFGMZn0P0ZSB-zFRP3IDyPeCpJ1AbnCwoKPR9LXTfFvnDmTy6wO7B3DVfXw7HpJZhI9rUBhgJSygRhTWh9WVLKclPv8zEoxn-0_qaraXOXqW-HcP9DbOPNtg.DVTCoA.qJO59hPpnsyvx9utx9qsCL994RA; Expires=Thu, 01-Feb-2018 15:54:16 GMT; HttpOnly; Path=/", "status": 400, "url": "https://172.17.65.140/api/1.11/host/host1"}[0m
+[0;36m...ignoring[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmVmMC01YzgxLTAwMDAwMDAwMDAxMCJ9[64D[K
+TASK [create new volume] *******************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjczNGYyNzllLTAwYWMtNDE2Zi1hMTU0LWVkNzFlYWJjOWQyZiJ9[64D[K[0;32mok: [localhost][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmVmMC01YzgxLTAwMDAwMDAwMDAxMiJ9[64D[K
+TASK [attach volume to host] ***************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjFjMTU4Mjg0LTQzZTYtNDczNS05OTJmLTUzMzFhM2JiMTI1OSJ9[64D[K[0;32mok: [localhost][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmVmMC01YzgxLTAwMDAwMDAwMDAxNCJ9[64D[K
+TASK [list all hosts] **********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjMwZGU0NmE3LWJjNDktNDA4Yy1iNTc1LTQxNGI5NGQxNzUyZSJ9[64D[K[0;32mok: [localhost][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmVmMC01YzgxLTAwMDAwMDAwMDAxNiJ9[64D[K
+TASK [show hosts data] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImZkMGYyMTQzLThhMWQtNGU5NC1hZDk2LWFiODU2ZjllMjJjZCJ9[64D[K[0;32mok: [localhost] => {[0m
+[0;32m    "msg": [[0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1998-01.com.vmware:cwl2-774564ed"[0m
+[0;32m            ], [0m
+[0;32m            "name": "Automation-test", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1998-01.com.vmware:las-28853a2f"[0m
+[0;32m            ], [0m
+[0;32m            "name": "bosch", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1994-05.com.redhat:7ecc92e1e46"[0m
+[0;32m            ], [0m
+[0;32m            "name": "centos", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.2005-15.com.qct:uni10001"[0m
+[0;32m            ], [0m
+[0;32m            "name": "qct-sanboot", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [], [0m
+[0;32m            "name": "centos2", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1991-05.com.microsoft:win-31"[0m
+[0;32m            ], [0m
+[0;32m            "name": "Windows-iscsi", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1998-01.com.vmware:59ca920d-a5e7-608e-6de0-a81e8473d66f-533c243f"[0m
+[0;32m            ], [0m
+[0;32m            "name": "ESXi-Host73-10", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [], [0m
+[0;32m            "name": "Nimesa-ESXi-FC", [0m
+[0;32m            "wwn": [[0m
+[0;32m                "20000024ff8be380", [0m
+[0;32m                "21000024FF8BE380"[0m
+[0;32m            ][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1998-01.com.vmware:5a1d7187-cd3d-a855-431d-a81e847d8f22-0a2f7302"[0m
+[0;32m            ], [0m
+[0;32m            "name": "Nimesa-ESXi-iSCSI", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": "sdx-pure-hgroup", [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1991-05.com.microsoft:l-185007523.wipro.com"[0m
+[0;32m            ], [0m
+[0;32m            "name": "sdx-pure-host", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1998-01.com.vmware:5a01ee92-4862-23bd-496a-a81e8473d8d0-51611512"[0m
+[0;32m            ], [0m
+[0;32m            "name": "host1", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1998-01.com.vmware:5a2aa30f-196f-5b5e-2952-005056b53101-2cc64f43"[0m
+[0;32m            ], [0m
+[0;32m            "name": "NIM-ESXi-ISCSI-172-17-65-148-2017-12-08-15-27", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [], [0m
+[0;32m            "name": "newhost", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": "sdx-pure-fc-hgroup", [0m
+[0;32m            "iqn": [], [0m
+[0;32m            "name": "sdx-pure-fc-host", [0m
+[0;32m            "wwn": [[0m
+[0;32m                "6000C29934611042"[0m
+[0;32m            ][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": "Sdx-serviceTheater-hgrp1", [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.1991-05.com.microsoft:win-hp7sbbk8ufi"[0m
+[0;32m            ], [0m
+[0;32m            "name": "Sdx-serviceTheater-host1", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [], [0m
+[0;32m            "name": "iqn", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.2010-08.org.illumos:02:1ca70045-a8c7-e073-ad97-a2683dab0c45"[0m
+[0;32m            ], [0m
+[0;32m            "name": "null", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "hgroup": null, [0m
+[0;32m            "iqn": [[0m
+[0;32m                "iqn.2010-08.org.illumos:02:1ca70045-a8c7-e073-ad97-a2683dab0c55"[0m
+[0;32m            ], [0m
+[0;32m            "name": "pure-host1", [0m
+[0;32m            "wwn": [][0m
+[0;32m        }[0m
+[0;32m    ][0m
+[0;32m}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmVmMC01YzgxLTAwMDAwMDAwMDAxOCJ9[64D[K
+TASK [list all volumes] ********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwM2E2NWRmLWE5MTUtNDliOS04YjVjLWNmNzNiNmFmNzQ2MSJ9[64D[K[0;32mok: [localhost][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmVmMC01YzgxLTAwMDAwMDAwMDAxYSJ9[64D[K
+TASK [show volumes data] *******************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImNlNDU1ZTA3LTMwMGYtNGMxMS05ZTNiLWU2MzNhMjQwOTE4MSJ9[64D[K[0;32mok: [localhost] => {[0m
+[0;32m    "msg": [[0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-13T08:41:00Z", [0m
+[0;32m            "name": "Automatiom-test", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011010", [0m
+[0;32m            "size": 1610612736000, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-13T08:41:01Z", [0m
+[0;32m            "name": "bosch-vol", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011011", [0m
+[0;32m            "size": 1099511627776, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-13T08:41:01Z", [0m
+[0;32m            "name": "centos", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011012", [0m
+[0;32m            "size": 107374182400, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-13T08:41:01Z", [0m
+[0;32m            "name": "iscsi-test", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011013", [0m
+[0;32m            "size": 107374182400, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-13T08:41:02Z", [0m
+[0;32m            "name": "res", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011015", [0m
+[0;32m            "size": 139586437120, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-13T08:41:02Z", [0m
+[0;32m            "name": "test", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011016", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-13T08:41:03Z", [0m
+[0;32m            "name": "testlun", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011019", [0m
+[0;32m            "size": 10737418240, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-13T09:28:29Z", [0m
+[0;32m            "name": "ActiveSync-Test::activelun", [0m
+[0;32m            "serial": "459AAD57B8184B6B0001101A", [0m
+[0;32m            "size": 107374182400, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-16T06:42:09Z", [0m
+[0;32m            "name": "iscsi-boot-lun", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011329", [0m
+[0;32m            "size": 214748364800, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-17T06:08:32Z", [0m
+[0;32m            "name": "ActiveSync-Test::samplevol", [0m
+[0;32m            "serial": "459AAD57B8184B6B00011434", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-10-27T11:37:19Z", [0m
+[0;32m            "name": "Datastore1", [0m
+[0;32m            "serial": "459AAD57B8184B6B000129DB", [0m
+[0;32m            "size": 1099511627776, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-11-06T07:38:57Z", [0m
+[0;32m            "name": "newvolumetesting", [0m
+[0;32m            "serial": "459AAD57B8184B6B00013EAB", [0m
+[0;32m            "size": 268435456000, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-11-06T12:02:30Z", [0m
+[0;32m            "name": "iscsi-replication::iscsi-lun2-pri", [0m
+[0;32m            "serial": "459AAD57B8184B6B00013F27", [0m
+[0;32m            "size": 322122547200, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-11-09T09:21:05Z", [0m
+[0;32m            "name": "windows-lun", [0m
+[0;32m            "serial": "459AAD57B8184B6B00014B74", [0m
+[0;32m            "size": 107374182400, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-11-09T09:23:47Z", [0m
+[0;32m            "name": "Windows-test::windows-testlun", [0m
+[0;32m            "serial": "459AAD57B8184B6B00014B75", [0m
+[0;32m            "size": 107374182400, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-11-10T06:08:02Z", [0m
+[0;32m            "name": "Datastore-replication::datastore1-pri", [0m
+[0;32m            "serial": "2510FCD895A54B4800014EF4", [0m
+[0;32m            "size": 322122547200, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-11-28T09:03:58Z", [0m
+[0;32m            "name": "Nimesa-ESXi-FC", [0m
+[0;32m            "serial": "459AAD57B8184B6B0001AD64", [0m
+[0;32m            "size": 1099511627776, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-11-28T11:06:41Z", [0m
+[0;32m            "name": "Nimesa-ESXi-iSCSI", [0m
+[0;32m            "serial": "459AAD57B8184B6B0001ADDD", [0m
+[0;32m            "size": 1099511627776, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-12-06T07:01:56Z", [0m
+[0;32m            "name": "purevol120617", [0m
+[0;32m            "serial": "459AAD57B8184B6B0001DB9A", [0m
+[0;32m            "size": 10737418240, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-12-08T10:21:38Z", [0m
+[0;32m            "name": "Nimesa-Replication-pod::critical-volume", [0m
+[0;32m            "serial": "459AAD57B8184B6B00021371", [0m
+[0;32m            "size": 85899345920, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-12-08T10:26:52Z", [0m
+[0;32m            "name": "Nimesa-Replication-pod::clone-17-12-08-16-00-10-132", [0m
+[0;32m            "serial": "459AAD57B8184B6B00021380", [0m
+[0;32m            "size": 85899345920, [0m
+[0;32m            "source": "Nimesa-Replication-pod::critical-volume"[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-12-08T13:23:50Z", [0m
+[0;32m            "name": "sdx_pure_vol_1", [0m
+[0;32m            "serial": "459AAD57B8184B6B00021479", [0m
+[0;32m            "size": 524288000, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-31T10:48:50Z", [0m
+[0;32m            "name": "sdx_pure_vol_02", [0m
+[0;32m            "serial": "459AAD57B8184B6B00022D62", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": "sdx_pure_vol_02"[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2017-12-12T10:07:16Z", [0m
+[0;32m            "name": "iscsi-replication::iscsi-lun2-data", [0m
+[0;32m            "serial": "459AAD57B8184B6B00023493", [0m
+[0;32m            "size": 53687091200, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-05T06:25:38Z", [0m
+[0;32m            "name": "Sdx-serviceTheater-pod::Sdx_st_vol1", [0m
+[0;32m            "serial": "459AAD57B8184B6B0002FE19", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-05T07:49:35Z", [0m
+[0;32m            "name": "Sdx-serviceTheater-pod::Sdx-serviceTheater-vol2", [0m
+[0;32m            "serial": "459AAD57B8184B6B0002FEA1", [0m
+[0;32m            "size": 2147483648, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-12T06:38:00Z", [0m
+[0;32m            "name": "sdx_pure_volume_0001", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003436B", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-29T06:50:37Z", [0m
+[0;32m            "name": "sdx_pure_volume_004", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003E1D9", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-29T06:55:15Z", [0m
+[0;32m            "name": "sdx_pure_volume_005", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003E1E3", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-29T06:57:09Z", [0m
+[0;32m            "name": "sdx_pure_volume_006", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003E1E4", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-29T07:39:54Z", [0m
+[0;32m            "name": "sdx_pure_volume_007", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003E22D", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-29T07:59:59Z", [0m
+[0;32m            "name": "sdx_pure_volume_008", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003E249", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-29T10:43:08Z", [0m
+[0;32m            "name": "test_vol_008", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003E358", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-31T07:29:04Z", [0m
+[0;32m            "name": "sdx_test_pure_vol1", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003F49D", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-31T07:30:31Z", [0m
+[0;32m            "name": "sdx_pure_volume_009", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003F49E", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-31T11:00:28Z", [0m
+[0;32m            "name": "test_demo_pure_vol1", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003F5FF", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-01-31T14:25:33Z", [0m
+[0;32m            "name": "sdx_pure_volume_012", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003F759", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-02-01T06:12:35Z", [0m
+[0;32m            "name": "roshith", [0m
+[0;32m            "serial": "459AAD57B8184B6B0003FD6F", [0m
+[0;32m            "size": 1073741824, [0m
+[0;32m            "source": null[0m
+[0;32m        }, [0m
+[0;32m        {[0m
+[0;32m            "created": "2018-02-01T15:24:16Z", [0m
+[0;32m            "name": "purevol", [0m
+[0;32m            "serial": "459AAD57B8184B6B0004111B", [0m
+[0;32m            "size": 10737418240, [0m
+[0;32m            "source": null[0m
+[0;32m        }[0m
+[0;32m    ][0m
+[0;32m}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmVmMC01YzgxLTAwMDAwMDAwMDAxYyJ9[64D[K
+TASK [show host volume attachments] ********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjY4ZjJmNmVlLTUwZmYtNDkzNS05OGU1LThiMzVmMGEyOGViOCJ9[64D[K[0;32mok: [localhost][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmVmMC01YzgxLTAwMDAwMDAwMDAxZSJ9[64D[K
+TASK [show attached volumes data] **********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjE2NmQ4MjIzLWZjMjMtNDE2ZC1iNjkyLTA3YWY4MjZmY2FiZiJ9[64D[K[0;32mok: [localhost] => {[0m
+[0;32m    "msg": [][0m
+[0;32m}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjA1MmZlMzhjLWQ5NDktNDdiZC1iYTQzLTUzOTNkNDhmNmQ0NSJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;32mlocalhost[0m                  : [0;32mok=14  [0m changed=0    unreachable=0    failed=0   
+
+[Ke30=[4D[K

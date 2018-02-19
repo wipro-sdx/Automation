@@ -1,0 +1,10 @@
+---
+- hosts: 172.17.65.175
+  tasks:
+    - name: download exe files
+      win_get_url:
+        url: 'https://package.avira.com/package/oeavira/win/int/avira_en_fass0_5a0d7dc8dc665__ws.exe'
+        dest: 'C:\Users\Administrator\Desktop\software\avira_en_fass0_5a0d7dc8dc665__ws.exe'
+    - name: install the package
+      raw: 'C:\Users\Administrator\Desktop\software\avira_en_fass0_5a0d7dc8dc665__ws.exe /Quiet /NoRestart /Full'
+

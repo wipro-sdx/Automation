@@ -1,0 +1,14 @@
+SSH password: 
+[KeyJ1dWlkIjogIjk2MTJlNmVlLTMzZDAtNDY1Mi05ZGY2LTllMjc3MTZiYWJhNiJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNjkyNC00NWJjLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNjkyNC00NWJjLTAwMDAwMDAwMDAwZCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImM3YjBkN2UxLTM3MmEtNDQ2My04YmU4LTU4ZDg2ZjhmYjU4OCJ9[64D[K[0;32mok: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNjkyNC00NWJjLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [command] *****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImE5YTg4ZTAwLTllOTQtNDY5Ni05YWJiLTExNzg3ZjlkY2EyYyJ9[64D[K[0;33mchanged: [127.0.0.1 -> 127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImJmYzY0MmY0LWUzNTEtNDNiYS1hY2Q4LTE1OWZmMTYwNTg2MiJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m127.0.0.1[0m                  : [0;32mok=2   [0m [0;33mchanged=1   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

@@ -1,0 +1,11 @@
+---
+- hosts: 172.17.65.175
+  tasks:
+    - name: Disable Domain firewall
+        win_firewall:
+          state: enabled
+          profiles:
+          - Domain
+          - Public
+          - Pribate
+        tags: disable_firewall

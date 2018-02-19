@@ -1,0 +1,42 @@
+---
+- hosts: 172.17.66.156
+  tasks:
+  - name: Create a VM from a template
+    vmware_guest:
+      vcenter_hostname: 172.17.66.156
+      username: administrator@vsphere.local
+      password: Wipro@123
+      guest: ISO_VM
+      state: powered_on
+      vm_extra_config:
+        vcpu.hotadd: yes
+        mem.hotadd: yes
+        notes: This is a test VM
+        folder: Myfolder
+      vm_disk:
+        disk:
+          size_gb: 50
+          type: thin
+          datastore: datastore1
+      vm_hardware:
+        memory_mb: 2048
+        num_cpus: 1
+        osid: centos7.3
+        scsi: paravirtual
+        vm_cdrom:
+          type: "iso"
+          iso_path: "datastore1/ISO/CentOS-7-x86_64-DVD-1503-01.iso"
+      vm_nic:
+        nic1:
+          type: vmxnet3
+          network_type: standard
+          network: VM Metwork
+      esxi:
+        datacenter: Devops
+        hostname: 172.17.66.15
+      #wait_for_ip_address: no
+    #delegate_to: localhost
+    register: deploy
+
+ # - pause:
+    #  seconds: 45

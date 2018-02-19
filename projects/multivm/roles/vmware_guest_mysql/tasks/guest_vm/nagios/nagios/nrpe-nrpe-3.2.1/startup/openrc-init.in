@@ -1,0 +1,17 @@
+#!/sbin/openrc-run
+#
+# Copyright (c) 2017 Nagios(R) Core(TM) Development Team
+#
+
+command="@sbindir@/nrpe"
+command_args="--config=${NRPE_CFG} ${NRPE_OPTS}"
+command_args_background="--daemon"
+description="Nagios Remote Plugin Executor (NRPE) daemon"
+extra_started_commands="reload"
+pidfile="@piddir@/nrpe.pid"
+
+reload() {
+    ebegin "Reloading ${SVCNAME}"
+    start-stop-daemon --signal HUP --pidfile "${pidfile}"
+    eend $?
+}

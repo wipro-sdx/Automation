@@ -1,0 +1,34 @@
+---
+- hosts: localhost
+  gather_facts: no
+  vars_prompt:
+  - name: nagios_clientIP
+    prompt: please enter the nagios_clientIP
+    private: no
+  #- name: nagios_serverIP
+    #prompt: please enter the nagios_serverIP
+    #private: no
+
+  tasks:
+    - add_host:
+        name: "{{ nagios_clientIP }}"
+        groups: nagios_client
+    - add_host:
+        name: "{{ nagios_serverIP }}"
+        groups: nagiosserver
+
+
+- hosts: nagios_client
+  become: yes
+  become_user: root
+
+  roles:
+  - linuxhost
+
+- hosts: nagiosserver
+  become: yes
+  become_user: root
+
+  roles:
+  - nagios_linux
+

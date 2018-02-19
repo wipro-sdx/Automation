@@ -1,0 +1,7 @@
+- hosts: 172.17.66.156 
+  gather_facts: False
+  tasks:
+
+  roles:
+  - vm_os_selection 
+

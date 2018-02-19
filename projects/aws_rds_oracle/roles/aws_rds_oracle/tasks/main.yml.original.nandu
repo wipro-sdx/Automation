@@ -1,0 +1,16 @@
+---
+- name: Create Database
+  rds:
+    aws_access_key: AKIAIVTGUHE6OZJPAY7A
+    aws_secret_key: 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
+    region: us-east-1
+    command: create
+    instance_name: oranewdb
+    db_engine: oracle-se
+    size: 20
+    instance_type: db.m1.small
+    username: oracle
+    password: 1nsecure
+    tags:
+      Environment: Dev
+      Application: cms 

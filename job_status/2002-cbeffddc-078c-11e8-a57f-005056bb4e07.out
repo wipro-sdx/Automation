@@ -1,0 +1,9 @@
+SSH password: 
+[KeyJ1dWlkIjogIjNhYjZiYzc0LWI0NzUtNDllNy05YjE5LTQyOWRlOGYxYTI4NSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzZjYy1hYzdjLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [oracle_new] **************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzZjYy1hYzdjLTAwMDAwMDAwMDAwZCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImQyMDBhNGU4LWFjZTMtNDlkMi04MDMwLTY0OGY0MDllMjVlYSJ9[64D[K[0;32mok: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzZjYy1hYzdjLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [Run installer to install oracle] *****************************************
+[Ke30=[4D[K

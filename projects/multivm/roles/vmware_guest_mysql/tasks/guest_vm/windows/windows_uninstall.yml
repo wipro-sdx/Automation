@@ -1,0 +1,8 @@
+---
+- hosts: 172.17.65.173
+  tasks:
+    - name: uninstall the package
+      win_package:
+        path: C:\Program Files (x86)\Notepad++\notepad++
+        state: absent
+        product_id: auto

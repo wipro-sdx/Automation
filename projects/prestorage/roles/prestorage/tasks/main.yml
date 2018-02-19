@@ -1,0 +1,3 @@
+---
+- name: Creatng partition and filesystem for datastore creation
+  shell: /var/lun_pre.sh

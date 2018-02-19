@@ -1,0 +1,9 @@
+---
+
+- hosts: razor
+  become: yes
+  become_user: root
+
+  roles:
+  - razor
+...

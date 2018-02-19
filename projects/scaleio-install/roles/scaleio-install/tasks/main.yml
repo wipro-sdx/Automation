@@ -1,0 +1,4 @@
+---
+# tasks file for scaleio-install
+- name: Install the ScaleIO Gateway on the Linux IM server
+  shell: GATEWAY_ADMIN_PASSWORD=Wipro123 rpm -U /software/EMC-ScaleIO-gateway-2.0-13000.211.x86_64.rpm 

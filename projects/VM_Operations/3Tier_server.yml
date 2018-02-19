@@ -1,0 +1,93 @@
+---
+- hosts: localhost
+
+  vars:
+    appserver_name: "{{appserver_name}}"
+    dbserver_name: "{{dbserver_name}}"
+    webserver_name: "{{webserver_name}}"
+
+  tasks:
+   - name: Deploying APP Server
+     vmware_guest:
+          validate_certs: False
+          hostname: 172.16.8.15
+          username: administrator@vsphere.opendc
+          password: W3lc0me!7
+          esxi_hostname: 172.16.4.29
+          datacenter: opendc-dc1
+          name: "{{appserver_name }}"
+          template: IV-Clone-Temp
+          state: poweredon
+   - name: Add PG
+     vsphere_guest:
+       validate_certs: False
+       vcenter_hostname: 172.16.8.15
+       username: administrator@vsphere.opendc
+       password: W3lc0me!7
+       guest: "{{appserver_name}}"
+       state: reconfigured
+       vm_nic:
+        nic1:
+          type: vmxnet3
+          network: Devops|Devops-APP|app
+          network_type: dvs
+       esxi:
+         datacenter: opendc-dc1
+         hostname: 172.16.4.29
+
+   - name: Deploying DB Server
+     vmware_guest:
+          validate_certs: False
+          hostname: 172.16.8.15
+          username: administrator@vsphere.opendc
+          password: W3lc0me!7
+          esxi_hostname: 172.16.4.29
+          datacenter: opendc-dc1
+          name: "{{dbserver_name }}"
+          template: IV-Clone-Temp
+          state: poweredon
+   - name: Add PG
+     vsphere_guest:
+       validate_certs: False
+       vcenter_hostname: 172.16.8.15
+       username: administrator@vsphere.opendc
+       password: W3lc0me!7
+       guest: "{{dbserver_name}}"
+       state: reconfigured
+       vm_nic:
+        nic1:
+          type: vmxnet3
+          network: Devops|Devops-APP|db
+          network_type: dvs
+       esxi:
+         datacenter: opendc-dc1
+         hostname: 172.16.4.29
+
+   - name: Deploying WEB Server
+     vmware_guest:
+          validate_certs: False
+          hostname: 172.16.8.15
+          username: administrator@vsphere.opendc
+          password: W3lc0me!7
+          esxi_hostname: 172.16.4.29
+          datacenter: opendc-dc1
+          name: "{{webserver_name }}"
+          template: IV-Clone-Temp
+          state: poweredon
+   - name: Add PG
+     vsphere_guest:
+       validate_certs: False
+       vcenter_hostname: 172.16.8.15
+       username: administrator@vsphere.opendc
+       password: W3lc0me!7
+       guest: "{{webserver_name}}"
+       state: reconfigured
+       vm_nic:
+        nic1:
+          type: vmxnet3
+          network: Devops|Devops-APP|web
+          network_type: dvs
+       esxi:
+         datacenter: opendc-dc1
+         hostname: 172.16.4.29
+

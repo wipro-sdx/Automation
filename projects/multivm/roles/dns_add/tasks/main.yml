@@ -1,0 +1,6 @@
+---
+- name: add
+  win_lineinfile:
+      path: C:\Windows\System32\drivers\etc\hosts
+      line: This is the line i am adding this to the host file
+

@@ -1,0 +1,16 @@
+---
+- hosts: all
+  connection: local
+ 
+  tasks:
+    - name: Create Node
+      bigip_node:
+         validate_certs: "false"
+         server: "{{f5_ip}}"
+         user: "admin"
+         password: "Wipro@123"
+         state: "present"
+         partition: "Common"
+         host: "{{node_ip}}"
+         name: "{{node_name}}"
+         session_state: "{{node_state}}"

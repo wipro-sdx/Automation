@@ -1,0 +1,23 @@
+SSH password: 
+[KeyJ1dWlkIjogIjZjMTYwZDExLTM1N2UtNDZlYS1hYmVhLTU2NGY0MjRjZjc2OSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYmNjNS01NGRmLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYmNjNS01NGRmLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQ0OGNkMDI5LWJkOTUtNGM2Mi1iNjY0LTczOGI3NmY1M2M3MSJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYmNjNS01NGRmLTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjBmOWIzYjUyLTZhMWMtNDEwZi05NzQ4LWIzYjBmZDVjNjY1MSJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYmNjNS01NGRmLTAwMDAwMDAwMDAwNyJ9[64D[K
+PLAY [source_server] ***********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYmNjNS01NGRmLTAwMDAwMDAwMDA0MSJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjcyYTMzMDBlLTY5NzgtNGFlMS04MWJlLWEyNWI3MTQxY2FlZSJ9[64D[K[0;32mok: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYmNjNS01NGRmLTAwMDAwMDAwMDAwYyJ9[64D[K
+TASK [sourcekvm : shuting down vm] *********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImYxMTBjNDFiLWJhOGUtNGZkYy1hNTk4LWY2MGYwYzA4NTE2ZSJ9[64D[K[0;31mfatal: [172.17.66.103]: FAILED! => {"changed": true, "cmd": "virsh shutdown centos7.0test", "delta": "0:00:00.034836", "end": "2018-02-10 16:08:13.715525", "failed": true, "rc": 1, "start": "2018-02-10 16:08:13.680689", "stderr": "error: Failed to shutdown domain centos7.0test\nerror: Requested operation is not valid: domain is not running", "stderr_lines": ["error: Failed to shutdown domain centos7.0test", "error: Requested operation is not valid: domain is not running"], "stdout": "", "stdout_lines": []}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjU0YjI2N2FhLTU2MDQtNDE2MC1hOWRiLTVkZWRkNDJlNTg5ZiJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m127.0.0.1[0m                  : [0;32mok=2   [0m [0;33mchanged=2   [0m unreachable=0    failed=0   
+[0;31m172.17.66.103[0m              : [0;32mok=1   [0m changed=0    unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

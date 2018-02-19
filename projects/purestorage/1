@@ -1,0 +1,33 @@
+- name: List volumes on FlashArray
+  hosts: localhost
+  gather_facts: no
+  vars:
+    arrayurl: 172.17.65.140
+    array_token: f191d609-0144-824c-4a2d-63885c6fc158
+    api_version: "1.11"
+
+  tasks:
+    - name: open session
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/auth/session
+        method: POST
+        validate_certs: no
+        return_content: yes
+        body:
+          api_token: "{{ array_token }}"
+        body_format: json
+      register: session
+
+    - name: list volumes
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/volume
+        method: GET
+        validate_certs: no
+        HEADER_Cookie: "{{session.set_cookie}}"
+        return_content: yes
+      ignore_errors: yes
+      register: voldata
+
+    - name: show volume list
+#      debug: msg="{{ voldata }}"
+      debug: msg=voldata 

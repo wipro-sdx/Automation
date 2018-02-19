@@ -1,0 +1,41 @@
+SSH password: 
+[KeyJ1dWlkIjogIjM1OTgxOTE3LWNkODUtNGYzNi04OTAxLWVkNTRjMDM4ZmMwZSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmI2MS0zMTg5LTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmI2MS0zMTg5LTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQ3MDIxZWY4LTkzZGQtNDYzYS05OTc3LTViNmI4YmY5YmI0NCJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmI2MS0zMTg5LTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImM1YjY4NzQ0LTJkMTQtNGUwNS04MWY5LWU4OTUyYjRmNGUzMSJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmI2MS0zMTg5LTAwMDAwMDAwMDAwNyJ9[64D[K
+PLAY [source_server] ***********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmI2MS0zMTg5LTAwMDAwMDAwMDA0MSJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjI2N2QyNjBmLTIyYWYtNGZlZC1iZTVjLTFjMzY1NzNkM2FmNSJ9[64D[K[0;32mok: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmI2MS0zMTg5LTAwMDAwMDAwMDAwYyJ9[64D[K
+TASK [sourcekvm : shuting down vm] *********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjBkZmQxOWY0LTYyYzAtNDFkMy1iZjEzLTMzODU5MmYwZTNlZCJ9[64D[K[0;33mchanged: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmI2MS0zMTg5LTAwMDAwMDAwMDAwZSJ9[64D[K
+TASK [sourcekvm : collecting dumpxml of vm] ************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImVhOGQzM2M2LTJmNWEtNDNjYS1iMzQwLWE5ZTQ5MGMwYTM3MSJ9[64D[K[0;33mchanged: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmI2MS0zMTg5LTAwMDAwMDAwMDAxMCJ9[64D[K
+TASK [sourcekvm : adding security limits for nproc] ****************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImQ4OGI0Y2FhLTkxMDktNDEwNC1hMjgyLTg0M2M3ZThlNzBkMSJ9[64D[K[0;33mchanged: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmI2MS0zMTg5LTAwMDAwMDAwMDAxMSJ9[64D[K
+PLAY [target_server] ***********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmI2MS0zMTg5LTAwMDAwMDAwMDA2NCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImJlNmQ4OThmLTdjZmItNDBiZS04Njc2LWQ4Y2RiMDczNjE1MyJ9[64D[K[0;32mok: [172.17.66.104][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmI2MS0zMTg5LTAwMDAwMDAwMDAxNiJ9[64D[K
+TASK [targetkvm : copy dump xml to target] *************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjk0ZjNiNzYzLWJlMWUtNDg5OS1iMDAzLTIwNTJiN2NiMTVkNyJ9[64D[K[0;33mchanged: [172.17.66.104 -> 172.17.65.22][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmI2MS0zMTg5LTAwMDAwMDAwMDAxOCJ9[64D[K
+TASK [targetkvm : copy vm dsk to target] ***************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjU4YWRhMjM2LTA3NDktNDRmOC04NGM0LWRhMGI3NmQ2YWM4MiJ9[64D[K[0;31mfatal: [172.17.66.104 -> 172.17.65.22]: FAILED! => {"changed": false, "cmd": "/usr/bin/rsync --delay-updates -F --compress --archive --rsh=/usr/bin/ssh -S none -o StrictHostKeyChecking=no --out-format=<<CHANGED>>%i %n%L /imageskvm/manageiq* 172.17.66.104:/var/lib/libvirt/images/", "failed": true, "msg": "rsync: link_stat \"/imageskvm/manageiq*\" failed: No such file or directory (2)\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1052) [sender=3.0.9]\n", "rc": 23}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImZmNWU5MDg4LTlkNTItNDcyZC04YTdlLTc3NDkxOGE1MWY2MyJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m127.0.0.1[0m                  : [0;32mok=2   [0m [0;33mchanged=2   [0m unreachable=0    failed=0   
+[0;33m172.17.66.103[0m              : [0;32mok=4   [0m [0;33mchanged=3   [0m unreachable=0    failed=0   
+[0;31m172.17.66.104[0m              : [0;32mok=2   [0m [0;33mchanged=1   [0m unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

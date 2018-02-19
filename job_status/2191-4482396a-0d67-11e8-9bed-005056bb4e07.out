@@ -1,0 +1,15 @@
+SSH password: 
+[KeyJ1dWlkIjogImM2ZDNiZjZhLWVlMTgtNGE3Ny1iNDljLTQxY2U4MTBhZDdhMSJ9[64D[K[1;35m [WARNING]: provided hosts list is empty, only localhost is available[0m
+[1;35m[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjMwNmI2ZmEzLWIxYzAtNDUzYy05MTJlLTJlOTE2MjY1OWYyNCJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctM2I1OC01YmM0LTAwMDAwMDAwMDAwMSJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctM2I1OC01YmM0LTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [bulkvm : vmware_guest] ***************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjM2NjVjYzU5LWJmMzQtNGJjZS05ZWMwLTlhZWNkNGQzMTA2OSJ9[64D[K[0;32mok: [localhost] => (item=1)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImMzYjM4NmI0LWFjNTUtNDJiMy1iYTc2LTcxYTBlZjU0MjIwMSJ9[64D[K[0;32mok: [localhost] => (item=2)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQ0NWQ0NTg5LTNhNzktNGY5Yi1hM2ZhLTEwNzA3ZDY5NzdkZiJ9[64D[K[0;31mfailed: [localhost] (item=3) => {"changed": true, "failed": true, "item": "3", "msg": "Memory (RAM) size (3) is invalid."}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjcyOTQ0MGRhLTA4MWQtNGNlZC1hYTZhLWI1ZDhlNDdhZGQ5ZiJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogImVmOGVhZTYwLTM0MzMtNDgyNC1hZWY5LTBmMzU2ODZmZjVhOCJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : ok=0    changed=0    unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

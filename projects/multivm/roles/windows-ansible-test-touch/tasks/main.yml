@@ -1,0 +1,7 @@
+---
+# tasks file for windows-ansible-test
+- name: Touch a file
+  win_file:
+    path_file: C:\test\foo.conf
+    state: touch
+

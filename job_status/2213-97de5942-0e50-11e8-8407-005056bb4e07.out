@@ -1,0 +1,34 @@
+SSH password: 
+[KeyJ1dWlkIjogIjg4NDg4ZjU2LWFjYjctNGFjZC1hYmQyLTc5Yjk5Njc0NWQwMiJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTU3OC03NjAwLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTU3OC03NjAwLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjA5MzMwOTMxLTNkMzItNDkyZS1iNWE1LWFmNWYyYjJlZGUwNCJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTU3OC03NjAwLTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImJlOGIyMGUyLWVmZDItNDM0MC04ZDA5LTA5NzgyZWFhMjE2YiJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTU3OC03NjAwLTAwMDAwMDAwMDAwNyJ9[64D[K
+PLAY [source_server] ***********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTU3OC03NjAwLTAwMDAwMDAwMDA0MSJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjI1Yjg3NGE2LWJiY2UtNDA4NC04MDc3LTY5NTdmZmQ2MjU1OCJ9[64D[K[0;32mok: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTU3OC03NjAwLTAwMDAwMDAwMDAwYyJ9[64D[K
+TASK [sourcekvm : shuting down vm] *********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImFlM2QzZTE3LTA3Y2UtNGMxZC1iMWY0LTE3MDliZGY3MjA0ZSJ9[64D[K[0;33mchanged: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTU3OC03NjAwLTAwMDAwMDAwMDAwZSJ9[64D[K
+TASK [sourcekvm : collecting dumpxml of vm] ************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjIzM2E5ZTQ3LWVhYzAtNGI1Zi05MTI0LWMwYzQ4M2RhMDE0NiJ9[64D[K[0;33mchanged: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTU3OC03NjAwLTAwMDAwMDAwMDAxMCJ9[64D[K
+TASK [sourcekvm : copying images] **********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImQ0ZmIyZTZiLWJjNmQtNDIwYy05MmJlLTg2Mjk4ZmVkYjM3NCJ9[64D[K[0;33mchanged: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTU3OC03NjAwLTAwMDAwMDAwMDAxMSJ9[64D[K
+PLAY [target_server] ***********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTU3OC03NjAwLTAwMDAwMDAwMDA2NCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImE2MDIxNjE3LTYyNmMtNDIxOC1hMmM5LTU0ZDIxMGM4OWQ4YyJ9[64D[K[0;32mok: [172.17.66.104][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTU3OC03NjAwLTAwMDAwMDAwMDAxNiJ9[64D[K
+TASK [targetkvm : copy dump xml to target] *************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImIwODlmZWY5LWZhNjctNDM2ZS05MGNkLWY3ODEwMmVmMTZjNyJ9[64D[K[0;33mchanged: [172.17.66.104 -> 172.17.65.22][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTU3OC03NjAwLTAwMDAwMDAwMDAxOCJ9[64D[K
+TASK [targetkvm : copy vm dsk to target] ***************************************
+[Ke30=[4D[K

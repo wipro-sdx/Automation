@@ -1,0 +1,8 @@
+---
+myvms:
+   violet:
+     - vmhost: violet-vm
+       vmip: 192.168.1.163
+   yellow:
+      - vmhost: yellow-vm
+        vmip: 192.168.1.164

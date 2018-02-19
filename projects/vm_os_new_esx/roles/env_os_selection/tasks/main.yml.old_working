@@ -1,0 +1,185 @@
+---
+- name: Create a VM from a rhel template
+  vmware_guest:
+    hostname: 172.16.8.15
+    username: administrator@vsphere.opendc
+    password: W3lc0me!7
+    validate_certs: no
+    esxi_hostname: 172.16.4.29
+    datacenter: opendc-dc1
+    name: "{{ server_name }}"
+    state: poweredon
+    template: oracle11g_template1
+    disk:
+    - size_gb: "{{ disk_size }}"
+      type: thin
+      datastore: openstack_datastore
+    hardware:
+      memory_mb: "{{ mem }}"
+      num_cpus: "{{ cpu }}"
+      scsi: paravirtual
+    networks:
+    - name: VLAN 204
+      device_type: vmxnet3
+      type: static
+      ip : 172.16.4.220 
+      netmask: 255.255.255.0
+      gateway: 172.16.4.1
+    wait_for_ip_address: no
+  delegate_to: localhost
+  register: deploy
+  when:  (os == "rhel" and env == "prod")
+- name: Create a VM from a rhel template
+  vmware_guest:
+    hostname: 172.16.8.15
+    username: administrator@vsphere.opendc
+    password: W3lc0me!7
+    validate_certs: no
+    esxi_hostname: 172.16.4.29
+    datacenter: opendc-dc1
+    name: "{{ server_name }}"
+    state: poweredon
+    template: oracle11g_template1
+    disk:
+    - size_gb: "{{ disk_size }}"
+      type: thin
+      datastore: openstack_datastore
+    hardware:
+      memory_mb: "{{ mem }}"
+      num_cpus: "{{ cpu }}"
+      scsi: paravirtual
+    networks:
+    - name: VLAN 204
+      device_type: vmxnet3
+      type: static
+      ip : 172.16.4.220
+      netmask: 255.255.255.0
+      gateway: 172.16.4.1
+    wait_for_ip_address: no
+  delegate_to: localhost
+  register: deploy
+  when:  (os == "rhel" and env == "dev")
+- name: Create a VM from a rhel template
+  vmware_guest:
+    hostname: 172.16.8.15
+    username: administrator@vsphere.opendc
+    password: W3lc0me!7
+    validate_certs: no
+    esxi_hostname: 172.16.4.29
+    datacenter: opendc-dc1
+    name: "{{ server_name }}"
+    state: poweredon
+    template: oracle11g_template1
+    disk:
+    - size_gb: "{{ disk_size }}"
+      type: thin
+      datastore: openstack_datastore
+    hardware:
+      memory_mb: "{{ mem }}"
+      num_cpus: "{{ cpu }}"
+      scsi: paravirtual
+    networks:
+    - name: VLAN 204
+      device_type: vmxnet3
+      type: static
+      ip : 172.16.4.220
+      netmask: 255.255.255.0
+      gateway: 172.16.4.1
+    wait_for_ip_address: no
+  delegate_to: localhost
+  register: deploy
+  when:  (os == "rhel" and env == "test")
+
+- name: Create a centos VM from a template
+  vmware_guest:
+    hostname: 172.16.8.15
+    username: administrator@vsphere.opendc
+    password: W3lc0me!7
+    validate_certs: no
+    esxi_hostname: 172.16.4.29
+    datacenter: opendc-dc1
+    name: "{{ server_name }}"
+    state: poweredon
+    template: Centos7_Template1
+    disk:
+    - size_gb: "{{ disk_size }}"
+      type: thin
+      datastore: openstack_datastore
+    hardware:
+      memory_mb: "{{ mem }}"
+      num_cpus: "{{ cpu }}"
+      scsi: paravirtual
+    networks:
+    - name: VLAN 204
+      device_type: vmxnet3
+      type: static
+      ip : 172.16.4.220
+      netmask: 255.255.255.0
+      gateway: 172.16.4.1
+    wait_for_ip_address: no
+  delegate_to: localhost
+  register: deploy
+  when: (os == "centos" and env == "prod") 
+- name: Create a centos VM from a template
+  vmware_guest:
+    hostname: 172.16.8.15
+    username: administrator@vsphere.opendc
+    password: W3lc0me!7
+    validate_certs: no
+    esxi_hostname: 172.16.4.29
+    datacenter: opendc-dc1
+    name: "{{ server_name }}"
+    state: poweredon
+    template: Centos7_Template1
+    disk:
+    - size_gb: "{{ disk_size }}"
+      type: thin
+      datastore: openstack_datastore
+    hardware:
+      memory_mb: "{{ mem }}"
+      num_cpus: "{{ cpu }}"
+      scsi: paravirtual
+    networks:
+    - name: VLAN 204
+      device_type: vmxnet3
+      type: static
+      ip : 172.16.4.220
+      netmask: 255.255.255.0
+      gateway: 172.16.4.1
+    wait_for_ip_address: no
+  delegate_to: localhost
+  register: deploy
+  when:  (os == "centos" and env == "dev")
+- name: Create a centos VM from a template
+  vmware_guest:
+    hostname: 172.16.8.15
+    username: administrator@vsphere.opendc
+    password: W3lc0me!7
+    validate_certs: no
+    esxi_hostname: 172.16.4.29
+    datacenter: opendc-dc1
+    name: "{{ server_name }}"
+    state: poweredon
+    template: Centos7_Template1
+    disk:
+    - size_gb: "{{ disk_size }}"
+      type: thin
+      datastore: openstack_datastore
+    hardware:
+      memory_mb: "{{ mem }}"
+      num_cpus: "{{ cpu }}"
+      scsi: paravirtual
+    networks:
+    - name: VLAN 204
+      device_type: vmxnet3
+      type: static
+      ip : 172.16.4.220
+      netmask: 255.255.255.0
+      gateway: 172.16.4.1
+    wait_for_ip_address: no
+  delegate_to: localhost
+  register: deploy
+  when:  (os == "centos" and env == "test") 
+
+- pause:
+    seconds: 150

@@ -1,0 +1,9 @@
+---
+
+- hosts: win
+  become: yes
+  become_user: root
+
+  roles:
+  - Win_firewall
+

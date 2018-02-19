@@ -1,0 +1,18 @@
+---
+
+- hosts: leaf
+  connection: local
+
+  tasks:
+    - name: Put interface description
+      nxos_interface:
+         interface: Ethernet1/34
+         description: "Ansible_Demo"
+         mode: layer3
+    - name: Configure IPv4 address
+      nxos_ip_interface:
+         interface: Ethernet1/34
+         version: v4
+         addr: 40.30.20.10
+         mask: 24
+

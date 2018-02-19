@@ -1,0 +1,15 @@
+SSH password: 
+[KeyJ1dWlkIjogIjhkYmI4Nzg1LWVjNDEtNGE5MC1iY2Y4LTkxMjUyZGU4M2Q1MiJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZWIxNS00ZjdlLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [vcenter_172.17.66.156] ***************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZWIxNS00ZjdlLTAwMDAwMDAwMDAwNyJ9[64D[K
+TASK [vmware_add_hosts : Add ESXi Host to vCenter] *****************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImE2YjIzYTAwLTdiMGMtNDg1Ny1iZjZkLTA4YjMwNWUxOWViOCJ9[64D[K[0;32mok: [172.17.66.156 -> localhost][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZWIxNS00ZjdlLTAwMDAwMDAwMDAwOSJ9[64D[K
+TASK [vmware_add_hosts : Add ESXi Host to vCenter] *****************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImM1NjFhN2ZmLTdlYjUtNDgxMy05M2VkLTA3NGRlYTVlYTMyYSJ9[64D[K[0;31mfatal: [172.17.66.156]: FAILED! => {"failed": true, "msg": "the field 'args' has an invalid value, which appears to include a variable that is undefined. The error was: 'esxi_hostname1' is undefined\n\nThe error appears to have been in '/var/lib/awx/projects/vmware_add_hosts/roles/vmware_add_hosts/tasks/main.yml': line 17, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  delegate_to: localhost\n- name: Add ESXi Host to vCenter\n  ^ here\n"}[0m
+[0;36m...ignoring[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImFmNmI5MzE1LTg2ZWMtNDQ3Ny04MDhlLWExNzk5YzE2NDlhYyJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;32m172.17.66.156[0m              : [0;32mok=2   [0m changed=0    unreachable=0    failed=0   
+
+[Ke30=[4D[K

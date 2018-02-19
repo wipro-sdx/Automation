@@ -1,0 +1,14 @@
+SSH password: 
+[KeyJ1dWlkIjogImMwMGU3MGVjLTE5MDItNGYwNi1iMWY3LWJmNDk3Y2Y3MWIzMCJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNTFjYy1mYjNhLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [oracle] ******************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNTFjYy1mYjNhLTAwMDAwMDAwMDAwZCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImE1ZjU2ZGYzLWI1NjgtNGRkMy1hZmVjLTk3ODU1MjAyMGJhNSJ9[64D[K[0;32mok: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNTFjYy1mYjNhLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [Run installer to install oracle] *****************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjBkNWU1MWE3LWRmNWQtNDVmNy05NzkyLTUzY2NlM2MyNmM2ZSJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjM1MjdmM2FiLTJiOWEtNGE3OC05NmNjLTkyYjZmZWMzNzI4YiJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m172.17.65.93[0m               : [0;32mok=2   [0m [0;33mchanged=1   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

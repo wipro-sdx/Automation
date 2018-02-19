@@ -1,0 +1,17 @@
+---
+- hosts: leaf
+  connection: local
+
+  vars: 
+   prefix: "{{prefix}}"
+   nexthop: "{{nexthop}}"
+
+
+  tasks:
+   - name: Add Static route
+     nxos_command:
+         commands:
+            - conf t
+            - ip route {{prefix}} {{nexthop}}
+            - exit
+            

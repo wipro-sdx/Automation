@@ -1,0 +1,128 @@
+    1.340 INFO     Updating inventory 56: CF-113-CoE-NEW
+    1.357 INFO     Reading executable JSON source: /tmp/ansible_tower_launch_ueBATc/tmpIqClTn
+   11.096 INFO     Loaded 46 groups, 6 hosts
+   11.152 INFO     Deleted host "falck02"
+   11.179 INFO     Deleted host "sdx-lin43"
+   11.245 INFO     Group "i-06d9ef8e04dc3507a" deleted
+   11.300 INFO     Group "i-0b51e79de8eb5056f" deleted
+   11.339 INFO     Group "tag_Name-falck02" deleted
+   11.376 INFO     Group "tag_Name-sdx-lin43" deleted
+   11.529 INFO     Group "ec2-custom" variables unmodified
+   11.533 INFO     Group "ami-11e84107" variables unmodified
+   11.534 INFO     Group "ami-1f28d965" variables unmodified
+   11.534 INFO     Group "ami-58fc7f22" variables unmodified
+   11.535 INFO     Group "ami-6496321e" variables unmodified
+   11.535 INFO     Group "ami-d01f9ac6" variables unmodified
+   11.535 INFO     Group "ec2" variables unmodified
+   11.536 INFO     Group "i-00970457bbdbca84b" variables unmodified
+   11.536 INFO     Group "i-010e51205338e1055" variables unmodified
+   11.536 INFO     Group "i-091fcf1030f932bc5" variables unmodified
+   11.537 INFO     Group "i-0d72df4707a20bb16" variables unmodified
+   11.537 INFO     Group "key_awskey" variables unmodified
+   11.537 INFO     Group "key_centos-aws" variables unmodified
+   11.537 INFO     Group "key_mediaserver" variables unmodified
+   11.538 INFO     Group "key_N-Virgina-GW-A" variables unmodified
+   11.538 INFO     Group "security_group_Controller-A-AviatrixSG-14BTZI28DGGYH" variables unmodified
+   11.539 INFO     Group "security_group_launch-wizard-3" variables unmodified
+   11.539 INFO     Group "security_group_N-Virgina-GW-A" variables unmodified
+   11.539 INFO     Group "security_group_webserver" variables unmodified
+   11.540 INFO     Group "tag_aws-cloudformation-logical-id-AviatrixController" variables unmodified
+   11.540 INFO     Group "tag_aws-cloudformation-stack-id-arn-aws-cloudformation-us-east-1-986182225774-stack-Controller-A-98bdc830-cbab-11e7-a47a-500c28afa0ba" variables unmodified
+   11.540 INFO     Group "tag_aws-cloudformation-stack-name-Controller-A" variables unmodified
+   11.541 INFO     Group "tag__GX_BACKUP_" variables unmodified
+   11.541 INFO     Group "tag_Name-AviatrixController" variables unmodified
+   11.541 INFO     Group "tag_Name-aviatrix-N-Virgina-GW-A-172-31-31-153" variables unmodified
+   11.542 INFO     Group "tag_Name-Cvlt-mediaserver" variables unmodified
+   11.542 INFO     Group "tag_Name-windows" variables unmodified
+   11.542 INFO     Group "tag_N-Virgina-GW-A-172-31-31-153-gateway" variables unmodified
+   11.543 INFO     Group "tag_Project-Aviatrix" variables unmodified
+   11.543 INFO     Group "type_c1-xlarge" variables unmodified
+   11.543 INFO     Group "type_m3-2xlarge" variables unmodified
+   11.543 INFO     Group "type_m3-medium" variables unmodified
+   11.544 INFO     Group "type_t2-large" variables unmodified
+   11.544 INFO     Group "type_t2-micro" variables unmodified
+   11.544 INFO     Group "us-east-1" variables unmodified
+   11.545 INFO     Group "us-east-1a" variables unmodified
+   11.545 INFO     Group "us-east-1b" variables unmodified
+   11.545 INFO     Group "us-east-1c" variables unmodified
+   11.545 INFO     Group "vpc_id_vpc-0b10e36f" variables unmodified
+   11.546 INFO     Group "vpc_id_vpc-e6c7279d" variables unmodified
+   11.557 INFO     Group "ami-a22323d8" added
+   11.563 INFO     Group "i-02e2d9292765af9eb" added
+   11.568 INFO     Group "i-0d923ce7bb6abe018" added
+   11.574 INFO     Group "key_AV-KP" added
+   11.579 INFO     Group "security_group_launch-wizard-9" added
+   11.585 INFO     Group "tag_Name-13feb2018-awsword" added
+   11.590 INFO     Group "tag_Name-Aviatrix-Linux-Test" added
+   11.599 INFO     Host "aviatrixcontroller" variables unmodified
+   11.599 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" variables unmodified
+   11.600 INFO     Host "cvlt-mediaserver" variables unmodified
+   11.600 INFO     Host "windows" variables unmodified
+   11.602 INFO     Host "13feb2018-awsword" added
+   11.604 INFO     Host "aviatrix-linux-test" added
+   11.614 INFO     Host "cvlt-mediaserver" already in group "ami-11e84107"
+   11.618 INFO     Host "aviatrixcontroller" already in group "ami-1f28d965"
+   11.622 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "ami-58fc7f22"
+   11.628 INFO     Host "13feb2018-awsword" added to group "ami-6496321e"
+   11.634 INFO     Host "aviatrix-linux-test" added to group "ami-a22323d8"
+   11.637 INFO     Host "windows" already in group "ami-d01f9ac6"
+   11.641 INFO     Host "aviatrixcontroller" already in group "ec2"
+   11.641 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "ec2"
+   11.641 INFO     Host "cvlt-mediaserver" already in group "ec2"
+   11.642 INFO     Host "windows" already in group "ec2"
+   11.644 INFO     Host "13feb2018-awsword" added to group "ec2"
+   11.644 INFO     Host "aviatrix-linux-test" added to group "ec2"
+   11.648 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "i-00970457bbdbca84b"
+   11.652 INFO     Host "cvlt-mediaserver" already in group "i-010e51205338e1055"
+   11.663 INFO     Host "aviatrix-linux-test" added to group "i-02e2d9292765af9eb"
+   11.668 INFO     Host "windows" already in group "i-091fcf1030f932bc5"
+   11.673 INFO     Host "aviatrixcontroller" already in group "i-0d72df4707a20bb16"
+   11.685 INFO     Host "13feb2018-awsword" added to group "i-0d923ce7bb6abe018"
+   11.692 INFO     Host "aviatrix-linux-test" added to group "key_AV-KP"
+   11.697 INFO     Host "aviatrixcontroller" already in group "key_awskey"
+   11.704 INFO     Host "13feb2018-awsword" added to group "key_centos-aws"
+   11.709 INFO     Host "cvlt-mediaserver" already in group "key_mediaserver"
+   11.714 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "key_N-Virgina-GW-A"
+   11.718 INFO     Host "aviatrixcontroller" already in group "security_group_Controller-A-AviatrixSG-14BTZI28DGGYH"
+   11.723 INFO     Host "cvlt-mediaserver" already in group "security_group_launch-wizard-3"
+   11.723 INFO     Host "windows" already in group "security_group_launch-wizard-3"
+   11.732 INFO     Host "aviatrix-linux-test" added to group "security_group_launch-wizard-9"
+   11.736 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "security_group_N-Virgina-GW-A"
+   11.745 INFO     Host "13feb2018-awsword" added to group "security_group_webserver"
+   11.749 INFO     Host "aviatrixcontroller" already in group "tag_aws-cloudformation-logical-id-AviatrixController"
+   11.756 INFO     Host "aviatrixcontroller" already in group "tag_aws-cloudformation-stack-id-arn-aws-cloudformation-us-east-1-986182225774-stack-Controller-A-98bdc830-cbab-11e7-a47a-500c28afa0ba"
+   11.761 INFO     Host "aviatrixcontroller" already in group "tag_aws-cloudformation-stack-name-Controller-A"
+   11.767 INFO     Host "cvlt-mediaserver" already in group "tag__GX_BACKUP_"
+   11.774 INFO     Host "13feb2018-awsword" added to group "tag_Name-13feb2018-awsword"
+   11.780 INFO     Host "aviatrixcontroller" already in group "tag_Name-AviatrixController"
+   11.788 INFO     Host "aviatrix-linux-test" added to group "tag_Name-Aviatrix-Linux-Test"
+   11.793 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "tag_Name-aviatrix-N-Virgina-GW-A-172-31-31-153"
+   11.798 INFO     Host "cvlt-mediaserver" already in group "tag_Name-Cvlt-mediaserver"
+   11.804 INFO     Host "windows" already in group "tag_Name-windows"
+   11.807 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "tag_N-Virgina-GW-A-172-31-31-153-gateway"
+   11.811 INFO     Host "aviatrixcontroller" already in group "tag_Project-Aviatrix"
+   11.816 INFO     Host "windows" already in group "type_c1-xlarge"
+   11.819 INFO     Host "cvlt-mediaserver" already in group "type_m3-2xlarge"
+   11.827 INFO     Host "13feb2018-awsword" added to group "type_m3-medium"
+   11.831 INFO     Host "aviatrixcontroller" already in group "type_t2-large"
+   11.835 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "type_t2-micro"
+   11.837 INFO     Host "aviatrix-linux-test" added to group "type_t2-micro"
+   11.841 INFO     Host "aviatrixcontroller" already in group "us-east-1"
+   11.841 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "us-east-1"
+   11.841 INFO     Host "cvlt-mediaserver" already in group "us-east-1"
+   11.841 INFO     Host "windows" already in group "us-east-1"
+   11.844 INFO     Host "13feb2018-awsword" added to group "us-east-1"
+   11.844 INFO     Host "aviatrix-linux-test" added to group "us-east-1"
+   11.849 INFO     Host "cvlt-mediaserver" already in group "us-east-1a"
+   11.849 INFO     Host "windows" already in group "us-east-1a"
+   11.853 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "us-east-1b"
+   11.857 INFO     Host "aviatrix-linux-test" added to group "us-east-1b"
+   11.861 INFO     Host "aviatrixcontroller" already in group "us-east-1c"
+   11.863 INFO     Host "13feb2018-awsword" added to group "us-east-1c"
+   11.867 INFO     Host "aviatrixcontroller" already in group "vpc_id_vpc-0b10e36f"
+   11.867 INFO     Host "cvlt-mediaserver" already in group "vpc_id_vpc-0b10e36f"
+   11.867 INFO     Host "windows" already in group "vpc_id_vpc-0b10e36f"
+   11.869 INFO     Host "13feb2018-awsword" added to group "vpc_id_vpc-0b10e36f"
+   11.873 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "vpc_id_vpc-e6c7279d"
+   11.875 INFO     Host "aviatrix-linux-test" added to group "vpc_id_vpc-e6c7279d"
+   12.048 INFO     Inventory import completed for group "EC2-Custom" in 10.7s

@@ -1,0 +1,10 @@
+---
+- hosts: 172.17.65.175
+  tasks:
+    - name: install the package
+      win_package:
+        path: C:\Users\Administrator\Desktop\nagios\NSCP-0.4.1.73-x64.msi
+        state: absent
+        productid: auto
+          
+

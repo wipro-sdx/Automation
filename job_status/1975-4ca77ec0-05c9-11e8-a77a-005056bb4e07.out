@@ -1,0 +1,111 @@
+SSH password: 
+[KeyJ1dWlkIjogIjEzMTM2MTk1LTkwN2MtNGNjMi1iZTI4LTFiYjI4NWI3MTEzZiJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [oracle_new] **************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDA0ZSJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjRmMmEzYmEyLWQwZTgtNDY2MS1hMjE3LWI0OWE5MjVjMDcyYiJ9[64D[K[0;32mok: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAwNyJ9[64D[K
+TASK [oracle_new_esx : Copy resolve.conf] **************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjIyMTc3MTQzLTcyOWUtNDcyYi1hMDI4LWMzNzRhODQ1OTllNSJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAwOSJ9[64D[K
+TASK [oracle_new_esx : install prerequesties] **********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQ1YjI4ZDMxLTE4OWMtNGIyZC04NDE2LWNjZGI1OTE4MzdlNiJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjRhYWEzMGZmLTQwZjctNDg5Mi05ZDYyLWU1NmMxYzdkZTA1OCJ9[64D[K[0;33mchanged: [172.16.103.200] => (item=[u'binutils', u'compat-libcap*', u'elfutils*', u'gcc*', u'glibc*', u'ksh', u'libgcc', u'libstdc*', u'libstdc++', u'libstdc++-devel', u'make', u'unixODBC', u'unixODBC-devel', u'sysstat', u'ruby'])[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAwYiJ9[64D[K
+TASK [oracle_new_esx : adding security limits for nproc] ***********************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQ5OTAwMDcxLTA2ZjYtNDRjMy1iNDczLWNjN2U3MzIyZDllMyJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAwZCJ9[64D[K
+TASK [oracle_new_esx : adding security limits for nofile] **********************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjJiZjU4NzMwLTc2MTItNDg2YS05ZmJmLTQwNzZjNzJiMTUxZSJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAwZiJ9[64D[K
+TASK [oracle_new_esx : adding security limits for core] ************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQ3OTQzNGVmLWE3ZTUtNDY4OS1hOWIzLTc1YjdiNmZjNTBlMCJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAxMSJ9[64D[K
+TASK [oracle_new_esx : adding security limits for memlock] *********************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjI4MDA1MTgzLTk5ODYtNDlhNC1iMmQzLTkyNTdlMGVjN2E2OSJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAxMyJ9[64D[K
+TASK [oracle_new_esx : Update pamd rule's control in /etc/pam.d/login] *********
+[Ke30=[4D[K[KeyJ1dWlkIjogIjlhZDhiYjI0LTRiZmMtNDg4ZC1iMDczLWE0N2M5N2Y5M2RmZCJ9[64D[K[0;32mok: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAxNSJ9[64D[K
+TASK [oracle_new_esx : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQ0NmIyYjY5LWVlMzktNGViZC05ZWE0LWE0MTkxMjE1MzFhOCJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAxNyJ9[64D[K
+TASK [oracle_new_esx : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogImZkOTYzOWFlLWMwY2YtNDBmMy1hNzFmLTA5YzRhYWI4ZTIxNCJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAxOSJ9[64D[K
+TASK [oracle_new_esx : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogImMyNmRiODRhLTQ4YTMtNGExNC1iNWRiLWVhOWZhNDVlMTQzZiJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAxYiJ9[64D[K
+TASK [oracle_new_esx : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogImEyMzdiMWNkLTg5NDktNGFiMy1hMmNlLWZlNzY1MzVlZGEyMCJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAxZCJ9[64D[K
+TASK [oracle_new_esx : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogImU2NGMxNzI5LTE1ZGEtNDczMC05NzVkLTQ2YjUwM2UxNmIwNiJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAxZiJ9[64D[K
+TASK [oracle_new_esx : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogImNlMmM5YWI3LTg5ZTEtNDAyYi1hYTYwLTZjNjg0YWZkYmQ0MyJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAyMSJ9[64D[K
+TASK [oracle_new_esx : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogImI0NjA5YzZmLTY5M2QtNDNiYy04OWUzLTJiYTU2YmFjM2Y2MCJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAyMyJ9[64D[K
+TASK [oracle_new_esx : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogImVmOGViMWZmLTBlMmEtNGU2Zi1iOGFlLTdjZTQxZjRmZDZiMCJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAyNSJ9[64D[K
+TASK [oracle_new_esx : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogIjZkYWU0NzhlLTMxNTItNGExNC04YzM2LTQwN2RkNDEyMmJlNSJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAyNyJ9[64D[K
+TASK [oracle_new_esx : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogImYwZjYyODBkLWEwZDItNDc1OC04ZjM5LWUyNDgyNTQ0YTQ3MCJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAyOSJ9[64D[K
+TASK [oracle_new_esx : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogIjlhY2MyNDNhLWY2YTUtNDA3Mi1hZWYzLTM5MzU5MTM5Nzk3NiJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAyYiJ9[64D[K
+TASK [oracle_new_esx : create group] *******************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQ4OWQ1MjYzLWNmNjktNGNlZC05NjBkLTRiMWRhMDBjOWJlYSJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAyZCJ9[64D[K
+TASK [oracle_new_esx : create group] *******************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjkwZWUyNWM4LTMxMTEtNDcwNy1hM2Q0LTVjY2Q5YTVhYmZkNiJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAyZiJ9[64D[K
+TASK [oracle_new_esx : create group] *******************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImVkMTRiYmI3LTRmZjItNDYwNi04OTc2LWQ1MjU2OTBjY2JhOCJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAzMSJ9[64D[K
+TASK [oracle_new_esx : create group] *******************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjFhZDg1OTMxLTRlMzUtNDBmNi1hY2M3LWUyYTkxNDNhNzJiZCJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAzMyJ9[64D[K
+TASK [oracle_new_esx : create group] *******************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjYyMGZlOWZmLTkyYzctNGVhZC1hZmU4LTA2OGRjZTAyOWJhZCJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAzNSJ9[64D[K
+TASK [oracle_new_esx : create group] *******************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImUyNzBkMWQxLTk0ZGMtNDdiNy04ZTVlLWUwYWRmOWY2YzdlYSJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAzNyJ9[64D[K
+TASK [oracle_new_esx : create user oracle] *************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjI3YzAzZjg2LTIyNmItNGExZi04MTU5LTM4ZWE4ZjVkYzFmZCJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAzOSJ9[64D[K
+TASK [oracle_new_esx : set password for oracle] ********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImIzOGYzZjA5LWFlMjEtNGQ0NC04ZTRkLTQ5ZmY4MzdkYTBkYSJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAzYiJ9[64D[K
+TASK [oracle_new_esx : update oracle profile] **********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjZlNmE1YmFhLWQ4MGEtNGE4Yi04ODQ5LTFhOTQ4N2NiYTY0MSJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAzZCJ9[64D[K
+TASK [oracle_new_esx : copy Oracle directory] **********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjczMTIxNzIwLTYxNDAtNDg2YS1iMTNiLTg3MDBkOTk2Y2JkYiJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDAzZiJ9[64D[K
+TASK [oracle_new_esx : Copy AutomateInstallation.rsp] **************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImZiNDU1NGNlLTFjZDMtNDQ3NC1hNDAxLWE0MjBlYTg1ZDVhZiJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDA0MSJ9[64D[K
+TASK [oracle_new_esx : setting permissions] ************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjFiNmNkMzBhLTEwYjItNDRkNS1hZWZmLWFmNTgzN2E2YjA0ZCJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDA0MyJ9[64D[K
+TASK [oracle_new_esx : pause] **************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjRjYWUzYzc4LTAwMjAtNGM5OC1iODU4LTBkNDkxNDNjODMxMiJ9[64D[KPausing for 30 seconds
+[Ke30=[4D[K[KeyJ1dWlkIjogIjNiZTE2NWQ1LTkxNGItNGE4Yy05OGFlLTkzYzUwOWEwNTA5ZiJ9[64D[K(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+[Ke30=[4D[K[KeyJ1dWlkIjogImE2OWZjZWRjLTBiMjQtNGEzMS1hMDY2LWZlMDA1Yzg3YjQ3NCJ9[64D[K[0;32mok: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOTY5OS0yNTViLTAwMDAwMDAwMDA0NSJ9[64D[K
+TASK [oracle_new_esx : install prerequesties] **********************************
+[Ke30=[4D[K[1;35m [WARNING]: Consider using yum module rather than running yum[0m
+[1;35m[0m
+[KeyJ1dWlkIjogIjVmNjNlM2MzLTE0OWItNDA3NC05ZjQ4LWQ1MGQ5MzIzYjEwOCJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjhiMTZkYmM1LWM1MWYtNGQ4OC05ZGQ4LWJhN2VlMWIwOGE2NiJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m172.16.103.200[0m             : [0;32mok=33  [0m [0;33mchanged=30  [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

@@ -1,0 +1,8 @@
+---
+- name: copy resolv.conf
+  template: src=resolv.conf dest=/etc/resolv.conf
+  tags: dns
+- name: update yum
+  yum: name=* state=latest
+   
+

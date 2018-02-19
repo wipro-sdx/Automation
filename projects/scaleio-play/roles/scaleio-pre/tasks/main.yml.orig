@@ -1,0 +1,30 @@
+---
+- name: install required softwares for scaleio
+  yum: name={{item}} state=installed
+  with_items:
+    - numactl
+    - libaio
+    - bash-completion
+    - python
+    - bind-utils
+    - net-tools
+- name: Open ports in firewall permanent for scalio
+  firewalld: port={{item}}/tcp state=enabled permanent=true zone=public immediate=yes
+  with_items:
+    - 6611
+    - 9011
+    - 7072
+    - 7073
+    - 7074
+    - 7075
+    - 7076
+    - 80
+    - 443
+    - 9099
+    - 162
+    - 25620
+    - 25640
+    - 25641
+    - 25642
+    - 25643
+    - 25644

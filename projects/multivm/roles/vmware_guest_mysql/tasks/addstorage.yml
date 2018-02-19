@@ -1,0 +1,6 @@
+---
+- name: connect1
+  shell: /tmp/lun_add.sh    
+      
+
+

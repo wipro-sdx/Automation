@@ -1,0 +1,3 @@
+systemname1,profile1,interface1,mac1,ipaddr1,netmask1,gw1,powaddr1,powuser1,powpass1
+alfarhel,ESXI_6.0_new-x86_64,eno2,a8:1e:84:7b:bb:ed,172.17.66.103,255.255.255.0,172.17.66.1,172.17.64.61,admin,admin
+#hcimaster,Redhat7.3-x86_64,eno2,a8:1e:84:73:d3:88,172.17.66.100,255.255.255.0,172.17.66.1,172.17.64.36,admin,admin

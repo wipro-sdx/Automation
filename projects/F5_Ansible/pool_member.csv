@@ -1,0 +1,5 @@
+Pool,Server_IP,Port
+Web,WEB-Server-A,80
+Web,WEB-Server-B,80
+App,APP-Server-A,443
+App,APP-Server-B,443

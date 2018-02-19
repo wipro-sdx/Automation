@@ -1,0 +1,18 @@
+SSH password: 
+[KeyJ1dWlkIjogImEzN2Q1ODczLWFiZmUtNDg1Yy1iMTcxLTcyODA2N2FhMzZjNCJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctN2Y2ZC03NjU3LTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [oracle_new] **************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctN2Y2ZC03NjU3LTAwMDAwMDAwMDA0ZSJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImIyMTFjZTczLTMyODEtNDVlMC04ZmFkLWNiN2U1ZjM2YmE5NiJ9[64D[K[0;32mok: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctN2Y2ZC03NjU3LTAwMDAwMDAwMDAwNyJ9[64D[K
+TASK [oracle_new_esx : Copy resolve.conf] **************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImMwOGJhMGExLWZlZWUtNDY1Ny05NWVjLWU5ZGQwYjVlMGM0YyJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctN2Y2ZC03NjU3LTAwMDAwMDAwMDAwOSJ9[64D[K
+TASK [oracle_new_esx : install prerequesties] **********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImU4N2M2ZWIxLTUzMTQtNGFjMi05YTE1LWNkOTU4MDI2NzRlMiJ9[64D[K[0;31mfailed: [172.16.103.200] (item=[u'binutils', u'compat-libcap*', u'elfutils*', u'gcc*', u'glibc*', u'ksh', u'libgcc', u'libstdc*', u'libstdc++', u'libstdc++-devel', u'make', u'unixODBC', u'unixODBC-devel', u'sysstat', u'ruby']) => {"item": ["binutils", "compat-libcap*", "elfutils*", "gcc*", "glibc*", "ksh", "libgcc", "libstdc*", "libstdc++", "libstdc++-devel", "make", "unixODBC", "unixODBC-devel", "sysstat", "ruby"], "msg": "Failed to connect to the host via ssh: Shared connection to 172.16.103.200 closed.\r\n", "unreachable": true}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjg3YmY5MTNjLWYwNmYtNGM2Ny1iZjliLTg1ZDU1ZmI3YjBjYSJ9[64D[K[1;31mfatal: [172.16.103.200]: UNREACHABLE! => {"changed": false, "msg": "All items completed", "results": [{"_ansible_item_result": true, "item": ["binutils", "compat-libcap*", "elfutils*", "gcc*", "glibc*", "ksh", "libgcc", "libstdc*", "libstdc++", "libstdc++-devel", "make", "unixODBC", "unixODBC-devel", "sysstat", "ruby"], "msg": "Failed to connect to the host via ssh: Shared connection to 172.16.103.200 closed.\r\n", "unreachable": true}]}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImVmYjc0YmJkLWJiYjgtNDBkZi1hMDI5LWVlMDk3M2I0NjA3OSJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;31m172.16.103.200[0m             : [0;32mok=2   [0m [0;33mchanged=1   [0m [1;31munreachable=1   [0m failed=0   
+
+[Ke30=[4D[K

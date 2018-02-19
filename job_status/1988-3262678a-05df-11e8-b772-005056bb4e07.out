@@ -1,0 +1,18 @@
+SSH password: 
+[KeyJ1dWlkIjogImM1MzM3YzE5LTg2YjItNDRkMS1hOGFmLTk2OWNlOTVlZmM2ZSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZGRlZi01MWVhLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [oracle_new] **************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZGRlZi01MWVhLTAwMDAwMDAwMDAwNyJ9[64D[K
+TASK [commvault_new_esx : Copy commvault.rb file] ******************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImVjM2FjZGEwLWM2MjAtNGI3My05Yzk5LWI5ZjMzOGUwMTE5NiJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZGRlZi01MWVhLTAwMDAwMDAwMDAwOSJ9[64D[K
+TASK [commvault_new_esx : Installing Commvault] ********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjRhNWIwMmVmLWI3OWUtNDFjZi05MjUzLWQyYTNhOWFkMzI1NiJ9[64D[K[0;33mchanged: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZGRlZi01MWVhLTAwMDAwMDAwMDAwYiJ9[64D[K
+TASK [commvault_new_esx : Registering and applying Backup Policy] **************
+[Ke30=[4D[K[KeyJ1dWlkIjogImI4YjUzM2U2LWZhYWMtNDIwNi1hYzA3LWQ5NDEwYmUxNzkyNyJ9[64D[K[0;31mfatal: [172.16.103.200]: FAILED! => {"changed": true, "cmd": "/usr/bin/ruby /tmp/commvault.rb \"oradbserveralfa3018\" \"Gold\"", "delta": "0:00:03.561278", "end": "2018-01-30 14:56:38.457355", "failed": true, "rc": 1, "start": "2018-01-30 14:56:34.896077", "stderr": "/usr/share/ruby/net/http.rb:878:in `initialize': No route to host - connect(2) (Errno::EHOSTUNREACH)\n\tfrom /usr/share/ruby/net/http.rb:878:in `open'\n\tfrom /usr/share/ruby/net/http.rb:878:in `block in connect'\n\tfrom /usr/share/ruby/timeout.rb:52:in `timeout'\n\tfrom /usr/share/ruby/net/http.rb:877:in `connect'\n\tfrom /usr/share/ruby/net/http.rb:862:in `do_start'\n\tfrom /usr/share/ruby/net/http.rb:851:in `start'\n\tfrom /usr/share/ruby/net/http.rb:582:in `start'\n\tfrom /tmp/commvault.rb:40:in `<main>'", "stderr_lines": ["/usr/share/ruby/net/http.rb:878:in `initialize': No route to host - connect(2) (Errno::EHOSTUNREACH)", "\tfrom /usr/share/ruby/net/http.rb:878:in `open'", "\tfrom /usr/share/ruby/net/http.rb:878:in `block in connect'", "\tfrom /usr/share/ruby/timeout.rb:52:in `timeout'", "\tfrom /usr/share/ruby/net/http.rb:877:in `connect'", "\tfrom /usr/share/ruby/net/http.rb:862:in `do_start'", "\tfrom /usr/share/ruby/net/http.rb:851:in `start'", "\tfrom /usr/share/ruby/net/http.rb:582:in `start'", "\tfrom /tmp/commvault.rb:40:in `<main>'"], "stdout": "", "stdout_lines": []}[0m
+[0;36m...ignoring[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImU1Zjg4Y2FjLTQyZDQtNDNjZS04NDMxLTkyMGE1OGM5NzZjYSJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m172.16.103.200[0m             : [0;32mok=3   [0m [0;33mchanged=3   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

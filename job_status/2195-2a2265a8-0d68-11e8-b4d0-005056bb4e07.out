@@ -1,0 +1,15 @@
+SSH password: 
+[KeyJ1dWlkIjogIjZmNjM0MWU1LTljZDEtNGFiMi1iNDVhLWUwYmQ5NTZmNTY5MCJ9[64D[K[1;35m [WARNING]: provided hosts list is empty, only localhost is available[0m
+[1;35m[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjExNjdkOWFjLWMxNzUtNGQwMS1iYzc1LWYzZjI1NDk1ZjhmNSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDM2Ny03YWNiLTAwMDAwMDAwMDAwMSJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDM2Ny03YWNiLTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [bulkvm : vmware_guest] ***************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjcyOWIyZDYyLTQ0MTktNGIwMi04ZDFjLWE0ZWFiZjRkY2UyYiJ9[64D[K[0;33mchanged: [localhost] => (item=1)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjY3ZDc3MTk1LTIyZjgtNDI1OC05NzQ0LTZiMzJiYmNjNmZhMiJ9[64D[K[0;33mchanged: [localhost] => (item=2)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImJkNzM0MThlLTNkYmMtNGI1OS04MzgxLTBkOTkxMzdhMDkyMiJ9[64D[K[0;31mfailed: [localhost] (item=3) => {"changed": true, "failed": true, "item": "3", "msg": "The number of network adapter settings in the customization specification: 0 does not match the number of network adapters present in the virtual machine: 1."}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjUzOGI3NWIxLWUwMzctNGJkOS1hZmU4LWJiNmU2NmE4YWFhNSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogImVkYjllNjE2LTQzYjktNGNiNy04MTMxLTYzM2U1NGQzMjYyMiJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : ok=0    changed=0    unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

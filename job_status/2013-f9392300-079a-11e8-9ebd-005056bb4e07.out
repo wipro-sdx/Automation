@@ -1,0 +1,14 @@
+SSH password: 
+[KeyJ1dWlkIjogIjI1NTBiNmZmLTY4MmYtNDNhOS1hZDVhLTIxYmU3YzQwZGNkYiJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODc4YS04NmE0LTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [172.17.65.11] ************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODc4YS04NmE0LTAwMDAwMDAwMDAxMCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImFmNTczZGZhLWJjOTYtNDRmOS1hNDA0LTRjZDg2ZDBmZjk0NyJ9[64D[K[0;32mok: [172.17.65.11][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODc4YS04NmE0LTAwMDAwMDAwMDAwNyJ9[64D[K
+TASK [prestorage : Creatng partition and filesystem for datastore creation] ****
+[Ke30=[4D[K[KeyJ1dWlkIjogIjM1YTQxMGRlLWQ4ZDEtNGM4My04MmYyLTBlZjcwY2Y3YTVkZCJ9[64D[K[0;33mchanged: [172.17.65.11][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImM4YmRkNjY3LThkMjctNDk5Ny05MmQ2LWNmY2M5N2UwZDQ4MiJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m172.17.65.11[0m               : [0;32mok=2   [0m [0;33mchanged=1   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

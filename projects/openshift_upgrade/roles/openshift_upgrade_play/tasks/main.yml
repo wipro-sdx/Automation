@@ -1,0 +1,2 @@
+- name: run playbook for upgarding from ose 3.5 to 3.6
+  shell: ansible-playbook -i /etc/ansible/hosts /usr/share/ansible/openshift-ansible/playbooks/byo/openshift-cluster/upgrades/v3_6/upgrade.yml

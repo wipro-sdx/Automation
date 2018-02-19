@@ -1,0 +1,8 @@
+---
+- hosts: 172.17.65.176
+  tasks:
+    - name: coping file from linux to windows
+      win_copy:
+        src: /etc/hosts
+        dest: C:\
+

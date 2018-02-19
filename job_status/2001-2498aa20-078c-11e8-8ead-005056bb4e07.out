@@ -1,0 +1,12 @@
+SSH password: 
+[KeyJ1dWlkIjogIjJhOTE2MjQ3LTRhODctNDY2Yi1iNDkzLTUyMjZmMWM4YmU2YyJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODc0OC0zNmMyLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [oracle_new] **************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODc0OC0zNmMyLTAwMDAwMDAwMDA0ZSJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjE4M2UxYzFkLWEzZDItNDU4MC04NjNkLWJkMGMzMGE3NjY0NyJ9[64D[K[0;32mok: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODc0OC0zNmMyLTAwMDAwMDAwMDAwNyJ9[64D[K
+TASK [oracle_new_esx : Copy resolve.conf] **************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjFmNGJmODJmLWVhYWYtNDIzOS1hOTllLTA5M2I3YjcxODA2OSJ9[64D[K[0;32mok: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODc0OC0zNmMyLTAwMDAwMDAwMDAwOSJ9[64D[K
+TASK [oracle_new_esx : install prerequesties] **********************************
+[Ke30=[4D[K

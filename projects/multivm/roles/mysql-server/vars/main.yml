@@ -1,0 +1,6 @@
+---
+# vars file for mysql-server
+db_name: alfa
+db_user: dbuser
+db_password: Wipro@123
+

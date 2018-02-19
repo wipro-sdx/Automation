@@ -1,0 +1,52 @@
+---
+- hosts: localhost
+
+  vars: 
+    vm_name: Windows12K
+
+  tasks:
+   - name: Deploy Windows Virtual Server
+     vmware_guest:
+          validate_certs: False
+          hostname: 172.17.66.156
+          username: administrator@vsphere.local
+          password: Wipro@123
+          esxi_hostname: 172.17.65.11
+          datacenter: Devops
+          name: "{{vm_name }}"
+          template: Win2K12
+          state: poweredon
+     
+   - name: Adding to APP PortGroup
+     vsphere_guest:
+        validate_certs: False
+        vcenter_hostname: 172.17.66.156
+        username: administrator@vsphere.local
+        password: Wipro@123
+        guest: "{{vm_name}}"
+        state: reconfigured
+        vm_nic:
+          nic1:
+           type: vmxnet3
+           network: VM Network
+           network_type: standard
+          nic2:
+           type: vmxnet3
+           network: VM Network
+           network_type: standard
+        vm_disk:
+          disk1:
+            size_gb: 10
+            type: thin
+            datastore: datastore1
+          disk2:
+            size_gb: 20
+            type: thin
+            datastore: datastore1
+        vm_hardware:
+          memory_mb: 8048
+          num_cpus: 2
+        esxi:
+          datacenter: Devops
+          hostname: 172.17.65.11
+

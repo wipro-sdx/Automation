@@ -1,0 +1,14 @@
+SSH password: 
+[KeyJ1dWlkIjogIjNiZTVkMDE5LWEwZGQtNGExMi1hY2Q1LWJiZTRlNTc5YjliNSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZGFmMS1jMmZiLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZGFmMS1jMmZiLTAwMDAwMDAwMDAwZCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImJiYTMwZTU3LWZmNmQtNDkzOC1iMzk1LTFiOTFiYjgzNjJjNSJ9[64D[K[0;32mok: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZGFmMS1jMmZiLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [command] *****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQwYzE2ZWVhLTE4YjUtNDI4My05NDQ2LTdjMjIwYzQ3MDdhMyJ9[64D[K[0;31mfatal: [127.0.0.1 -> 127.0.0.1]: FAILED! => {"changed": true, "cmd": "python ise_create_user_v1.py 'Neelan' 'Neelakantan' 'R' 'Guru@123' 'neel@abc.com' 'Employee'", "delta": "0:00:00.220790", "end": "2018-02-09 18:40:52.339368", "failed": true, "rc": 1, "start": "2018-02-09 18:40:52.118578", "stderr": "Traceback (most recent call last):\n  File \"ise_create_user_v1.py\", line 21, in <module>\n    if (uid_group == 'Employee'):\nNameError: name 'uid_group' is not defined", "stderr_lines": ["Traceback (most recent call last):", "  File \"ise_create_user_v1.py\", line 21, in <module>", "    if (uid_group == 'Employee'):", "NameError: name 'uid_group' is not defined"], "stdout": "", "stdout_lines": []}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImZlYjQwZmFjLThjMmQtNDNlNC1hYWY4LWVhNGQ2MzZmNTJkMyJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;31m127.0.0.1[0m                  : [0;32mok=1   [0m changed=0    unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

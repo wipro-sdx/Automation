@@ -1,0 +1,11 @@
+SSH password: 
+[KeyJ1dWlkIjogIjFjZDFiZDIxLWYwMTQtNDViZi04YTE2LWUyYzVjZjU0ZTcyMyJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODcxYS0zNTUzLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [oracle_new] **************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctODcxYS0zNTUzLTAwMDAwMDAwMDAwZCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImI5YTExNWE2LTU3MTYtNDM0MS1hZDEyLTI2ZDE2N2VmMmJkYSJ9[64D[K[1;31mfatal: [172.16.103.200]: UNREACHABLE! => {"changed": false, "msg": "Authentication failure.", "unreachable": true}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImM2ZmU4MmRiLWUwZjQtNDZjZS05NjllLTAyYjJmZGYxYjk5YyJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;31m172.16.103.200[0m             : ok=0    changed=0    [1;31munreachable=1   [0m failed=0   
+
+[Ke30=[4D[K

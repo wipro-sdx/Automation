@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  connection: local
+
+  vars:
+    uname: "{{uname}}"
+    fname: "{{first_name}}"
+    lname: "{{last_name}}"
+    pwd: "{{password}}"
+    email: "{{email}}"
+    id_group: "{{id_group}}"
+  tasks:
+    - shell: python ise_create_user_v1.py '{{uname}}' '{{fname}}' '{{lname}}' '{{pwd}}' '{{email}}' '{{id_group}}'
+      delegate_to: 127.0.0.1
+

@@ -1,0 +1,29 @@
+Dear User, 
+
+zeta has been spinned up. Please find below the APP Server Details
+
+MACADDRESS          IPADDRESS         EPG             
+00:50:56:BB:65:B3   172.16.101.24     web             
+00:50:56:BB:01:49   172.16.103.20     db              
+00:50:56:BB:0F:F3   172.16.102.21     app             
+00:50:56:BB:67:E0   172.16.102.22     app             
+Dear User, 
+
+zingo has been spinned up. Please find below the APP Server Details
+
+Dear User, 
+
+success has been spinned up. Please find below the APP Server Details
+
+Dear User, 
+
+sdx778 has been spinned up. Please find below the APP Server Details
+
+Dear User, 
+
+SDX-44 has been spinned up. Please find below the APP Server Details
+
+Dear User, 
+
+getvm has been spinned up. Please find below the APP Server Details
+

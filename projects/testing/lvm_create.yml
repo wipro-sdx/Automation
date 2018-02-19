@@ -1,0 +1,19 @@
+---
+ - hosts: anstwo.example.com
+   user: root
+   tasks: 
+     - name: vgcreate
+       lvg:
+         vg: vgdata
+         pvs: /dev/sdb5, /dev/sdb6
+
+     - name: lvcreate
+       lvol:
+         vg: vgdata
+         lv: dataone
+         size: 1500M
+
+     - name: create filesystem
+       filesystem:
+         fstype: ext4
+         dev: /dev/vgdata/dataone

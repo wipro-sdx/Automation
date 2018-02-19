@@ -1,0 +1,10 @@
+[nodes]
+hcimaster.opendc.com
+hcinode1.opendc.com
+hcinode2.opendc.com
+#master1.opendc.com
+#minion1.opendc.com
+#minion2.opendc.com
+
+[localhost]
+127.0.0.1

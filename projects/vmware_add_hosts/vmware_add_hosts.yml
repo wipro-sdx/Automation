@@ -1,0 +1,7 @@
+---
+
+- hosts: vcenter_172.17.66.156
+  gather_facts: False
+
+  roles:
+    - vmware_add_hosts

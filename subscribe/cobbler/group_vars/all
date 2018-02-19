@@ -1,0 +1,10 @@
+systemname: Laas-3
+profile: Redhat7.3-x86_64
+interface: eno2
+mac: a8:1e:84:7d:90:5e
+ipaddr: 172.17.66.84
+netmask: 255.255.255.0
+gw: 172.17.66.1
+powaddr: 172.17.64.32
+powuser: admin
+powpass: admin

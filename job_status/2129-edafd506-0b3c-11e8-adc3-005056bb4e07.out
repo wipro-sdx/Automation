@@ -1,0 +1,22 @@
+SSH password: 
+[KeyJ1dWlkIjogImM2NjkzNDIyLWMxMDItNGE0OC1hMDY1LTZiZDU5Nzg3NTlhOCJ9[64D[K[1;35m [WARNING]: provided hosts list is empty, only localhost is available[0m
+[1;35m[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjYyNTRhOGE2LWMwYmQtNDFjNC1hZDVhLTA4MTg5NzFlZmU2YiJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZGZhZi04Y2QwLTAwMDAwMDAwMDAwMSJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZGZhZi04Y2QwLTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [multivm : Deploy guest from template] ************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjNhZTczNzQwLWQxNTktNDhmOC05MTRlLTQyZGJjZjlmYjQyOSJ9[64D[K[0;33mchanged: [localhost] => (item=1)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjZlY2UzZGE2LTY1OGEtNGFkYS05NDUxLWU0ZDg1ZmE4YzU1YyJ9[64D[K[0;33mchanged: [localhost] => (item=2)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImEwNjBkMWRjLTViMGUtNGI1Mi1hOGNlLTdjNzM1NzAyZjFmZSJ9[64D[K[0;33mchanged: [localhost] => (item=3)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjI3OWI2ZTA5LWMzYWUtNDJkZS05N2Q2LTcwYWYzODhkZTU4OCJ9[64D[K[0;33mchanged: [localhost] => (item=4)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImFkZDZiNjRhLWE3NTEtNDVlZC1iN2Q2LWExYWNhNGExMDgzNiJ9[64D[K[0;33mchanged: [localhost] => (item=5)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImM1YTM1ZWU3LTUzNWYtNDdjOS05MmUzLWYzNWYyYzgwZjUwNSJ9[64D[K[0;33mchanged: [localhost] => (item=6)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjVlM2NmYzFhLWMwNGEtNDQzNS05OTJiLWQxZDMzZTU3YjUxYSJ9[64D[K[0;33mchanged: [localhost] => (item=7)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImZlOGNmOTAwLTk2YmItNGQwNy1hZjJiLWNkOTRhMWJlNTIwMyJ9[64D[K[0;33mchanged: [localhost] => (item=8)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAzZTgyM2MwLTU3MTEtNDc3YS05MTFkLTVjZjc2ZGM5MDIxNSJ9[64D[K[0;33mchanged: [localhost] => (item=9)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjhlMmI4ZTU1LTVlZWItNDIwZC04NjAxLTBmNDg5ZGE1N2JhMSJ9[64D[K[0;33mchanged: [localhost] => (item=10)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImQ4NzZlYWZkLTJiZWYtNGI2My05YTdhLTkxYmIwZDk4NGM2NyJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogImVkODJiOTAxLWQ2MjMtNDMwOS1hM2YxLTFmOWQwNzVhYzc1MyJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33mlocalhost[0m                  : [0;32mok=1   [0m [0;33mchanged=1   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

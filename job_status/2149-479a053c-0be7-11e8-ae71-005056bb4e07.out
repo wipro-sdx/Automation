@@ -1,0 +1,20 @@
+SSH password: 
+[KeyJ1dWlkIjogImNkZTMyMzJhLTQ2ZmItNGIxYS1iODUyLTE3N2QzNjA1ZTJiMSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDM3OC05ZWNhLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDM3OC05ZWNhLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAyOTRlYTNhLTlhYzUtNDY2Yi05OTBlLTU5OGExYjUzMDA2YSJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDM3OC05ZWNhLTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjY4YjA2NzcyLWNiN2YtNDZkYy05M2FjLWU1NmMzMWMwZmMwMCJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDM3OC05ZWNhLTAwMDAwMDAwMDAwNyJ9[64D[K
+PLAY [nagios_hosts] ************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDM3OC05ZWNhLTAwMDAwMDAwMDA1OSJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjdkZWQ2MTk3LTg1YzQtNDIwNC1hNDIwLWQyMmE4NjRkNzBjMyJ9[64D[K[0;32mok: [172.17.65.199][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDM3OC05ZWNhLTAwMDAwMDAwMDAwYyJ9[64D[K
+TASK [linuxhost : create folder] ***********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjA3NDA1ZDNlLTNkMTgtNDUwNi05ZGQyLWM4ZWMxYzlkYWI0MiJ9[64D[K[0;32mok: [172.17.65.199][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDM3OC05ZWNhLTAwMDAwMDAwMDAwZSJ9[64D[K
+TASK [linuxhost : copy file to client hosts] ***********************************
+[Ke30=[4D[Kroot@172.17.65.199's password: 

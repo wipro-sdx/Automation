@@ -1,0 +1,14 @@
+---
+
+- hosts: leaf 
+  connection: local
+   
+  vars: 
+   fname: "{{fname}}"
+   faction: "{{faction}}" 
+
+  tasks:
+    - name: configuring feature    
+      nxos_feature: 
+         feature: "{{fname}}"
+         state: "{{faction}}"

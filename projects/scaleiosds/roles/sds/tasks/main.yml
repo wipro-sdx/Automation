@@ -1,0 +1,9 @@
+---
+# tasks file for roles/sds
+# add sds software
+
+- name: copy sds software to sds hosts
+  copy: src={{ scaleio_package_path }}/EMC-ScaleIO-sds-{{ scaleio_version }}.el7.x86_64.rpm dest=/opt/EMC-ScaleIO-sds.x86_64.rpm
+
+- name: install sds software
+  yum: name=/opt/EMC-ScaleIO-sds.x86_64.rpm state=present

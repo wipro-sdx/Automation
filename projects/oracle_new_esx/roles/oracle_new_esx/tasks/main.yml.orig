@@ -1,0 +1,34 @@
+---
+- name: copy Oracle directory
+  synchronize:
+    src:  /root/Oracle11.2.0.4/
+    dest: /root/Oracle11.2.0.4/
+  delegate_to: 172.17.65.22  
+- name: Copy hosts
+  template: src=/var/lib/awx/projects/commvault/roles/commvault/tasks/hosts dest=/etc/hosts
+- name: Copy resolve.conf
+  template: src=/var/lib/awx/projects/oracle/roles/oracle/tasks/resolv.conf dest=/etc/resolv.conf
+- name: Installing Oracle
+  shell: /root/Oracle11.2.0.4/Oracle_automated_Install.sh
+- name: install prerequesties
+  yum: name={{item}} state=installed
+  with_items:
+   - binutils
+   - compat-libcap*
+   - elfutils*
+   - gcc*
+   - glibc*
+   - ksh
+   - libgcc
+   - libstdc*
+   - libstdc++
+   - libstdc++-devel
+   - make
+   - unixODBC
+   - unixODBC-devel
+   - sysstat
+  ignore_errors: True  
+- pause:
+    seconds: 30
+- name: install prerequesties
+  shell: yum install binutils compat-libcap* elfutils* pdksh gcc* glibc* libaio* libgcc libstdc* libstdc++ libstdc++-devel make unixODBC unixODBC-devel sysystat -y

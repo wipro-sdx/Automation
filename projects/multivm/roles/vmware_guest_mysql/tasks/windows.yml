@@ -1,0 +1,8 @@
+---
+- hosts: 172.17.66.156
+  tasks:
+    - name: creating file in windoes
+      win_file:
+        state: touch
+        path: C:\test\test1
+

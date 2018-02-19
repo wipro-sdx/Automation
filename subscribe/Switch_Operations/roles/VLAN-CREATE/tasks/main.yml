@@ -1,0 +1,8 @@
+---
+
+- name: VLAN Creation
+  nxos_vlan:
+    vlan_id: "{{vlan}}"
+    admin_state: "{{state}}"
+    name: "{{vlan_name}}"
+

@@ -1,0 +1,46 @@
+[scaleio]
+#scaleio01 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2222
+#scaleio02 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2200
+#scaleio03 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2201
+172.17.65.86
+172.17.65.87
+172.17.65.88
+
+[mdm]
+#scaleio[01:02]
+172.17.65.86
+172.17.65.87
+172.17.65.88
+
+[sds]
+#scaleio[01:03]
+172.17.65.86
+172.17.65.87
+172.17.65.88
+
+[sdc]
+#scaleio03
+172.17.65.86
+172.17.65.87
+172.17.65.88
+
+[tb]
+#scaleio03
+172.17.65.88
+
+[pmdm]
+#scaleio01
+172.17.65.86
+
+[gateway]
+172.17.65.85
+
+[lia]
+172.17.65.85
+172.17.65.86
+172.17.65.87
+172.17.65.88
+
+[localhost]
+172.17.66.156
+

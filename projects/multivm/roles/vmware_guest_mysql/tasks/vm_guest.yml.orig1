@@ -1,0 +1,34 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Create a VM from a template
+    vmware_guest:
+      hostname: 172.16.8.15
+      username: administrator@vsphere.opendc
+      password: W3lc0me!7
+      validate_certs: no
+      datacenter: opendc-dc1
+      cluster: SDXT7_CommonWorkload
+      name: alfa1
+      state: poweredon
+      template: rhel73_temp
+      disk:
+      - size_gb: 50
+        type: thin
+        datastore: datastore1
+      hardware:
+        memory_mb: 2048
+        num_cpus: 1
+        scsi: paravirtual
+      networks:
+      - name: VM Network
+        device_type: vmxnet3
+        type: static
+        network: CommonWorkload-1265
+        ip : 172.17.65.110
+        netmask: 255.255.255.0
+        gateway: 172.17.65.1
+      
+      wait_for_ip_address: no
+    delegate_to: localhost
+    register: deploy

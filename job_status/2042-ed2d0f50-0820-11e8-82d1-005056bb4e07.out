@@ -1,0 +1,15 @@
+SSH password: 
+SUDO password[defaults to SSH password]: 
+[KeyJ1dWlkIjogImY2OGFhMDhhLTFkYzItNGE1Yi04NzlhLTMxYTRiOWVjNTYzYiJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNTNhNC0xMzIzLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [oracle_new] **************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNTNhNC0xMzIzLTAwMDAwMDAwMDAxMSJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImFhODgxYWNjLTJmZmYtNGRlYS1hZmYxLTE2YjNjODViYjA0OCJ9[64D[K[0;32mok: [172.16.103.200][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNTNhNC0xMzIzLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [Running orainstRoot.sh as root] ******************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjk4NjU5NjM4LWY2NjYtNDIwMC05MjFiLTQ3OTY1M2ViNjcyMyJ9[64D[K[0;31mfatal: [172.16.103.200]: FAILED! => {"changed": true, "cmd": "/bin/sh /home/oracle/app/oraInventory/orainstRoot.sh", "delta": "0:00:00.008028", "end": "2018-02-02 11:51:45.787511", "failed": true, "rc": 127, "start": "2018-02-02 11:51:45.779483", "stderr": "/bin/sh: /home/oracle/app/oraInventory/orainstRoot.sh: No such file or directory", "stderr_lines": ["/bin/sh: /home/oracle/app/oraInventory/orainstRoot.sh: No such file or directory"], "stdout": "", "stdout_lines": []}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjlhM2E1NjkzLTQ5MDYtNDk3Zi1iNTNlLTJkOGI1NTViZmYxNiJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;31m172.16.103.200[0m             : [0;32mok=1   [0m changed=0    unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

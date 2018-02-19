@@ -1,0 +1,7 @@
+---
+- name: Attach new volume to a new host in a FlashArray
+  hosts: localhost
+  gather_facts: no
+
+  roles:
+    - purestorage-attach-vol

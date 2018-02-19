@@ -1,0 +1,116 @@
+SSH password: 
+SUDO password[defaults to SSH password]: 
+[KeyJ1dWlkIjogImVlMDMyNzg2LWMzNjktNGFhZS1iMTgwLTYzM2I2ODI5Yjg4YSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [oracle] ******************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDA1MCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImY5ZmUyODZmLWZkMjgtNDc3ZC1hZDk1LTQzMzI1MTY2YWFjNCJ9[64D[K[0;32mok: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAwNyJ9[64D[K
+TASK [oracle : copy Oracle directory] ******************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImU1Y2ZlMDAxLTA2ZTYtNDViZS05OWMyLTc0ZDU3MmQ3ZDY2ZiJ9[64D[K[0;33mchanged: [172.17.65.93 -> 172.17.65.22][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAwOSJ9[64D[K
+TASK [oracle : Copy resolve.conf] **********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjMzZTY3ZGUxLTFkYmMtNGIxMC1hNTU3LTE5MDliNmQxODQyNyJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAwYiJ9[64D[K
+TASK [oracle : install prerequesties] ******************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjJiMzA2ZDRkLWFkNWItNGU0My1hODA3LWQ1YTJjMTBiNGE4ZSJ9[64D[K[0;31mfailed: [172.17.65.93] (item=[u'binutils', u'compat-libcap*', u'elfutils*', u'gcc*', u'glibc*', u'ksh', u'libgcc', u'libstdc*', u'libstdc++', u'libstdc++-devel', u'make', u'unixODBC', u'unixODBC-devel', u'sysstat']) => {"changed": true, "failed": true, "item": ["binutils", "compat-libcap*", "elfutils*", "gcc*", "glibc*", "ksh", "libgcc", "libstdc*", "libstdc++", "libstdc++-devel", "make", "unixODBC", "unixODBC-devel", "sysstat"], "msg": "https://cdn.redhat.com/content/dist/rhel/server/7/7Server/x86_64/os/Packages/glibc-devel-2.17-196.el7_4.2.x86_64.rpm: [Errno 14] curl#6 - \"Could not resolve host: cdn.redhat.com; Name or service not known\"\nTrying other mirror.\n\n\nError downloading packages:\n  glibc-devel-2.17-196.el7_4.2.x86_64: [Errno 256] No more mirrors to try.\n\n", "rc": 1, "results": ["binutils-2.25.1-22.base.el7.x86_64 providing binutils is already installed", "elfutils-libs-0.166-2.el7.x86_64 providing elfutils* is already installed", "glibc-common-2.17-157.el7.x86_64 providing glibc* is already installed", "libgcc-4.8.5-11.el7.x86_64 providing libgcc is already installed", "libstdc++-4.8.5-11.el7.x86_64 providing libstdc* is already installed", "libstdc++-4.8.5-11.el7.x86_64 providing libstdc++ is already installed", "make-1:3.82-23.el7.x86_64 providing make is already installed", "sysstat-10.1.5-11.el7.x86_64 providing sysstat is already installed", "Loaded plugins: langpacks, product-id, search-disabled-repos, subscription-\n              : manager\n\n*** WARNING ***\nThe subscription for following product(s) has expired:\n  - Red Hat Beta\n  - Red Hat Ceph Storage\n  - Red Hat Ceph Storage Calamari\n  - Red Hat Ceph Storage MON\n  - Red Hat Certification (for RHEL Server)\n  - Red Hat CloudForms\n  - Red Hat CloudForms Beta\n  - Red Hat Enterprise Linux Atomic Host\n  - Red Hat Enterprise Linux Atomic Host Beta\n  - Red Hat Enterprise Linux Fast Datapath\n  - Red Hat Enterprise Linux Fast Datapath Beta\n  - Red Hat Enterprise Linux High Availability (for RHEL Server)\n  - Red Hat Enterprise Linux Load Balancer (for RHEL Server)\n  - Red Hat Enterprise Linux Server\n  - Red Hat Enterprise Linux for Real Time for NFV\n  - Red Hat Enterprise MRG Messaging\n  - Red Hat OpenStack\n  - Red Hat OpenStack Beta\n  - Red Hat OpenStack Beta Certification Test Suite\n  - Red Hat OpenStack Certification Test Suite\n  - Red Hat Software Collections (for RHEL Server)\n  - Red Hat Software Collections Beta (for RHEL Server)\n  - dotNET on RHEL (for RHEL Server)\n  - dotNET on RHEL Beta (for RHEL Server)\nYou no longer have access to the repositories that provide these products.  It is important that you apply an active subscription in order to resume access to security and other critical updates. If you don't have other active subscriptions, you can renew the expired subscription.  \nResolving Dependencies\n--> Running transaction check\n---> Package compat-libcap1.x86_64 0:1.10-7.el7 will be installed\n---> Package gcc.x86_64 0:4.8.5-16.el7_4.1 will be installed\n--> Processing Dependency: cpp = 4.8.5-16.el7_4.1 for package: gcc-4.8.5-16.el7_4.1.x86_64\n--> Processing Dependency: libgomp = 4.8.5-16.el7_4.1 for package: gcc-4.8.5-16.el7_4.1.x86_64\n--> Processing Dependency: glibc-devel >= 2.2.90-12 for package: gcc-4.8.5-16.el7_4.1.x86_64\n--> Processing Dependency: libgcc >= 4.8.5-16.el7_4.1 for package: gcc-4.8.5-16.el7_4.1.x86_64\n--> Processing Dependency: libmpc.so.3()(64bit) for package: gcc-4.8.5-16.el7_4.1.x86_64\n--> Processing Dependency: libmpfr.so.4()(64bit) for package: gcc-4.8.5-16.el7_4.1.x86_64\n---> Package gcc-c++.x86_64 0:4.8.5-16.el7_4.1 will be installed\n--> Processing Dependency: libstdc++ = 4.8.5-16.el7_4.1 for package: gcc-c++-4.8.5-16.el7_4.1.x86_64\n---> Package gcc-gfortran.x86_64 0:4.8.5-16.el7_4.1 will be installed\n--> Processing Dependency: libgfortran = 4.8.5-16.el7_4.1 for package: gcc-gfortran-4.8.5-16.el7_4.1.x86_64\n--> Processing Dependency: libquadmath = 4.8.5-16.el7_4.1 for package: gcc-gfortran-4.8.5-16.el7_4.1.x86_64\n--> Processing Dependency: libquadmath-devel = 4.8.5-16.el7_4.1 for package: gcc-gfortran-4.8.5-16.el7_4.1.x86_64\n--> Processing Dependency: libgfortran.so.3()(64bit) for package: gcc-gfortran-4.8.5-16.el7_4.1.x86_64\n---> Package gcc-gnat.x86_64 0:4.8.5-16.el7_4.1 will be installed\n--> Processing Dependency: libgnat = 4.8.5-16.el7_4.1 for package: gcc-gnat-4.8.5-16.el7_4.1.x86_64\n--> Processing Dependency: libgnat-devel = 4.8.5-16.el7_4.1 for package: gcc-gnat-4.8.5-16.el7_4.1.x86_64\n---> Package gcc-objc.x86_64 0:4.8.5-16.el7_4.1 will be installed\n--> Processing Dependency: libobjc = 4.8.5-16.el7_4.1 for package: gcc-objc-4.8.5-16.el7_4.1.x86_64\n--> Processing Dependency: libobjc.so.4()(64bit) for package: gcc-objc-4.8.5-16.el7_4.1.x86_64\n---> Package gcc-objc++.x86_64 0:4.8.5-16.el7_4.1 will be installed\n---> Package ksh.x86_64 0:20120801-34.el7 will be installed\n---> Package libstdc++-devel.x86_64 0:4.8.5-16.el7_4.1 will be installed\n---> Package unixODBC.x86_64 0:2.3.1-11.el7 will be installed\n--> Processing Dependency: libltdl.so.7()(64bit) for package: unixODBC-2.3.1-11.el7.x86_64\n---> Package unixODBC-devel.x86_64 0:2.3.1-11.el7 will be installed\n--> Running transaction check\n---> Package cpp.x86_64 0:4.8.5-16.el7_4.1 will be installed\n---> Package glibc-devel.x86_64 0:2.17-196.el7_4.2 will be installed\n--> Processing Dependency: glibc = 2.17-196.el7_4.2 for package: glibc-devel-2.17-196.el7_4.2.x86_64\n--> Processing Dependency: glibc-headers = 2.17-196.el7_4.2 for package: glibc-devel-2.17-196.el7_4.2.x86_64\n--> Processing Dependency: glibc-headers for package: glibc-devel-2.17-196.el7_4.2.x86_64\n---> Package libgcc.x86_64 0:4.8.5-11.el7 will be updated\n---> Package libgcc.x86_64 0:4.8.5-16.el7_4.1 will be an update\n---> Package libgfortran.x86_64 0:4.8.5-16.el7_4.1 will be installed\n---> Package libgnat.x86_64 0:4.8.5-16.el7_4.1 will be installed\n---> Package libgnat-devel.x86_64 0:4.8.5-16.el7_4.1 will be installed\n---> Package libgomp.x86_64 0:4.8.5-11.el7 will be updated\n---> Package libgomp.x86_64 0:4.8.5-16.el7_4.1 will be an update\n---> Package libmpc.x86_64 0:1.0.1-3.el7 will be installed\n---> Package libobjc.x86_64 0:4.8.5-16.el7_4.1 will be installed\n---> Package libquadmath.x86_64 0:4.8.5-16.el7_4.1 will be installed\n---> Package libquadmath-devel.x86_64 0:4.8.5-16.el7_4.1 will be installed\n---> Package libstdc++.x86_64 0:4.8.5-11.el7 will be updated\n---> Package libstdc++.x86_64 0:4.8.5-16.el7_4.1 will be an update\n---> Package libtool-ltdl.x86_64 0:2.4.2-22.el7_3 will be installed\n---> Package mpfr.x86_64 0:3.1.1-4.el7 will be installed\n--> Running transaction check\n---> Package glibc.x86_64 0:2.17-157.el7 will be updated\n--> Processing Dependency: glibc = 2.17-157.el7 for package: glibc-common-2.17-157.el7.x86_64\n---> Package glibc.x86_64 0:2.17-196.el7_4.2 will be an update\n---> Package glibc-headers.x86_64 0:2.17-196.el7_4.2 will be installed\n--> Processing Dependency: kernel-headers >= 2.2.1 for package: glibc-headers-2.17-196.el7_4.2.x86_64\n--> Processing Dependency: kernel-headers for package: glibc-headers-2.17-196.el7_4.2.x86_64\n--> Running transaction check\n---> Package glibc-common.x86_64 0:2.17-157.el7 will be updated\n---> Package glibc-common.x86_64 0:2.17-196.el7_4.2 will be an update\n---> Package kernel-headers.x86_64 0:3.10.0-693.11.6.el7 will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package             Arch     Version                Repository            Size\n================================================================================\nInstalling:\n compat-libcap1      x86_64   1.10-7.el7             rhel-7-server-rpms    19 k\n gcc                 x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms    16 M\n gcc-c++             x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms   7.2 M\n gcc-gfortran        x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms   6.7 M\n gcc-gnat            x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms    13 M\n gcc-objc            x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms   5.7 M\n gcc-objc++          x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms   6.2 M\n ksh                 x86_64   20120801-34.el7        rhel-7-server-rpms   883 k\n libstdc++-devel     x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms   1.5 M\n unixODBC            x86_64   2.3.1-11.el7           rhel-7-server-rpms   413 k\n unixODBC-devel      x86_64   2.3.1-11.el7           rhel-7-server-rpms    55 k\nInstalling for dependencies:\n cpp                 x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms   5.9 M\n glibc-devel         x86_64   2.17-196.el7_4.2       rhel-7-server-rpms   1.1 M\n glibc-headers       x86_64   2.17-196.el7_4.2       rhel-7-server-rpms   676 k\n kernel-headers      x86_64   3.10.0-693.11.6.el7    rhel-7-server-rpms   6.0 M\n libgfortran         x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms   296 k\n libgnat             x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms   963 k\n libgnat-devel       x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms   2.7 M\n libmpc              x86_64   1.0.1-3.el7            rhel-7-server-rpms    51 k\n libobjc             x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms    76 k\n libquadmath         x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms   186 k\n libquadmath-devel   x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms    49 k\n libtool-ltdl        x86_64   2.4.2-22.el7_3         rhel-7-server-rpms    49 k\n mpfr                x86_64   3.1.1-4.el7            rhel-7-server-rpms   203 k\nUpdating for dependencies:\n glibc               x86_64   2.17-196.el7_4.2       rhel-7-server-rpms   3.6 M\n glibc-common        x86_64   2.17-196.el7_4.2       rhel-7-server-rpms    11 M\n libgcc              x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms    98 k\n libgomp             x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms   154 k\n libstdc++           x86_64   4.8.5-16.el7_4.1       rhel-7-server-rpms   301 k\n\nTransaction Summary\n================================================================================\nInstall  11 Packages (+13 Dependent packages)\nUpgrade              (  5 Dependent packages)\n\nTotal download size: 91 M\nDownloading packages:\nDelta RPMs disabled because /usr/bin/applydeltarpm not installed.\n"]}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjA1NTQ5NTdmLWZiNmMtNDdmNi04NmFiLTNjMDEyNDNkZDFkNCJ9[64D[K[0;36m...ignoring[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAwZCJ9[64D[K
+TASK [oracle : adding security limits for nproc] *******************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImVjOThiYjFkLTY2MzUtNGE2My1iMTMyLTI0N2E3MjU0NjcxNiJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAwZiJ9[64D[K
+TASK [oracle : adding security limits for nofile] ******************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjgxZTE5YmU1LTMxMWUtNGFlMy1iMGFiLWQzZjllZjQ3ZTA5YyJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAxMSJ9[64D[K
+TASK [oracle : adding security limits for core] ********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQyMTVmYWU4LTAzMWMtNDgxMS1hNTRiLTMzYWU4NDRjZjA0NCJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAxMyJ9[64D[K
+TASK [oracle : adding security limits for memlock] *****************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjA5NzE2MjEyLTIwMzktNGM3OS1hNjE2LWM1NDVmZjJiNDM1YyJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAxNSJ9[64D[K
+TASK [oracle : Update pamd rule's control in /etc/pam.d/login] *****************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAzMTYzZDhlLTVkZTMtNDA3MS05Y2U4LWZlMjUwNDJjNTZjOSJ9[64D[K[0;32mok: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAxNyJ9[64D[K
+TASK [oracle : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogIjYwMTAwNWY2LWJmNTEtNDRiNC1hNzBiLThiMTEyMzA1ZWRhNSJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAxOSJ9[64D[K
+TASK [oracle : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogIjMyZDZlZjY4LTA1NjMtNGQ5OC04YzIyLTk1NWFhZjFmZmFjYiJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAxYiJ9[64D[K
+TASK [oracle : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogIjdiOWY0NDZmLTczMGMtNGZjNi1iZmFmLTQ4OTNhYzgwMjkwNSJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAxZCJ9[64D[K
+TASK [oracle : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogImNmNjcwODlhLTU0ZDktNDhiMi04ZTU4LWFiOGQ2YTUwMWY5MiJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAxZiJ9[64D[K
+TASK [oracle : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogIjc1MDZkZDNiLTE5ZjgtNGU5ZS04OWQ5LTlkZTY3ZTM4Zjg0YyJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAyMSJ9[64D[K
+TASK [oracle : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogIjhkNTkwOTIxLTYxNjktNGE4Mi05ZGU3LTBkMGVkMDQwZmRjMiJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAyMyJ9[64D[K
+TASK [oracle : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogIjA3MTk2Nzg2LTEzNjItNGVmMi1iYzc3LTNiNTcyMTY0NTNjZSJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAyNSJ9[64D[K
+TASK [oracle : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogImMxZjk3MWU5LWVkYzktNDRhZS05OWViLTA1NDU5NTI3NDc2ZCJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAyNyJ9[64D[K
+TASK [oracle : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogImQzMmZiNGM0LTVmMDItNDQwMy04OTc4LWE3YzUwNmI1MjdkNSJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAyOSJ9[64D[K
+TASK [oracle : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogIjExNjYyM2RhLTBiZDEtNDg3MC1hYmIzLTdhNWFhNmRhMGU3NSJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAyYiJ9[64D[K
+TASK [oracle : Set kernel.shmmni in /proc and in the sysctl file and reload] ***
+[Ke30=[4D[K[KeyJ1dWlkIjogImIzNDRlODNlLWE0NGYtNDQ2Mi1hNDg2LWM5ZDE2OTkxMDM0MCJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAyZCJ9[64D[K
+TASK [oracle : create group] ***************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjBiYTUyMTdkLWZiNDgtNDU2Ny1iNDViLWIxZTNmYzYwYjcwYSJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAyZiJ9[64D[K
+TASK [oracle : create group] ***************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImJiZjM3NDRjLTg1YmItNGY1ZC1hM2FmLWVjODNjOTUyMzU5ZCJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAzMSJ9[64D[K
+TASK [oracle : create group] ***************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjgxOWZhMGZhLWFmNzYtNDM3MC1hZjZmLWNkYTRlNmM5ZDE2OSJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAzMyJ9[64D[K
+TASK [oracle : create group] ***************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjg0YjZmNjVhLTQ2NGQtNDU0MS1hMTY5LTdjZDk3MTJmOWFiNSJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAzNSJ9[64D[K
+TASK [oracle : create group] ***************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImNhNDRiYjM2LWQ5YzMtNDUwZC05MzA4LTI4MTEwYzdkY2I2YyJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAzNyJ9[64D[K
+TASK [oracle : create group] ***************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjZhNzExZGQ2LWJiMDctNGQ3MC1iZWZjLTFlMzk3MWQ2MzU2MSJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAzOSJ9[64D[K
+TASK [oracle : create user oracle] *********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjMwMzY0YTQ2LWI1NTctNDYzOS05NmM3LTVjNGQwYjljZDMyYyJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAzYiJ9[64D[K
+TASK [oracle : set password for oracle] ****************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjU0YTQwNjdhLTY3ZGQtNGVlYS05YjExLTNlZmVlN2FiYzFlNiJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAzZCJ9[64D[K
+TASK [oracle : update oracle profile] ******************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjI4ZmYzNTU1LTlkMWItNDJkOC04MGJkLWYxMDMxMDdkOGE3ZSJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDAzZiJ9[64D[K
+TASK [oracle : copy Oracle directory] ******************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjVlOTZmMjFmLWJhYjUtNGZjZC04YjU5LWEyMTA4YjQxM2NjOCJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDA0MSJ9[64D[K
+TASK [oracle : Copy AutomateInstallation.rsp] **********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjcyYzkwZjFiLTZjN2ItNDk1MC1hMjQ2LTg5NWY2YzQ1NzkzMiJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDA0MyJ9[64D[K
+TASK [oracle : setting permissions] ********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImIwNmQ1MDk2LWMzYjgtNDRiYi1iZDllLTIwZmVjNTdmNTZlZCJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDA0NSJ9[64D[K
+TASK [oracle : pause] **********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjM4ZWY2ZWNhLTY4NTItNDQ2OC1hYjU5LWFhMTAxNDk2ZmFjYSJ9[64D[KPausing for 30 seconds
+[Ke30=[4D[K[KeyJ1dWlkIjogIjlmYTMyMTJmLTU5NmYtNDE5NS05OTM0LWJiYTY2NzY2NGQ3NiJ9[64D[K(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+[Ke30=[4D[K[KeyJ1dWlkIjogImNmMGY1ZTk4LTE4NjQtNDJkYi1iOWUxLWNjZWM3YzkzMGQ4OSJ9[64D[K[0;32mok: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNDgzNy1lZGQ3LTAwMDAwMDAwMDA0NyJ9[64D[K
+TASK [oracle : install prerequesties] ******************************************
+[Ke30=[4D[K[1;35m [WARNING]: Consider using yum module rather than running yum[0m
+[1;35m[0m
+[KeyJ1dWlkIjogIjUzOTc4MjJkLWNmMmEtNDJjYy1hNmYzLTI4MjMxNzFiMGQ3ZSJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjRjNDE3YmUwLTBhM2ItNDgxNS04MGZkLTFmZmYxYmIwMzVkNyJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m172.17.65.93[0m               : [0;32mok=34  [0m [0;33mchanged=31  [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

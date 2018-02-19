@@ -1,0 +1,26 @@
+---
+
+- hosts: all
+  connection: local
+
+  tasks:
+   - name: Video QoS configuration
+     nxos_command:
+        commands:
+            - conf t
+            - class-map type qos match-all VOICE
+            - policy-map type qos VOICE
+            - class VOICE
+            - set dscp ef
+            - exit
+            - class-map type qos match-all VIDEO
+            - policy-map type qos VIDEO
+            - class VIDEO
+            - set dscp af11
+            - exit
+            - class-map type qos match-all DATA
+            - policy-map type qos DATA
+            - class DATA
+            - set dscp cs1
+            - exit
+            - exit

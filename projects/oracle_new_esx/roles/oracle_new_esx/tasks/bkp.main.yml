@@ -1,0 +1,11 @@
+---
+- name: copy Oracle directory
+  synchronize:
+    src:  /root/Oracle11.2.0.4/
+    dest: /root/Oracle11.2.0.4/
+- name: Copy resolve.conf
+  template: src=/var/lib/awx/projects/oracle/roles/oracle/tasks/resolv.conf dest=/etc/resolv.conf
+- name: Installing Oracle
+  shell: /root/Oracle11.2.0.4/Oracle_automated_Install.sh
+- pause:
+    seconds: 30

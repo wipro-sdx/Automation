@@ -1,0 +1,12 @@
+---
+- hosts: 172.17.66.156
+  ansible_ssh_user: administrator
+  ansible_ssh_pass: Wipro@123
+  ansible_ssh_port: 5985
+  ansible_connection: winrm
+  ansible_winrm_server_cert_validation: ignore
+  tasks:
+    - name: Run Powershell Scripts
+      script: /root/openshift/roles/vmware_guest_mysql/files/power_shell.ps1
+#      win_shell: C:\scripts\Add_datastore.ps1 
+      ignore_errors: yes

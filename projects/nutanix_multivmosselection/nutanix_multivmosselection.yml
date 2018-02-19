@@ -1,0 +1,7 @@
+- hosts: ESX_172.16.8.15
+  gather_facts: False
+  tasks:
+
+  roles:
+  - nutanix_multivmosselection
+

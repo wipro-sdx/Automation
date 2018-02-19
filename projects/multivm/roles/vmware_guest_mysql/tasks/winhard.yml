@@ -1,0 +1,6 @@
+---
+- hosts: 172.17.65.212
+  tasks:
+    - name: run a multiple shell commands
+      win_shell: |
+        Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True

@@ -1,0 +1,7 @@
+---
+- name: shuting down vm
+  shell: virsh shutdown {{ vm_name }}
+- name: collecting dumpxml of vm
+  shell: virsh dumpxml {{ vm_name }} > /share/{{ vm_name }}.xml
+- name: copying images 
+  shell: cp /var/lib/libvirt/images/* /share/

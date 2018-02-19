@@ -1,0 +1,25 @@
+- name: subscribe and register specific pool bi ID
+  redhat_subscription:
+   state: present
+   username: 
+   password: 
+   pool: 8a85f98158de227b0158e0ee016c2ca3
+- name: Disable all repo
+  yum_repository: name=* enabled=no baseurl=* mirrorlist=* description="disabling all repos"
+- name: Enable specific repository
+  yum_repository: name={{item}} enabled=yes description="enabling three repos" baseurl="https://cdn.redhat.com/content/dist/rhel/server/7/7Server/$basearch/extras/os","https://cdn.redhat.com/content/dist/rhel/server/7/7Server/$basearch/extras/os"
+  with_items:
+   - rhel-7-server-rpms
+   - rhel-7-server-extras-rpms
+- name: install wget git net-tools bind-utils iptables-services 
+  yum: name={{item}} state=installed
+  with_items:
+   - wget
+   - git
+   - net-tools
+   - bind-utils
+   - iptables-services
+- name: update yum
+  yum: name=* state=latest
+   
+

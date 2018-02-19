@@ -1,0 +1,8 @@
+---
+- hosts: oracle_new
+  become: yes
+  become_user: root
+  gather_facts: False
+
+  roles:
+  - commvault_new_esx

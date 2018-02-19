@@ -1,0 +1,14 @@
+SSH password: 
+[KeyJ1dWlkIjogIjZkNDJjZTJhLWNlZWYtNDRhNi05MmQ4LTdjMDk3OWRiOThjYyJ9[64D[K[1;35m [WARNING]: provided hosts list is empty, only localhost is available[0m
+[1;35m[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjBhYTkzNzc4LTU1YjAtNDAxMi1hNTdiLTAyNWRiNTAzZTJlZSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMDViNi0xNmM1LTAwMDAwMDAwMDAwMSJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMDViNi0xNmM1LTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [multivm : Deploy guest from template] ************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjNiMmYwODJmLWY0YjUtNDdjNC05ODM5LWMyOWExMTRjMDlhYSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjRjYzFkZmMyLWQ0MDgtNGZmNC05ZDBmLTY2M2IwZDJlZWUwYyJ9[64D[K[0;31mAn exception occurred during task execution. To see the full traceback, use -vvv. The error was: KeyError: 'hostname'[0m
+[0;31mfailed: [localhost] (item=1) => {"failed": true, "item": "1", "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_F3iBsx/ansible_module_vsphere_guest.py\", line 1918, in <module>\n    main()\n  File \"/tmp/ansible_F3iBsx/ansible_module_vsphere_guest.py\", line 1875, in main\n    vm_extra_config=vm_extra_config\n  File \"/tmp/ansible_F3iBsx/ansible_module_vsphere_guest.py\", line 667, in deploy_template\n    esxi_hostname = esxi['hostname']\nKeyError: 'hostname'\n", "module_stdout": "", "msg": "MODULE FAILURE", "rc": 0}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjE2NmZkOGY0LTMyMWYtNGU2My04Mzc3LTMzMGJmZWQ1ZDlkYiJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : ok=0    changed=0    unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

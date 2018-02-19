@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+
+  - name: install security plugin
+    yum: name=yum-plugin-security state=present
+    when: ansible_os_family == "RedHat"
+    
+  - name: "just update security patches"
+    shell: yum --security update
+    when: ansible_os_family == "RedHat"

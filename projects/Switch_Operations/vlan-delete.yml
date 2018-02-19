@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  connection: local
+
+  vars_prompt:
+    name: "vlan"
+    prompt: "Enter the VLAN to be deleted"
+    private: no
+
+  roles:
+  - VLAN-DELETE

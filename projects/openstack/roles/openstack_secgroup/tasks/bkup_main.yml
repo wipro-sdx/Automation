@@ -1,0 +1,10 @@
+- name: Create a security group and assign Rules
+  os_security_group:
+       state: present
+       auth:
+         auth_url: http://172.17.77.108:35357/v2.0
+         username: admin
+         password: Wipro@123
+         project_name: admin
+       name: foo
+       description: security group for foo servers

@@ -1,0 +1,21 @@
+---
+- hosts: F5
+  connection: local
+   #validate_certs: False 
+
+  vars: 
+    server_addr: "{{server_addr}}"
+    f5_ip: "{{f5_ip}}" 
+  tasks:
+    - name: Config DNS
+      bigip_device_dns:
+       name_servers:
+          - "{{server_addr}}"
+       state: present
+       password: "Wipro@123"
+       #server: "172.16.48.93"
+       server: "{{item}}"
+       user: "admin"
+       validate_certs: "no"
+      with_items: 
+         - "{{f5_ip}}"

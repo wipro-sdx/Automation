@@ -1,0 +1,32 @@
+---
+- name: copy resolv.conf
+  template: src=resolv.conf dest=/etc/resolv.conf
+  tags: dns
+- name: subscribe and register specific pool bi ID
+  redhat_subscription:
+   state: present
+   username:
+   password: 
+   pool: 8a85f98158de227b0158e0ee016c2ca3
+- name: Disable all repo
+  shell: subscription-manager repos --disable=*
+- name: Enable specific repository
+  shell: subscription-manager repos --enable={{ item }}
+  with_items:
+   - rhel-7-server-rpms
+   - rhel-7-server-extras-rpms
+   - rhel-7-server-ose-3.5-rpms
+   - rhel-7-fast-datapath-rpms
+- name: install wget git net-tools bind-utils iptables-services 
+  yum: name={{item}} state=installed
+  with_items:
+   - wget
+   - git
+   - net-tools
+   - bind-utils
+   - iptables-services
+   - bridge-utils
+- name: update yum
+  yum: name=* state=latest
+   
+

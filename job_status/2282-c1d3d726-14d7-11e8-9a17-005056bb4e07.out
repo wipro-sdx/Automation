@@ -1,0 +1,39 @@
+deleting "2017-10-16 07:05:49.679008+00:00-1049-successful" (1 host summaries, 20 events)
+deleting "2017-10-16 07:09:33.039025+00:00-1050-failed" (1 host summaries, 59 events)
+deleting "2017-10-16 07:39:11.281686+00:00-1055-successful" (1 host summaries, 20 events)
+deleting "2017-10-16 08:29:11.916456+00:00-1057-successful" (1 host summaries, 20 events)
+deleting "2017-10-16 08:33:03.966074+00:00-1058-successful" (1 host summaries, 75 events)
+deleting "2017-10-16 08:50:12.343408+00:00-1061-successful" (1 host summaries, 20 events)
+deleting "2017-10-16 08:53:52.049375+00:00-1062-successful" (1 host summaries, 75 events)
+deleting "2017-10-16 09:23:53.102796+00:00-1065-successful" (1 host summaries, 20 events)
+deleting "2017-10-16 09:27:39.175461+00:00-1066-successful" (1 host summaries, 75 events)
+deleting "2017-10-16 09:53:09.401311+00:00-1067-failed" (1 host summaries, 8 events)
+deleting "2017-10-16 10:02:54.122902+00:00-1070-successful" (1 host summaries, 20 events)
+deleting "2017-10-16 10:45:15.340332+00:00-1072-canceled" (0 host summaries, 71 events)
+deleting "2017-10-16 10:53:15.380531+00:00-1075-successful" (1 host summaries, 20 events)
+deleting "2017-10-16 10:56:54.363105+00:00-1076-successful" (1 host summaries, 75 events)
+deleting "2017-10-16 11:06:03.458884+00:00-1077-successful" (1 host summaries, 8 events)
+deleting "2017-10-16 11:14:02.045092+00:00-1078-successful" (1 host summaries, 11 events)
+deleting "2017-10-16 11:14:10.127870+00:00-1079-successful" (1 host summaries, 14 events)
+deleting "2017-10-17 06:13:31.924042+00:00-1080-failed" (1 host summaries, 63 events)
+deleting "2017-10-17 06:16:35.357880+00:00-1081-successful" (1 host summaries, 75 events)
+deleting "2017-10-17 06:21:19.962986+00:00-1082-failed" (1 host summaries, 63 events)
+deleting "2017-10-17 06:22:13.246914+00:00-1083-failed" (1 host summaries, 63 events)
+deleting "2017-10-17 06:24:07.387673+00:00-1084-successful" (1 host summaries, 75 events)
+deleting "2017-10-17 06:28:07.003801+00:00-1085-successful" (1 host summaries, 75 events)
+jobs: 23 deleted, 749 skipped.
+ad hoc commands: 0 deleted, 0 skipped.
+project updates: 0 deleted, 1 skipped.
+inventory updates: 0 deleted, 44 skipped.
+deleting "2017-10-15 18:15:48.451100+00:00-1047-successful" (type cleanup_jobs)
+deleting "2017-10-17 18:15:41.239428+00:00-1086-successful" (type cleanup_activitystream)
+management jobs: 2 deleted, 36 skipped.
+deleting "2017-10-16 07:05:29.343476+00:00-1048-successful" (4 nodes)
+deleting "2017-10-16 08:29:07.457814+00:00-1056-successful" (4 nodes)
+deleting "2017-10-16 08:50:02.161563+00:00-1060-successful" (4 nodes)
+deleting "2017-10-16 09:23:25.470303+00:00-1064-successful" (4 nodes)
+deleting "2017-10-16 10:02:35.324635+00:00-1069-successful" (5 nodes)
+deleting "2017-10-16 10:49:07.646016+00:00-1073-canceled" (5 nodes)
+deleting "2017-10-16 10:53:10.972545+00:00-1074-successful" (5 nodes)
+workflow jobs: 7 deleted, 58 skipped.
+notifications: 0 deleted, 0 skipped.

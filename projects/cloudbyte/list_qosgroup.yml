@@ -1,0 +1,16 @@
+---
+- name: Listing QoS group in the cloudbyte storage
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: List QoS Group
+      uri:
+        url: https://172.16.6.21/client/api?command=listQosGroup&apiKey=V-RDsMsLIn84TVjcJkWAyvdxhj5LYHpfpm6UzdhVJ1dWMxzN3Bcd_guGkiljA9JodnMTu-USUro7VaYoZgx8gw&response=json
+        method: GET
+        validate_certs: no
+        return_content: yes
+        body_format: json
+      register: qosgroup
+ 
+    - name: Show output
+      debug: var=qosgroup

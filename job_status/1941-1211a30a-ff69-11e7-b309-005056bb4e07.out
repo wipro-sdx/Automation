@@ -1,0 +1,14 @@
+SSH password: 
+[KeyJ1dWlkIjogImY0ZGM4MDBkLWJiNjAtNDBjMy04M2ZjLWU1YTYwNjRmZjcwMiJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNTMzNS1jYWYxLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [all] *********************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNTMzNS1jYWYxLTAwMDAwMDAwMDAwZCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjIxYzc3YzUzLTU1MjktNDM1MS1iMzlhLTg3NmY2ODE3OGVlYSJ9[64D[K[0;32mok: [172.16.48.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNTMzNS1jYWYxLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [Create Node] *************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQzYTgzY2ZjLTNlY2EtNDczYy05YjExLTQxNDNlY2Y5NDY1YiJ9[64D[K[0;31mfatal: [172.16.48.93]: FAILED! => {"changed": false, "failed": true, "msg": "value of session_state must be one of: enabled,disabled, got: present"}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjMwN2Q4YWJkLTE3ZGQtNDkzNi04NjlkLTYxYjAyNzdhYzM5MSJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;31m172.16.48.93[0m               : [0;32mok=1   [0m changed=0    unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

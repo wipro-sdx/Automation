@@ -1,0 +1,13 @@
+SSH password: 
+[KeyJ1dWlkIjogIjIxZTdlZGM5LWRjMTUtNGMxOC05NTdjLTViMTRjMDNkY2MyNCJ9[64D[K[1;35m [WARNING]: provided hosts list is empty, only localhost is available[0m
+[1;35m[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjc3OGEzYjE4LTJjZjAtNDgwYi04NjM3LWExMTFlOTI5YTgyNSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZGZmMy0wMjg0LTAwMDAwMDAwMDAwMSJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZGZmMy0wMjg0LTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [multivm : Deploy guest from template] ************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjIxMTAyM2M0LTIwYzEtNDViYy05OTM4LWY1MDFkYzBjOTdkOSJ9[64D[K[0;31mfatal: [localhost]: FAILED! => {"failed": true, "msg": "can't parse arg count=u'' as integer"}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjZmY2QzNGQyLTc1ZGItNGRkMi04MjczLWYzOGEzNjU4YjFjMyJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : ok=0    changed=0    unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

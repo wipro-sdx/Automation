@@ -1,0 +1,26 @@
+SSH password: 
+[KeyJ1dWlkIjogIjY0Y2ZiMGQzLTZjNjQtNGU4Mi05NDMxLTBiZTg2YWZhZmU4MCJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmMzMy1mYjlkLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmMzMy1mYjlkLTAwMDAwMDAwMDAxNSJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjJmMWViMzU5LTY0ZGEtNGE5My05Y2U1LTc0ZThkZTA3ZjEyYiJ9[64D[K[0;32mok: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmMzMy1mYjlkLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [Deploy Application Server] ***********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjkwYTAxN2FhLTU0OWQtNGExYi1hZjU4LWU3ODgxOTAxNWIzZSJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmMzMy1mYjlkLTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [Adding to APP PortGroup] *************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjViM2RjNmQ5LWY1N2ItNDk0My04ZjQ1LTk4MTNkMTFiZjFhOCJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmMzMy1mYjlkLTAwMDAwMDAwMDAwOCJ9[64D[K
+TASK [Fetch VM Details] ********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjk2Zjc1MmZjLWMyMDEtNGJjOS1iNjIxLWViNzM3ZDYyOWIwNiJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmMzMy1mYjlkLTAwMDAwMDAwMDAwYSJ9[64D[K
+TASK [Fetch VM IP] *************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjlhN2UzYzU0LTM3NDgtNGMxZS1iZWQxLTY0Mzk1NGY1MjkzOSJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmMzMy1mYjlkLTAwMDAwMDAwMDAwYyJ9[64D[K
+TASK [Email VM Details] ********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImY3ZWI3OTljLTQ5ZjktNDU0ZS1iODYwLWViNzNhMWFiNzU1MSJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjIyMDBkNGQzLTZkMWUtNDlkOS04ZTgwLWVhNWQ5NzA1YTNhOSJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m127.0.0.1[0m                  : [0;32mok=6   [0m [0;33mchanged=5   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

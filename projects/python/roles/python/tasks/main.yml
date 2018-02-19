@@ -1,0 +1,5 @@
+---
+- name: Deployment of python app on Openshift
+  shell: /root/SDX-Demo/python-app.bash
+  args:
+    executable: /bin/bash

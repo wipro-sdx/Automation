@@ -1,0 +1,16 @@
+SSH password: 
+[KeyJ1dWlkIjogIjk5MDEyOTZmLWFkY2YtNDUwOC04YzQ0LWJjOWUxMmQ0NTY0NCJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmYxYy01MzA2LTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmYxYy01MzA2LTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjE0ZTUzODZhLWIxZWMtNDU4MC1hNGMyLWRmZGNmMGIyNjhlOSJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmYxYy01MzA2LTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImJjMjRkZjc5LWY0NDUtNDdjYy1hNjJlLTFmMjU0ZTA0MTVhNCJ9[64D[K[0;31mfatal: [127.0.0.1]: FAILED! => {"failed": true, "msg": "the field 'args' has an invalid value, which appears to include a variable that is undefined. The error was: float object has no element 65\n\nThe error appears to have been in '/var/lib/awx/projects/nagios_linux/nagios_linux.yaml': line 16, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n        groups: nagios_client\n    - add_host:\n      ^ here\n"}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjYxYmE4OTQ0LWE2MmUtNDIxMS04YzIyLWVjOGI4YjFkNTg2NSJ9[64D[K
+NO MORE HOSTS LEFT *************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjkwZmE2ZTMxLTA0M2QtNGFlMC1iZDI2LWU2ZmYwN2VlOTkzNiJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;31m127.0.0.1[0m                  : [0;32mok=1   [0m [0;33mchanged=1   [0m unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

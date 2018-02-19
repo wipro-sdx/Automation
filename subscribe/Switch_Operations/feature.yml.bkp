@@ -1,0 +1,16 @@
+---
+
+- hosts: all
+  connection: local
+
+  vars_prompt:
+    - name: feature
+      prompt: "Enter the feature to be enabled or disabled"
+      private: no
+
+    - name: condition
+      prompt: "enabled or disabled"
+      private: no
+
+  roles:
+  - Feature

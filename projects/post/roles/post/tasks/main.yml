@@ -1,0 +1,49 @@
+---
+- name: copy ntp file
+  template: src=ntp_prod.conf dest=/etc/ntp.conf
+  tags: ntp
+  when: env == "Prod"
+- name: copy resolv.conf
+  template: src=resolv_prod.conf dest=/etc/resolv.conf
+  tags: dns
+  when: env == "Prod"
+- name: copy motd
+  template: src=motd_prod dest=/etc/motd
+  tags: motd
+  when: env == "Prod"
+- name: copy ntp file
+  template: src=ntp_dev.conf dest=/etc/ntp.conf
+  tags: ntp
+  when: env == "Dev"
+- name: copy resolv.conf
+  template: src=resolv_dev.conf dest=/etc/resolv.conf
+  tags: dns
+  when: env == "Dev"
+- name: copy motd
+  template: src=motd_dev dest=/etc/motd
+  tags: motd
+  when: env == "Dev"
+- name: copy ntp file
+  template: src=ntp_test.conf dest=/etc/ntp.conf
+  tags: ntp
+  when: env == "Test"
+- name: copy resolv.conf
+  template: src=resolv_test.conf dest=/etc/resolv.conf
+  tags: dns
+  when: env == "Test"
+- name: copy motd
+  template: src=motd_test dest=/etc/motd
+  tags: motd
+  when: env == "Test"
+- name: copy ntp file
+  template: src=ntp_dmz.conf dest=/etc/ntp.conf
+  tags: ntp
+  when: env == "DMZ"
+- name: copy resolv.conf
+  template: src=resolv_dmz.conf dest=/etc/resolv.conf
+  tags: dns
+  when: env == "DMZ"
+- name: copy motd
+  template: src=motd_dmz dest=/etc/motd
+  tags: motd
+  when: env == "DMZ"

@@ -1,0 +1,13 @@
+---
+# tasks file for roles/gateway
+# add Gateway software
+- name: Install Java package in IM
+  yum: name=java state=present
+
+- name: copy Gateway software to Gateway hosts
+  copy: src={{ scaleio_package_path }}/EMC-ScaleIO-gateway-{{ scaleio_version }}.x86_64.rpm dest=/tmp/EMC-ScaleIO-gateway.x86_64.rpm
+
+- name: install Gateway 
+#  yum: name=/opt/EMC-ScaleIO-gateway.x86_64.rpm state=present
+  shell: GATEWAY_ADMIN_PASSWORD=Wipro123 rpm -i /tmp/EMC-ScaleIO-gateway.x86_64.rpm --nodeps
+ 

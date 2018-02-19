@@ -1,0 +1,18 @@
+- name: Create a new instance and attaches to a network and passes metadata to the instance
+  os_server:
+       state: present
+       auth:
+         auth_url: http://172.17.77.108:5000/v2.0
+         username: admin
+         password: Wipro@123
+         project_name: admin
+       name: "{{ item }}"
+       with_items:
+         - testuser1
+         - testuser2
+       image: 21d1728c-1d46-43f9-94be-c6b907cce91f
+       key_name: ansible_key
+       timeout: 200
+       flavor: test
+       nics:
+         - net-id: afc3fb00-fc6b-47ce-83cf-912d71988004

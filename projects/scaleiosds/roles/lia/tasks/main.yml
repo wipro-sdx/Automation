@@ -1,0 +1,10 @@
+---
+# tasks file for roles/lia
+# add lia software
+
+- name: copy lia software to lia hosts
+  copy: src={{ scaleio_package_path }}/EMC-ScaleIO-lia-{{ scaleio_version }}.el7.x86_64.rpm dest=/opt/EMC-ScaleIO-lia.x86_64.rpm
+
+- name: install lia software
+  yum: name=/opt/EMC-ScaleIO-lia.x86_64.rpm state=present
+

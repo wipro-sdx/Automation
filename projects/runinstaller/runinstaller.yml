@@ -1,0 +1,12 @@
+---
+
+- hosts: oracle 
+#  become_user: oracle
+#  remote_user: oracle
+#  become_method: sudo
+#  become: yes
+
+  tasks:
+  - name: Run installer to install oracle
+    command: /home/oracle/Oracle11.2.0.4/database/runInstaller -silent -ignorePrereq -ignoreSysPrereqs -waitforcompletion -responseFile /home/oracle/Oracle11.2.0.4/database/AutomateInstallation.rsp
+    ignore_errors: True

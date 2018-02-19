@@ -1,0 +1,31 @@
+SSH password: 
+[KeyJ1dWlkIjogIjBlMWE5ODQ3LWMxZmItNGZjMy04NDFiLTZjMTBjMTk4NzdmMyJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmI3MS0wMTZmLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [172.16.8.15] *************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmI3MS0wMTZmLTAwMDAwMDAwMDAwNyJ9[64D[K
+TASK [env_os_selection : Create a VM from a rhel template] *********************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjBhMDA1OTkwLTI0ZjgtNDk5OS05NzU3LTYzNmM5MzJhMGFmYiJ9[64D[K[0;36mskipping: [172.16.8.15][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmI3MS0wMTZmLTAwMDAwMDAwMDAwOSJ9[64D[K
+TASK [env_os_selection : Create a VM from a rhel template] *********************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjRlZGYyODA0LTVlMDAtNDNkMy05ZWM4LWJiMmMxNWZjNDhjZCJ9[64D[K[0;33mchanged: [172.16.8.15 -> localhost][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmI3MS0wMTZmLTAwMDAwMDAwMDAwYiJ9[64D[K
+TASK [env_os_selection : Create a VM from a rhel template] *********************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjZmNzAxYWU5LTVlNzItNGUyZS1iYzMzLTk5ZmYyMGFmN2IzNyJ9[64D[K[0;36mskipping: [172.16.8.15][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmI3MS0wMTZmLTAwMDAwMDAwMDAwZCJ9[64D[K
+TASK [env_os_selection : Create a centos VM from a template] *******************
+[Ke30=[4D[K[KeyJ1dWlkIjogImZmNDcwYjUzLTMzNDgtNGM1Mi1iMmViLTM2N2U5ZWJjNDUyYSJ9[64D[K[0;36mskipping: [172.16.8.15][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmI3MS0wMTZmLTAwMDAwMDAwMDAwZiJ9[64D[K
+TASK [env_os_selection : Create a centos VM from a template] *******************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAyN2FhMTI3LTRiNTQtNDA4My1iNjczLWZmNDE3YmJiNmM3ZiJ9[64D[K[0;36mskipping: [172.16.8.15][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmI3MS0wMTZmLTAwMDAwMDAwMDAxMSJ9[64D[K
+TASK [env_os_selection : Create a centos VM from a template] *******************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjRhZDAyYmI4LWRjNDctNDg1NC04NDhjLWMzNmFmYWJlM2QwNyJ9[64D[K[0;36mskipping: [172.16.8.15][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMmI3MS0wMTZmLTAwMDAwMDAwMDAxMyJ9[64D[K
+TASK [env_os_selection : pause] ************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjBhZjEwMjdkLTQ0YmYtNDBiYy05NWZmLTY5MDUzMzI3ZjMwNyJ9[64D[KPausing for 150 seconds
+[Ke30=[4D[K[KeyJ1dWlkIjogImFkOTE4MTE1LWRjNWYtNDY3OS04ZTIyLWRkN2JmZDJjMzRlOCJ9[64D[K(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+[Ke30=[4D[K[KeyJ1dWlkIjogIjRlOTQ2OGRjLTQxNjAtNGEzYy05M2IzLTFhZmY5ZDk1OTAzMCJ9[64D[K[0;32mok: [172.16.8.15][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImJjZGNkMWNiLWFhNWMtNGMzNy04NGJhLTc0ZDQ5ZjMyOTJhMiJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m172.16.8.15[0m                : [0;32mok=2   [0m [0;33mchanged=1   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

@@ -1,0 +1,139 @@
+    1.355 INFO     Updating inventory 56: CF-113-CoE-NEW
+    1.372 INFO     Reading executable JSON source: /var/lib/awx/venv/tower/lib/python2.7/site-packages/awx/plugins/inventory/ec2.py
+    3.636 INFO     Loaded 53 groups, 5 hosts
+    3.682 INFO     Deleted host "34.229.210.21"
+    3.744 INFO     Group "ami_6496321e" deleted
+    3.782 INFO     Group "key_centos_aws" deleted
+    3.819 INFO     Group "security_group_webserver" deleted
+    3.864 INFO     Group "tag_Name_feb2_18" deleted
+    3.901 INFO     Group "type_m3_medium" deleted
+    4.101 INFO     Group "ec2" variables unmodified
+    4.105 INFO     Group "ami_11e84107" variables unmodified
+    4.105 INFO     Group "ami_1f28d965" variables unmodified
+    4.105 INFO     Group "ami_58fc7f22" variables unmodified
+    4.105 INFO     Group "ami_b2748ddf" variables unmodified
+    4.105 INFO     Group "ec2" variables unmodified
+    4.105 INFO     Group "images" variables unmodified
+    4.106 INFO     Group "key_awskey" variables unmodified
+    4.106 INFO     Group "key_mediaserver" variables unmodified
+    4.106 INFO     Group "key_N_Virgina_GW_A" variables unmodified
+    4.106 INFO     Group "key_nvirginia_1" variables unmodified
+    4.106 INFO     Group "key_nvirginia_1_hagw" variables unmodified
+    4.106 INFO     Group "keys" variables unmodified
+    4.107 INFO     Group "regions" variables unmodified
+    4.107 INFO     Group "security_group_Controller_A_AviatrixSG_14BTZI28DGGYH" variables unmodified
+    4.107 INFO     Group "security_group_launch_wizard_3" variables unmodified
+    4.107 INFO     Group "security_group_N_Virgina_GW_A" variables unmodified
+    4.107 INFO     Group "security_group_nvirginia_1" variables unmodified
+    4.107 INFO     Group "security_group_nvirginia_1_hagw" variables unmodified
+    4.107 INFO     Group "security_groups" variables unmodified
+    4.107 INFO     Group "tag_aws_cloudformation_logical_id" variables unmodified
+    4.108 INFO     Group "tag_aws_cloudformation_logical_id_AviatrixController" variables unmodified
+    4.108 INFO     Group "tag_aws_cloudformation_stack_id" variables unmodified
+    4.108 INFO     Group "tag_aws_cloudformation_stack_id_arn_aws_cloudformation_us_east_1_986182225774_stack_Controller_A_98bdc830_cbab_11e7_a47a_500c28afa0ba" variables unmodified
+    4.108 INFO     Group "tag_aws_cloudformation_stack_name" variables unmodified
+    4.108 INFO     Group "tag_aws_cloudformation_stack_name_Controller_A" variables unmodified
+    4.108 INFO     Group "tag__GX_BACKUP_" variables unmodified
+    4.108 INFO     Group "tag_Name" variables unmodified
+    4.108 INFO     Group "tag_Name_AviatrixController" variables unmodified
+    4.109 INFO     Group "tag_Name_aviatrix_N_Virgina_GW_A_172_31_31_153" variables unmodified
+    4.109 INFO     Group "tag_Name_aviatrix_nvirginia_1_172_31_5_171" variables unmodified
+    4.109 INFO     Group "tag_Name_aviatrix_nvirginia_1_hagw_172_31_5_171" variables unmodified
+    4.109 INFO     Group "tag_Name_Cvlt_mediaserver" variables unmodified
+    4.109 INFO     Group "tag_N_Virgina_GW_A_172_31_31_153" variables unmodified
+    4.109 INFO     Group "tag_N_Virgina_GW_A_172_31_31_153_gateway" variables unmodified
+    4.109 INFO     Group "tag_nvirginia_1_172_31_5_171" variables unmodified
+    4.109 INFO     Group "tag_nvirginia_1_172_31_5_171_gateway" variables unmodified
+    4.110 INFO     Group "tag_nvirginia_1_hagw_172_31_5_171" variables unmodified
+    4.110 INFO     Group "tag_nvirginia_1_hagw_172_31_5_171_gateway" variables unmodified
+    4.110 INFO     Group "tag_Project" variables unmodified
+    4.110 INFO     Group "tag_Project_Aviatrix" variables unmodified
+    4.110 INFO     Group "tags" variables unmodified
+    4.110 INFO     Group "type_m3_2xlarge" variables unmodified
+    4.110 INFO     Group "types" variables unmodified
+    4.110 INFO     Group "type_t2_large" variables unmodified
+    4.110 INFO     Group "type_t2_micro" variables unmodified
+    4.111 INFO     Group "us-east-1" variables unmodified
+    4.111 INFO     Group "us-east-1a" variables unmodified
+    4.111 INFO     Group "us-east-1b" variables unmodified
+    4.111 INFO     Group "us-east-1c" variables unmodified
+    4.111 INFO     Group "vpc_id_vpc_0b10e36f" variables unmodified
+    4.111 INFO     Group "vpc_id_vpc_e6c7279d" variables unmodified
+    4.111 INFO     Group "vpcs" variables unmodified
+    4.111 INFO     Group "zones" variables unmodified
+    4.118 INFO     Host "34.193.109.28" variables unmodified
+    4.118 INFO     Host "34.224.245.31" variables unmodified
+    4.119 INFO     Host "34.225.52.141" variables unmodified
+    4.119 INFO     Host "54.89.83.56" variables unmodified
+    4.119 INFO     Host "54.91.231.196" variables unmodified
+    4.131 INFO     Group "ami_b2748ddf" added as child of "images"
+    4.138 INFO     Group "key_nvirginia_1_hagw" added as child of "keys"
+    4.144 INFO     Group "us-east-1" added as child of "regions"
+    4.149 INFO     Group "security_group_nvirginia_1_hagw" added as child of "security_groups"
+    4.155 INFO     Group "tag_aws_cloudformation_logical_id_AviatrixController" added as child of "tag_aws_cloudformation_logical_id"
+    4.161 INFO     Group "tag_aws_cloudformation_stack_id_arn_aws_cloudformation_us_east_1_986182225774_stack_Controller_A_98bdc830_cbab_11e7_a47a_500c28afa0ba" added as child of "tag_aws_cloudformation_stack_id"
+    4.166 INFO     Group "tag_aws_cloudformation_stack_name_Controller_A" added as child of "tag_aws_cloudformation_stack_name"
+    4.173 INFO     Group "tag_Name_Cvlt_mediaserver" added as child of "tag_Name"
+    4.178 INFO     Group "tag_N_Virgina_GW_A_172_31_31_153_gateway" added as child of "tag_N_Virgina_GW_A_172_31_31_153"
+    4.184 INFO     Group "tag_nvirginia_1_172_31_5_171_gateway" added as child of "tag_nvirginia_1_172_31_5_171"
+    4.189 INFO     Group "tag_nvirginia_1_hagw_172_31_5_171_gateway" added as child of "tag_nvirginia_1_hagw_172_31_5_171"
+    4.195 INFO     Group "tag_Project_Aviatrix" added as child of "tag_Project"
+    4.201 INFO     Group "tag_Project" added as child of "tags"
+    4.207 INFO     Group "type_t2_micro" added as child of "types"
+    4.213 INFO     Group "us-east-1c" added as child of "us-east-1"
+    4.218 INFO     Group "vpc_id_vpc_e6c7279d" added as child of "vpcs"
+    4.224 INFO     Group "us-east-1c" added as child of "zones"
+    4.231 INFO     Host "54.91.231.196" already in group "ami_11e84107"
+    4.235 INFO     Host "34.225.52.141" already in group "ami_1f28d965"
+    4.239 INFO     Host "34.224.245.31" already in group "ami_58fc7f22"
+    4.243 INFO     Host "34.193.109.28" already in group "ami_b2748ddf"
+    4.243 INFO     Host "54.89.83.56" already in group "ami_b2748ddf"
+    4.248 INFO     Host "34.193.109.28" already in group "ec2"
+    4.248 INFO     Host "34.224.245.31" already in group "ec2"
+    4.248 INFO     Host "34.225.52.141" already in group "ec2"
+    4.248 INFO     Host "54.89.83.56" already in group "ec2"
+    4.248 INFO     Host "54.91.231.196" already in group "ec2"
+    4.253 INFO     Host "34.225.52.141" already in group "key_awskey"
+    4.260 INFO     Host "54.91.231.196" already in group "key_mediaserver"
+    4.267 INFO     Host "34.224.245.31" already in group "key_N_Virgina_GW_A"
+    4.272 INFO     Host "34.193.109.28" already in group "key_nvirginia_1"
+    4.276 INFO     Host "54.89.83.56" already in group "key_nvirginia_1_hagw"
+    4.281 INFO     Host "34.225.52.141" already in group "security_group_Controller_A_AviatrixSG_14BTZI28DGGYH"
+    4.286 INFO     Host "54.91.231.196" already in group "security_group_launch_wizard_3"
+    4.291 INFO     Host "34.224.245.31" already in group "security_group_N_Virgina_GW_A"
+    4.296 INFO     Host "34.193.109.28" already in group "security_group_nvirginia_1"
+    4.300 INFO     Host "54.89.83.56" already in group "security_group_nvirginia_1_hagw"
+    4.305 INFO     Host "34.225.52.141" already in group "tag_aws_cloudformation_logical_id_AviatrixController"
+    4.310 INFO     Host "34.225.52.141" already in group "tag_aws_cloudformation_stack_id_arn_aws_cloudformation_us_east_1_986182225774_stack_Controller_A_98bdc830_cbab_11e7_a47a_500c28afa0ba"
+    4.315 INFO     Host "34.225.52.141" already in group "tag_aws_cloudformation_stack_name_Controller_A"
+    4.320 INFO     Host "54.91.231.196" already in group "tag__GX_BACKUP_"
+    4.324 INFO     Host "34.225.52.141" already in group "tag_Name_AviatrixController"
+    4.329 INFO     Host "34.224.245.31" already in group "tag_Name_aviatrix_N_Virgina_GW_A_172_31_31_153"
+    4.334 INFO     Host "34.193.109.28" already in group "tag_Name_aviatrix_nvirginia_1_172_31_5_171"
+    4.339 INFO     Host "54.89.83.56" already in group "tag_Name_aviatrix_nvirginia_1_hagw_172_31_5_171"
+    4.344 INFO     Host "54.91.231.196" already in group "tag_Name_Cvlt_mediaserver"
+    4.348 INFO     Host "34.224.245.31" already in group "tag_N_Virgina_GW_A_172_31_31_153_gateway"
+    4.353 INFO     Host "34.193.109.28" already in group "tag_nvirginia_1_172_31_5_171_gateway"
+    4.358 INFO     Host "54.89.83.56" already in group "tag_nvirginia_1_hagw_172_31_5_171_gateway"
+    4.363 INFO     Host "34.225.52.141" already in group "tag_Project_Aviatrix"
+    4.368 INFO     Host "54.91.231.196" already in group "type_m3_2xlarge"
+    4.372 INFO     Host "34.225.52.141" already in group "type_t2_large"
+    4.377 INFO     Host "34.193.109.28" already in group "type_t2_micro"
+    4.377 INFO     Host "34.224.245.31" already in group "type_t2_micro"
+    4.377 INFO     Host "54.89.83.56" already in group "type_t2_micro"
+    4.383 INFO     Host "34.193.109.28" already in group "us-east-1"
+    4.383 INFO     Host "34.224.245.31" already in group "us-east-1"
+    4.383 INFO     Host "34.225.52.141" already in group "us-east-1"
+    4.383 INFO     Host "54.89.83.56" already in group "us-east-1"
+    4.383 INFO     Host "54.91.231.196" already in group "us-east-1"
+    4.388 INFO     Host "34.193.109.28" already in group "us-east-1a"
+    4.388 INFO     Host "54.89.83.56" already in group "us-east-1a"
+    4.388 INFO     Host "54.91.231.196" already in group "us-east-1a"
+    4.393 INFO     Host "34.224.245.31" already in group "us-east-1b"
+    4.397 INFO     Host "34.225.52.141" already in group "us-east-1c"
+    4.402 INFO     Host "34.193.109.28" already in group "vpc_id_vpc_0b10e36f"
+    4.403 INFO     Host "34.225.52.141" already in group "vpc_id_vpc_0b10e36f"
+    4.403 INFO     Host "54.89.83.56" already in group "vpc_id_vpc_0b10e36f"
+    4.403 INFO     Host "54.91.231.196" already in group "vpc_id_vpc_0b10e36f"
+    4.407 INFO     Host "34.224.245.31" already in group "vpc_id_vpc_e6c7279d"
+    4.607 INFO     Inventory import completed for group "EC2" in 3.3s

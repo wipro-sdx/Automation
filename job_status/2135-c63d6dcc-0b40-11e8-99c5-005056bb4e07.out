@@ -1,0 +1,52 @@
+SSH password: 
+[KeyJ1dWlkIjogImYwNzAxNTkyLWY4NGItNDg0Zi1iMTkwLTQxMWRkYmJkOTg2ZSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOGE1Mi0xZDVjLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOGE1Mi0xZDVjLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImYwNTE5MWY3LTNiNzktNDMyYy1hYzFhLTNlMzg1NDkxYjI3ZCJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOGE1Mi0xZDVjLTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjdjNDM4NjJiLWI3ZmYtNGZkNi04NTc4LTRkOThhNzkyZGI4YSJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOGE1Mi0xZDVjLTAwMDAwMDAwMDAwNyJ9[64D[K
+PLAY [source_server] ***********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOGE1Mi0xZDVjLTAwMDAwMDAwMDA0MSJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImM0N2QxZDAyLWE1OWUtNDY2Ni1hOGMyLWMzMDFkOGU3NDhkYyJ9[64D[K[0;32mok: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOGE1Mi0xZDVjLTAwMDAwMDAwMDAwYyJ9[64D[K
+TASK [sourcekvm : shuting down vm] *********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImJhMDRmZDM3LTkxMWUtNGVjYy1iYjFhLThjYTUwMmViMDJmMyJ9[64D[K[0;33mchanged: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOGE1Mi0xZDVjLTAwMDAwMDAwMDAwZSJ9[64D[K
+TASK [sourcekvm : collecting dumpxml of vm] ************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImFiNDBjNGY2LWQyZWItNGNkNC05NTg4LTU0MzEwMDM4YzhiOCJ9[64D[K[0;33mchanged: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOGE1Mi0xZDVjLTAwMDAwMDAwMDAxMCJ9[64D[K
+TASK [sourcekvm : adding security limits for nproc] ****************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjhlYjc5ZGE5LTAyYzctNGJlZS04MTQyLTZiOWQ0NDc2NzlkNiJ9[64D[K[0;33mchanged: [172.17.66.103][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOGE1Mi0xZDVjLTAwMDAwMDAwMDAxMSJ9[64D[K
+PLAY [target_server] ***********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOGE1Mi0xZDVjLTAwMDAwMDAwMDA2NCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjVkZTBlZmNmLTE1NzMtNGZmMi1hNzMzLTNlNmI5NjYyYWQxNCJ9[64D[K[0;32mok: [172.17.66.104][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOGE1Mi0xZDVjLTAwMDAwMDAwMDAxNiJ9[64D[K
+TASK [targetkvm : copy dump xml to target] *************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjJiZWNkOWI3LTE1NTItNDU0Zi1iMDI4LTgwOGI2MmMwYTEzNyJ9[64D[K[0;33mchanged: [172.17.66.104 -> 172.17.65.22][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOGE1Mi0xZDVjLTAwMDAwMDAwMDAxOCJ9[64D[K
+TASK [targetkvm : copy vm dsk to target] ***************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjEzZjdkNGY4LWU5YzAtNGUxOC04ZjgxLTJlMzk2NjdlNmZiOCJ9[64D[K[0;33mchanged: [172.17.66.104 -> 172.17.65.22][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOGE1Mi0xZDVjLTAwMDAwMDAwMDAxYSJ9[64D[K
+TASK [targetkvm : define vm at taget machine] **********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImM3MTk0ZWYxLTZkN2ItNDMyOS04N2FlLTJhZDMyOTZiYzQ2MSJ9[64D[K[0;33mchanged: [172.17.66.104][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOGE1Mi0xZDVjLTAwMDAwMDAwMDAxYyJ9[64D[K
+TASK [targetkvm : pause] *******************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImZjYzVlMWZlLWViZTktNDczOC05M2UzLWE3M2UxNzlhNDUxNiJ9[64D[KPausing for 30 seconds
+[Ke30=[4D[K[KeyJ1dWlkIjogIjE5OWRlNmE0LWE1NTItNDVlMy05NDJkLTdjODE5YzBjMDQyNCJ9[64D[K(ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+[Ke30=[4D[K[KeyJ1dWlkIjogImUzMDk2NTc4LTEzZGQtNGI5YS04ZjBlLTU2NDk5YTE0N2YwNSJ9[64D[K[0;32mok: [172.17.66.104][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOGE1Mi0xZDVjLTAwMDAwMDAwMDAxZSJ9[64D[K
+TASK [targetkvm : starting vm] *************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjkxMzJjOWQzLWU4NTMtNGU5NC1hODg2LTA3ZTYwMGQ0NzA2MyJ9[64D[K[0;33mchanged: [172.17.66.104][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImZiNjRlYzUzLWZmNjctNDQ4Yi1iNmFmLTY5N2ZiZjM5NjY5MCJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m127.0.0.1[0m                  : [0;32mok=2   [0m [0;33mchanged=2   [0m unreachable=0    failed=0   
+[0;33m172.17.66.103[0m              : [0;32mok=4   [0m [0;33mchanged=3   [0m unreachable=0    failed=0   
+[0;33m172.17.66.104[0m              : [0;32mok=6   [0m [0;33mchanged=4   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

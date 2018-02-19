@@ -1,0 +1,98 @@
+    1.298 INFO     Updating inventory 56: CF-113-CoE-NEW
+    1.318 INFO     Reading executable JSON source: /var/lib/awx/venv/tower/lib/python2.7/site-packages/awx/plugins/inventory/ec2.py
+    3.918 INFO     Loaded 24 groups, 6 hosts
+    4.016 INFO     Group "ami_11e84107" deleted
+    4.065 INFO     Group "ami_1f28d965" deleted
+    4.118 INFO     Group "ami_58fc7f22" deleted
+    4.167 INFO     Group "ami_6496321e" deleted
+    4.223 INFO     Group "ami_b2748ddf" deleted
+    4.280 INFO     Group "images" deleted
+    4.328 INFO     Group "key_awskey" deleted
+    4.389 INFO     Group "key_centos_aws" deleted
+    4.438 INFO     Group "key_mediaserver" deleted
+    4.486 INFO     Group "key_N_Virgina_GW_A" deleted
+    4.545 INFO     Group "key_nvirginia_1" deleted
+    4.593 INFO     Group "key_nvirginia_1_hagw" deleted
+    4.642 INFO     Group "keys" deleted
+    4.680 INFO     Group "regions" deleted
+    4.720 INFO     Group "security_group_Controller_A_AviatrixSG_14BTZI28DGGYH" deleted
+    4.764 INFO     Group "security_group_launch_wizard_3" deleted
+    4.803 INFO     Group "security_group_N_Virgina_GW_A" deleted
+    4.842 INFO     Group "security_group_nvirginia_1" deleted
+    4.882 INFO     Group "security_group_nvirginia_1_hagw" deleted
+    4.929 INFO     Group "security_groups" deleted
+    4.967 INFO     Group "security_group_webserver" deleted
+    5.006 INFO     Group "type_m3_2xlarge" deleted
+    5.045 INFO     Group "type_m3_medium" deleted
+    5.090 INFO     Group "types" deleted
+    5.128 INFO     Group "type_t2_large" deleted
+    5.169 INFO     Group "type_t2_micro" deleted
+    5.221 INFO     Group "us-east-1" deleted
+    5.274 INFO     Group "us-east-1a" deleted
+    5.326 INFO     Group "us-east-1b" deleted
+    5.377 INFO     Group "us-east-1c" deleted
+    5.426 INFO     Group "vpc_id_vpc_0b10e36f" deleted
+    5.466 INFO     Group "vpc_id_vpc_e6c7279d" deleted
+    5.514 INFO     Group "vpcs" deleted
+    5.561 INFO     Group "zones" deleted
+    5.650 INFO     Group "ec2" variables unmodified
+    5.652 INFO     Group "ec2" variables unmodified
+    5.653 INFO     Group "tag_aws_cloudformation_logical_id" variables unmodified
+    5.653 INFO     Group "tag_aws_cloudformation_logical_id_AviatrixController" variables unmodified
+    5.653 INFO     Group "tag_aws_cloudformation_stack_id" variables unmodified
+    5.653 INFO     Group "tag_aws_cloudformation_stack_id_arn_aws_cloudformation_us_east_1_986182225774_stack_Controller_A_98bdc830_cbab_11e7_a47a_500c28afa0ba" variables unmodified
+    5.653 INFO     Group "tag_aws_cloudformation_stack_name" variables unmodified
+    5.653 INFO     Group "tag_aws_cloudformation_stack_name_Controller_A" variables unmodified
+    5.653 INFO     Group "tag__GX_BACKUP_" variables unmodified
+    5.654 INFO     Group "tag_Name" variables unmodified
+    5.654 INFO     Group "tag_Name_AviatrixController" variables unmodified
+    5.654 INFO     Group "tag_Name_aviatrix_N_Virgina_GW_A_172_31_31_153" variables unmodified
+    5.654 INFO     Group "tag_Name_aviatrix_nvirginia_1_172_31_5_171" variables unmodified
+    5.654 INFO     Group "tag_Name_aviatrix_nvirginia_1_hagw_172_31_5_171" variables unmodified
+    5.654 INFO     Group "tag_Name_Cvlt_mediaserver" variables unmodified
+    5.654 INFO     Group "tag_Name_sdx_wrp_10" variables unmodified
+    5.654 INFO     Group "tag_N_Virgina_GW_A_172_31_31_153" variables unmodified
+    5.654 INFO     Group "tag_N_Virgina_GW_A_172_31_31_153_gateway" variables unmodified
+    5.655 INFO     Group "tag_nvirginia_1_172_31_5_171" variables unmodified
+    5.655 INFO     Group "tag_nvirginia_1_172_31_5_171_gateway" variables unmodified
+    5.655 INFO     Group "tag_nvirginia_1_hagw_172_31_5_171" variables unmodified
+    5.655 INFO     Group "tag_nvirginia_1_hagw_172_31_5_171_gateway" variables unmodified
+    5.655 INFO     Group "tag_Project" variables unmodified
+    5.655 INFO     Group "tag_Project_Aviatrix" variables unmodified
+    5.655 INFO     Group "tags" variables unmodified
+    5.661 INFO     Host "34.193.109.28" variables unmodified
+    5.662 INFO     Host "34.224.245.31" variables unmodified
+    5.662 INFO     Host "34.225.52.141" variables unmodified
+    5.662 INFO     Host "54.83.140.39" variables unmodified
+    5.663 INFO     Host "54.89.83.56" variables unmodified
+    5.663 INFO     Host "54.91.231.196" variables unmodified
+    5.674 INFO     Group "tag_aws_cloudformation_logical_id_AviatrixController" added as child of "tag_aws_cloudformation_logical_id"
+    5.680 INFO     Group "tag_aws_cloudformation_stack_id_arn_aws_cloudformation_us_east_1_986182225774_stack_Controller_A_98bdc830_cbab_11e7_a47a_500c28afa0ba" added as child of "tag_aws_cloudformation_stack_id"
+    5.685 INFO     Group "tag_aws_cloudformation_stack_name_Controller_A" added as child of "tag_aws_cloudformation_stack_name"
+    5.691 INFO     Group "tag_Name_sdx_wrp_10" added as child of "tag_Name"
+    5.697 INFO     Group "tag_N_Virgina_GW_A_172_31_31_153_gateway" added as child of "tag_N_Virgina_GW_A_172_31_31_153"
+    5.703 INFO     Group "tag_nvirginia_1_172_31_5_171_gateway" added as child of "tag_nvirginia_1_172_31_5_171"
+    5.709 INFO     Group "tag_nvirginia_1_hagw_172_31_5_171_gateway" added as child of "tag_nvirginia_1_hagw_172_31_5_171"
+    5.715 INFO     Group "tag_Project_Aviatrix" added as child of "tag_Project"
+    5.721 INFO     Group "tag_Project" added as child of "tags"
+    5.728 INFO     Host "34.193.109.28" already in group "ec2"
+    5.728 INFO     Host "34.224.245.31" already in group "ec2"
+    5.728 INFO     Host "34.225.52.141" already in group "ec2"
+    5.728 INFO     Host "54.83.140.39" already in group "ec2"
+    5.729 INFO     Host "54.89.83.56" already in group "ec2"
+    5.729 INFO     Host "54.91.231.196" already in group "ec2"
+    5.733 INFO     Host "34.225.52.141" already in group "tag_aws_cloudformation_logical_id_AviatrixController"
+    5.738 INFO     Host "34.225.52.141" already in group "tag_aws_cloudformation_stack_id_arn_aws_cloudformation_us_east_1_986182225774_stack_Controller_A_98bdc830_cbab_11e7_a47a_500c28afa0ba"
+    5.742 INFO     Host "34.225.52.141" already in group "tag_aws_cloudformation_stack_name_Controller_A"
+    5.746 INFO     Host "54.91.231.196" already in group "tag__GX_BACKUP_"
+    5.753 INFO     Host "34.225.52.141" already in group "tag_Name_AviatrixController"
+    5.758 INFO     Host "34.224.245.31" already in group "tag_Name_aviatrix_N_Virgina_GW_A_172_31_31_153"
+    5.762 INFO     Host "34.193.109.28" already in group "tag_Name_aviatrix_nvirginia_1_172_31_5_171"
+    5.766 INFO     Host "54.89.83.56" already in group "tag_Name_aviatrix_nvirginia_1_hagw_172_31_5_171"
+    5.770 INFO     Host "54.91.231.196" already in group "tag_Name_Cvlt_mediaserver"
+    5.774 INFO     Host "54.83.140.39" already in group "tag_Name_sdx_wrp_10"
+    5.778 INFO     Host "34.224.245.31" already in group "tag_N_Virgina_GW_A_172_31_31_153_gateway"
+    5.782 INFO     Host "34.193.109.28" already in group "tag_nvirginia_1_172_31_5_171_gateway"
+    5.787 INFO     Host "54.89.83.56" already in group "tag_nvirginia_1_hagw_172_31_5_171_gateway"
+    5.791 INFO     Host "34.225.52.141" already in group "tag_Project_Aviatrix"
+    5.867 INFO     Inventory import completed for group "EC2" in 4.6s

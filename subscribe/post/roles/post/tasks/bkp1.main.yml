@@ -1,0 +1,13 @@
+---
+- name: Production servers post implementation
+  shell: ansible-playbook /root/openshift/prod.yml 
+  when: env == "Prod"
+- name: Development servers post implementation
+  shell: ansible-playbook /root/openshift/dev.yml 
+  when: env == "Dev"
+- name: Test servers post implementation
+  shell: ansible-playbook /root/openshift/test.yml
+  when: env == "Test"
+- name: DMZ servers post implementation
+  shell: ansible-playbook /root/openshift/dmz.yml
+  when: env == "DMZ"

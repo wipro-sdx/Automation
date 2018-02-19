@@ -1,0 +1,5 @@
+---
+- name: sinlge server os installation via expro provisioning
+  shell: python /var/lib/awx/projects/cobbler/code.py 
+- pause:
+    seconds: 1000

@@ -1,0 +1,260 @@
+    1.371 INFO     Updating inventory 56: CF-113-CoE-NEW
+    1.402 INFO     Reading executable JSON source: /var/lib/awx/venv/tower/lib/python2.7/site-packages/awx/plugins/inventory/ec2.py
+   39.897 INFO     Loaded 98 groups, 12 hosts
+   39.931 INFO     Group "ec2" variables unmodified
+   39.934 INFO     Group "tags" variables unmodified
+   39.943 INFO     Group "ami_11e84107" added
+   39.949 INFO     Group "ami_1566297a" added
+   39.956 INFO     Group "ami_1f28d965" added
+   39.962 INFO     Group "ami_27057148" added
+   39.968 INFO     Group "ami_391a055d" added
+   39.975 INFO     Group "ami_46eea129" added
+   39.982 INFO     Group "ami_58fc7f22" added
+   39.988 INFO     Group "ami_6496321e" added
+   39.994 INFO     Group "ami_b1858fd5" added
+   40.000 INFO     Group "ami_b2748ddf" added
+   40.006 INFO     Group "ap-south-1" added
+   40.012 INFO     Group "ap-south-1b" added
+   40.018 INFO     Group "ec2" added
+   40.024 INFO     Group "eu-west-2" added
+   40.030 INFO     Group "eu-west-2a" added
+   40.037 INFO     Group "images" added
+   40.044 INFO     Group "key_London_GW" added
+   40.050 INFO     Group "key_London_GW_A" added
+   40.056 INFO     Group "key_London_GW_hagw" added
+   40.062 INFO     Group "key_Mumbai_GW" added
+   40.069 INFO     Group "key_Mumbai_GW_A" added
+   40.076 INFO     Group "key_N_Virgina_GW_A" added
+   40.082 INFO     Group "key_aviatrix123" added
+   40.090 INFO     Group "key_awskey" added
+   40.097 INFO     Group "key_centos_aws" added
+   40.103 INFO     Group "key_mediaserver" added
+   40.109 INFO     Group "key_nvirginia_1" added
+   40.115 INFO     Group "key_nvirginia_1_hagw" added
+   40.121 INFO     Group "keys" added
+   40.127 INFO     Group "regions" added
+   40.135 INFO     Group "security_group_Controller_A_AviatrixSG_14BTZI28DGGYH" added
+   40.141 INFO     Group "security_group_London_GW" added
+   40.147 INFO     Group "security_group_London_GW_A" added
+   40.153 INFO     Group "security_group_London_GW_hagw" added
+   40.159 INFO     Group "security_group_Mumbai_GW" added
+   40.165 INFO     Group "security_group_Mumbai_GW_A" added
+   40.171 INFO     Group "security_group_N_Virgina_GW_A" added
+   40.177 INFO     Group "security_group_launch_wizard_2" added
+   40.184 INFO     Group "security_group_launch_wizard_3" added
+   40.195 INFO     Group "security_group_nvirginia_1" added
+   40.201 INFO     Group "security_group_nvirginia_1_hagw" added
+   40.207 INFO     Group "security_group_webserver" added
+   40.214 INFO     Group "security_groups" added
+   40.220 INFO     Group "tag_London_GW_172_31_5_171" added
+   40.226 INFO     Group "tag_London_GW_172_31_5_171_gateway" added
+   40.231 INFO     Group "tag_London_GW_A_172_31_31_153" added
+   40.237 INFO     Group "tag_London_GW_A_172_31_31_153_gateway" added
+   40.243 INFO     Group "tag_London_GW_hagw_172_31_5_171" added
+   40.249 INFO     Group "tag_London_GW_hagw_172_31_5_171_gateway" added
+   40.255 INFO     Group "tag_Mumbai_GW_172_31_5_171" added
+   40.262 INFO     Group "tag_Mumbai_GW_172_31_5_171_gateway" added
+   40.268 INFO     Group "tag_Mumbai_GW_A_172_31_31_153" added
+   40.274 INFO     Group "tag_Mumbai_GW_A_172_31_31_153_gateway" added
+   40.280 INFO     Group "tag_N_Virgina_GW_A_172_31_31_153" added
+   40.286 INFO     Group "tag_N_Virgina_GW_A_172_31_31_153_gateway" added
+   40.292 INFO     Group "tag_Name" added
+   40.298 INFO     Group "tag_Name_AviatrixController" added
+   40.304 INFO     Group "tag_Name_Cvlt_mediaserver" added
+   40.310 INFO     Group "tag_Name_aviatrix_London_GW_172_31_5_171" added
+   40.316 INFO     Group "tag_Name_aviatrix_London_GW_A_172_31_31_153" added
+   40.322 INFO     Group "tag_Name_aviatrix_London_GW_hagw_172_31_5_171" added
+   40.328 INFO     Group "tag_Name_aviatrix_Mumbai_GW_172_31_5_171" added
+   40.334 INFO     Group "tag_Name_aviatrix_Mumbai_GW_A_172_31_31_153" added
+   40.340 INFO     Group "tag_Name_aviatrix_N_Virgina_GW_A_172_31_31_153" added
+   40.346 INFO     Group "tag_Name_aviatrix_nvirginia_1_172_31_5_171" added
+   40.352 INFO     Group "tag_Name_aviatrix_nvirginia_1_hagw_172_31_5_171" added
+   40.358 INFO     Group "tag_Name_feb2_18" added
+   40.364 INFO     Group "tag_Project" added
+   40.370 INFO     Group "tag_Project_Aviatrix" added
+   40.376 INFO     Group "tag__GX_BACKUP_" added
+   40.382 INFO     Group "tag_aws_cloudformation_logical_id" added
+   40.388 INFO     Group "tag_aws_cloudformation_logical_id_AviatrixController" added
+   40.394 INFO     Group "tag_aws_cloudformation_stack_id" added
+   40.400 INFO     Group "tag_aws_cloudformation_stack_id_arn_aws_cloudformation_us_east_1_986182225774_stack_Controller_A_98bdc830_cbab_11e7_a47a_500c28afa0ba" added
+   40.406 INFO     Group "tag_aws_cloudformation_stack_name" added
+   40.412 INFO     Group "tag_aws_cloudformation_stack_name_Controller_A" added
+   40.418 INFO     Group "tag_none" added
+   40.424 INFO     Group "tag_nvirginia_1_172_31_5_171" added
+   40.430 INFO     Group "tag_nvirginia_1_172_31_5_171_gateway" added
+   40.436 INFO     Group "tag_nvirginia_1_hagw_172_31_5_171" added
+   40.442 INFO     Group "tag_nvirginia_1_hagw_172_31_5_171_gateway" added
+   40.448 INFO     Group "type_m3_2xlarge" added
+   40.454 INFO     Group "type_m3_medium" added
+   40.460 INFO     Group "type_t2_large" added
+   40.466 INFO     Group "type_t2_micro" added
+   40.472 INFO     Group "types" added
+   40.478 INFO     Group "us-east-1" added
+   40.484 INFO     Group "us-east-1a" added
+   40.490 INFO     Group "us-east-1b" added
+   40.496 INFO     Group "us-east-1c" added
+   40.502 INFO     Group "vpc_id_vpc_0b10e36f" added
+   40.508 INFO     Group "vpc_id_vpc_451ef32c" added
+   40.513 INFO     Group "vpc_id_vpc_b8e9c9d1" added
+   40.520 INFO     Group "vpc_id_vpc_c28e95ab" added
+   40.526 INFO     Group "vpc_id_vpc_e6c7279d" added
+   40.532 INFO     Group "vpcs" added
+   40.538 INFO     Group "zones" added
+   40.555 INFO     Host "13.126.214.29" added
+   40.557 INFO     Host "13.127.13.202" added
+   40.559 INFO     Host "34.193.109.28" added (disabled)
+   40.561 INFO     Host "34.224.245.31" added
+   40.563 INFO     Host "34.225.52.141" added
+   40.565 INFO     Host "34.229.210.21" added
+   40.567 INFO     Host "35.154.142.70" added (disabled)
+   40.571 INFO     Host "35.176.36.6" added (disabled)
+   40.573 INFO     Host "35.177.84.250" added
+   40.575 INFO     Host "52.56.209.184" added (disabled)
+   40.577 INFO     Host "54.89.83.56" added (disabled)
+   40.579 INFO     Host "54.91.231.196" added
+   40.593 INFO     Group "ap-south-1b" added as child of "ap-south-1"
+   40.599 INFO     Group "eu-west-2a" added as child of "eu-west-2"
+   40.607 INFO     Group "ami_b2748ddf" added as child of "images"
+   40.614 INFO     Group "key_nvirginia_1_hagw" added as child of "keys"
+   40.622 INFO     Group "us-east-1" added as child of "regions"
+   40.629 INFO     Group "security_group_webserver" added as child of "security_groups"
+   40.636 INFO     Group "tag_aws_cloudformation_logical_id_AviatrixController" added as child of "tag_aws_cloudformation_logical_id"
+   40.643 INFO     Group "tag_aws_cloudformation_stack_id_arn_aws_cloudformation_us_east_1_986182225774_stack_Controller_A_98bdc830_cbab_11e7_a47a_500c28afa0ba" added as child of "tag_aws_cloudformation_stack_id"
+   40.649 INFO     Group "tag_aws_cloudformation_stack_name_Controller_A" added as child of "tag_aws_cloudformation_stack_name"
+   40.655 INFO     Group "tag_London_GW_172_31_5_171_gateway" added as child of "tag_London_GW_172_31_5_171"
+   40.661 INFO     Group "tag_London_GW_A_172_31_31_153_gateway" added as child of "tag_London_GW_A_172_31_31_153"
+   40.668 INFO     Group "tag_London_GW_hagw_172_31_5_171_gateway" added as child of "tag_London_GW_hagw_172_31_5_171"
+   40.675 INFO     Group "tag_Mumbai_GW_172_31_5_171_gateway" added as child of "tag_Mumbai_GW_172_31_5_171"
+   40.681 INFO     Group "tag_Mumbai_GW_A_172_31_31_153_gateway" added as child of "tag_Mumbai_GW_A_172_31_31_153"
+   40.688 INFO     Group "tag_Name_feb2_18" added as child of "tag_Name"
+   40.695 INFO     Group "tag_N_Virgina_GW_A_172_31_31_153_gateway" added as child of "tag_N_Virgina_GW_A_172_31_31_153"
+   40.702 INFO     Group "tag_nvirginia_1_172_31_5_171_gateway" added as child of "tag_nvirginia_1_172_31_5_171"
+   40.708 INFO     Group "tag_nvirginia_1_hagw_172_31_5_171_gateway" added as child of "tag_nvirginia_1_hagw_172_31_5_171"
+   40.715 INFO     Group "tag_Project_Aviatrix" added as child of "tag_Project"
+   40.722 INFO     Group "tag_Project" added as child of "tags"
+   40.730 INFO     Group "type_t2_micro" added as child of "types"
+   40.737 INFO     Group "us-east-1c" added as child of "us-east-1"
+   40.744 INFO     Group "vpc_id_vpc_e6c7279d" added as child of "vpcs"
+   40.751 INFO     Group "us-east-1c" added as child of "zones"
+   40.763 INFO     Host "54.91.231.196" added to group "ami_11e84107"
+   40.770 INFO     Host "13.126.214.29" added to group "ami_1566297a"
+   40.777 INFO     Host "34.225.52.141" added to group "ami_1f28d965"
+   40.783 INFO     Host "35.154.142.70" added to group "ami_27057148"
+   40.790 INFO     Host "35.177.84.250" added to group "ami_391a055d"
+   40.797 INFO     Host "13.127.13.202" added to group "ami_46eea129"
+   40.803 INFO     Host "34.224.245.31" added to group "ami_58fc7f22"
+   40.810 INFO     Host "34.229.210.21" added to group "ami_6496321e"
+   40.816 INFO     Host "35.176.36.6" added to group "ami_b1858fd5"
+   40.817 INFO     Host "52.56.209.184" added to group "ami_b1858fd5"
+   40.823 INFO     Host "34.193.109.28" added to group "ami_b2748ddf"
+   40.823 INFO     Host "54.89.83.56" added to group "ami_b2748ddf"
+   40.830 INFO     Host "13.126.214.29" added to group "ap-south-1"
+   40.830 INFO     Host "13.127.13.202" added to group "ap-south-1"
+   40.830 INFO     Host "35.154.142.70" added to group "ap-south-1"
+   40.837 INFO     Host "13.126.214.29" added to group "ap-south-1b"
+   40.837 INFO     Host "13.127.13.202" added to group "ap-south-1b"
+   40.837 INFO     Host "35.154.142.70" added to group "ap-south-1b"
+   40.844 INFO     Host "13.126.214.29" added to group "ec2"
+   40.844 INFO     Host "13.127.13.202" added to group "ec2"
+   40.844 INFO     Host "34.193.109.28" added to group "ec2"
+   40.845 INFO     Host "34.224.245.31" added to group "ec2"
+   40.845 INFO     Host "34.225.52.141" added to group "ec2"
+   40.845 INFO     Host "34.229.210.21" added to group "ec2"
+   40.845 INFO     Host "35.154.142.70" added to group "ec2"
+   40.845 INFO     Host "35.176.36.6" added to group "ec2"
+   40.845 INFO     Host "35.177.84.250" added to group "ec2"
+   40.845 INFO     Host "52.56.209.184" added to group "ec2"
+   40.845 INFO     Host "54.89.83.56" added to group "ec2"
+   40.845 INFO     Host "54.91.231.196" added to group "ec2"
+   40.853 INFO     Host "35.176.36.6" added to group "eu-west-2"
+   40.853 INFO     Host "35.177.84.250" added to group "eu-west-2"
+   40.853 INFO     Host "52.56.209.184" added to group "eu-west-2"
+   40.859 INFO     Host "35.176.36.6" added to group "eu-west-2a"
+   40.860 INFO     Host "35.177.84.250" added to group "eu-west-2a"
+   40.860 INFO     Host "52.56.209.184" added to group "eu-west-2a"
+   40.866 INFO     Host "13.127.13.202" added to group "key_aviatrix123"
+   40.873 INFO     Host "34.225.52.141" added to group "key_awskey"
+   40.879 INFO     Host "34.229.210.21" added to group "key_centos_aws"
+   40.885 INFO     Host "52.56.209.184" added to group "key_London_GW"
+   40.892 INFO     Host "35.177.84.250" added to group "key_London_GW_A"
+   40.898 INFO     Host "35.176.36.6" added to group "key_London_GW_hagw"
+   40.905 INFO     Host "54.91.231.196" added to group "key_mediaserver"
+   40.911 INFO     Host "35.154.142.70" added to group "key_Mumbai_GW"
+   40.918 INFO     Host "13.126.214.29" added to group "key_Mumbai_GW_A"
+   40.924 INFO     Host "34.224.245.31" added to group "key_N_Virgina_GW_A"
+   40.931 INFO     Host "34.193.109.28" added to group "key_nvirginia_1"
+   40.937 INFO     Host "54.89.83.56" added to group "key_nvirginia_1_hagw"
+   40.944 INFO     Host "34.225.52.141" added to group "security_group_Controller_A_AviatrixSG_14BTZI28DGGYH"
+   40.950 INFO     Host "13.127.13.202" added to group "security_group_launch_wizard_2"
+   40.957 INFO     Host "54.91.231.196" added to group "security_group_launch_wizard_3"
+   40.964 INFO     Host "52.56.209.184" added to group "security_group_London_GW"
+   40.970 INFO     Host "35.177.84.250" added to group "security_group_London_GW_A"
+   40.977 INFO     Host "35.176.36.6" added to group "security_group_London_GW_hagw"
+   40.983 INFO     Host "35.154.142.70" added to group "security_group_Mumbai_GW"
+   40.990 INFO     Host "13.126.214.29" added to group "security_group_Mumbai_GW_A"
+   40.996 INFO     Host "34.224.245.31" added to group "security_group_N_Virgina_GW_A"
+   41.003 INFO     Host "34.193.109.28" added to group "security_group_nvirginia_1"
+   41.009 INFO     Host "54.89.83.56" added to group "security_group_nvirginia_1_hagw"
+   41.016 INFO     Host "34.229.210.21" added to group "security_group_webserver"
+   41.022 INFO     Host "34.225.52.141" added to group "tag_aws_cloudformation_logical_id_AviatrixController"
+   41.028 INFO     Host "34.225.52.141" added to group "tag_aws_cloudformation_stack_id_arn_aws_cloudformation_us_east_1_986182225774_stack_Controller_A_98bdc830_cbab_11e7_a47a_500c28afa0ba"
+   41.035 INFO     Host "34.225.52.141" added to group "tag_aws_cloudformation_stack_name_Controller_A"
+   41.042 INFO     Host "54.91.231.196" added to group "tag__GX_BACKUP_"
+   41.048 INFO     Host "52.56.209.184" added to group "tag_London_GW_172_31_5_171_gateway"
+   41.054 INFO     Host "35.177.84.250" added to group "tag_London_GW_A_172_31_31_153_gateway"
+   41.061 INFO     Host "35.176.36.6" added to group "tag_London_GW_hagw_172_31_5_171_gateway"
+   41.067 INFO     Host "35.154.142.70" added to group "tag_Mumbai_GW_172_31_5_171_gateway"
+   41.073 INFO     Host "13.126.214.29" added to group "tag_Mumbai_GW_A_172_31_31_153_gateway"
+   41.080 INFO     Host "34.225.52.141" added to group "tag_Name_AviatrixController"
+   41.086 INFO     Host "52.56.209.184" added to group "tag_Name_aviatrix_London_GW_172_31_5_171"
+   41.093 INFO     Host "35.177.84.250" added to group "tag_Name_aviatrix_London_GW_A_172_31_31_153"
+   41.099 INFO     Host "35.176.36.6" added to group "tag_Name_aviatrix_London_GW_hagw_172_31_5_171"
+   41.106 INFO     Host "35.154.142.70" added to group "tag_Name_aviatrix_Mumbai_GW_172_31_5_171"
+   41.112 INFO     Host "13.126.214.29" added to group "tag_Name_aviatrix_Mumbai_GW_A_172_31_31_153"
+   41.119 INFO     Host "34.224.245.31" added to group "tag_Name_aviatrix_N_Virgina_GW_A_172_31_31_153"
+   41.125 INFO     Host "34.193.109.28" added to group "tag_Name_aviatrix_nvirginia_1_172_31_5_171"
+   41.131 INFO     Host "54.89.83.56" added to group "tag_Name_aviatrix_nvirginia_1_hagw_172_31_5_171"
+   41.138 INFO     Host "54.91.231.196" added to group "tag_Name_Cvlt_mediaserver"
+   41.144 INFO     Host "34.229.210.21" added to group "tag_Name_feb2_18"
+   41.150 INFO     Host "13.127.13.202" added to group "tag_none"
+   41.157 INFO     Host "34.224.245.31" added to group "tag_N_Virgina_GW_A_172_31_31_153_gateway"
+   41.164 INFO     Host "34.193.109.28" added to group "tag_nvirginia_1_172_31_5_171_gateway"
+   41.170 INFO     Host "54.89.83.56" added to group "tag_nvirginia_1_hagw_172_31_5_171_gateway"
+   41.177 INFO     Host "34.225.52.141" added to group "tag_Project_Aviatrix"
+   41.183 INFO     Host "54.91.231.196" added to group "type_m3_2xlarge"
+   41.190 INFO     Host "34.229.210.21" added to group "type_m3_medium"
+   41.196 INFO     Host "34.225.52.141" added to group "type_t2_large"
+   41.203 INFO     Host "13.126.214.29" added to group "type_t2_micro"
+   41.203 INFO     Host "13.127.13.202" added to group "type_t2_micro"
+   41.203 INFO     Host "34.193.109.28" added to group "type_t2_micro"
+   41.203 INFO     Host "34.224.245.31" added to group "type_t2_micro"
+   41.204 INFO     Host "35.154.142.70" added to group "type_t2_micro"
+   41.204 INFO     Host "35.176.36.6" added to group "type_t2_micro"
+   41.204 INFO     Host "35.177.84.250" added to group "type_t2_micro"
+   41.204 INFO     Host "52.56.209.184" added to group "type_t2_micro"
+   41.204 INFO     Host "54.89.83.56" added to group "type_t2_micro"
+   41.211 INFO     Host "34.193.109.28" added to group "us-east-1"
+   41.212 INFO     Host "34.224.245.31" added to group "us-east-1"
+   41.212 INFO     Host "34.225.52.141" added to group "us-east-1"
+   41.212 INFO     Host "34.229.210.21" added to group "us-east-1"
+   41.212 INFO     Host "54.89.83.56" added to group "us-east-1"
+   41.212 INFO     Host "54.91.231.196" added to group "us-east-1"
+   41.219 INFO     Host "34.193.109.28" added to group "us-east-1a"
+   41.219 INFO     Host "54.89.83.56" added to group "us-east-1a"
+   41.219 INFO     Host "54.91.231.196" added to group "us-east-1a"
+   41.226 INFO     Host "34.224.245.31" added to group "us-east-1b"
+   41.232 INFO     Host "34.225.52.141" added to group "us-east-1c"
+   41.232 INFO     Host "34.229.210.21" added to group "us-east-1c"
+   41.239 INFO     Host "34.193.109.28" added to group "vpc_id_vpc_0b10e36f"
+   41.239 INFO     Host "34.225.52.141" added to group "vpc_id_vpc_0b10e36f"
+   41.239 INFO     Host "34.229.210.21" added to group "vpc_id_vpc_0b10e36f"
+   41.239 INFO     Host "54.89.83.56" added to group "vpc_id_vpc_0b10e36f"
+   41.239 INFO     Host "54.91.231.196" added to group "vpc_id_vpc_0b10e36f"
+   41.246 INFO     Host "13.126.214.29" added to group "vpc_id_vpc_451ef32c"
+   41.246 INFO     Host "13.127.13.202" added to group "vpc_id_vpc_451ef32c"
+   41.246 INFO     Host "35.154.142.70" added to group "vpc_id_vpc_451ef32c"
+   41.253 INFO     Host "35.176.36.6" added to group "vpc_id_vpc_b8e9c9d1"
+   41.253 INFO     Host "52.56.209.184" added to group "vpc_id_vpc_b8e9c9d1"
+   41.259 INFO     Host "35.177.84.250" added to group "vpc_id_vpc_c28e95ab"
+   41.265 INFO     Host "34.224.245.31" added to group "vpc_id_vpc_e6c7279d"
+   42.022 INFO     Inventory import completed for group "EC2" in 40.7s

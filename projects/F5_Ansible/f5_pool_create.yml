@@ -1,0 +1,22 @@
+---
+- hosts: F5
+  connection: local
+
+  vars: 
+    pool_name: "{{pool_name}}"
+    lb_name: "{{lb_name}}"
+    f5_ip: "{{f5_ip}}" 
+  
+  tasks:
+    - name: Create Pool
+      bigip_pool:
+        validate_certs: "false"
+        server: "{{item}}"
+        user: "admin"
+        password: "Wipro@123"
+        state: "present"
+        partition: "Common"
+        name: "{{pool_name}}"
+        lb_method: "{{lb_name}}"
+      with_items: 
+        - "{{f5_ip}}" 

@@ -1,0 +1,7 @@
+---
+
+- hosts: windows
+  gather_facts: False
+
+  roles:
+    - dns_add

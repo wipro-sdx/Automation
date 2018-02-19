@@ -1,0 +1,59 @@
+Identity added: /tmp/ansible_tower_B5nX8X/credential (/tmp/ansible_tower_B5nX8X/credential)
+[KeyJ1dWlkIjogIjNjM2U2MGNlLTY0NmUtNGRhNS1iMzFkLTJiNGJmZDA3NzU0OSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMTNiNi03ZDY3LTAwMDAwMDAwMDAwNyJ9[64D[K
+PLAY [all] *********************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMTNiNi03ZDY3LTAwMDAwMDAwMDAyYyJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjE5MTQzNWJkLTlmODQtNGE5YS04NDMzLWYyMjZkMWM1YTg1OCJ9[64D[K[0;32mok: [wil-01][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMTNiNi03ZDY3LTAwMDAwMDAwMDAwOSJ9[64D[K
+TASK [Install Package] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImRjMjNhNTY1LTkwZDUtNDg0MC05MzgwLTc2ZGFjMjMwMmI0YyJ9[64D[K[0;33mchanged: [wil-01] => (item=[u'httpd', u'unzip', u'mariadb-server', u'mariadb', u'php', u'php-mysql', u'php-gd', u'php-ldap', u'php-odbc', u'php-pear', u'php-xml', u'php-xmlrpc', u'php-mbstring', u'php-snmp', u'php-soap', u'curl'])[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImJmZDA2MWEwLTNiMDctNDc3My1iODk0LTlhYjdjYTRiZjkzZiJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMTNiNi03ZDY3LTAwMDAwMDAwMDAwYiJ9[64D[K
+TASK [start httpd Service] *****************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjIyMTE5YWI1LTVjNDktNGJiMi1iNDlmLWM4ZDE3ZDM3ODY1MSJ9[64D[K[0;33mchanged: [wil-01][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMTNiNi03ZDY3LTAwMDAwMDAwMDAwZCJ9[64D[K
+TASK [start mariadb Service] ***************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImVlODdkYzRjLTg4OGEtNDUyMy05ZDIzLWU5OTBhNWFiZjViNSJ9[64D[K[0;33mchanged: [wil-01][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMTNiNi03ZDY3LTAwMDAwMDAwMDAwZiJ9[64D[K
+TASK [Set MySQL root password] *************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImUyMGQ2NDM2LWZmYmItNGViMy1iMGZhLWQyZjcyZDA0M2Q1YyJ9[64D[K[0;33mchanged: [wil-01][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMTNiNi03ZDY3LTAwMDAwMDAwMDAxMSJ9[64D[K
+TASK [Copy mysql commands file into /tmp] **************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImJkMTEyMDk2LTM4MDUtNGVjYy05NjQwLWFhNDJmOGE3OGI0NyJ9[64D[K[0;33mchanged: [wil-01][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMTNiNi03ZDY3LTAwMDAwMDAwMDAxMyJ9[64D[K
+TASK [Setup database for wordpress] ********************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjI1YzkxZTA0LTczNmMtNDM5Yi05NzY5LTA1YzYxNWQzMTE2NSJ9[64D[K[0;33mchanged: [wil-01][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMTNiNi03ZDY3LTAwMDAwMDAwMDAxNSJ9[64D[K
+TASK [Download Wordpress] ******************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjczNDk0NDFiLWE4YWItNDAyNy1hOGFjLTBiZGRkMzkwOWQ5YiJ9[64D[K[0;33mchanged: [wil-01][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMTNiNi03ZDY3LTAwMDAwMDAwMDAxNyJ9[64D[K
+TASK [Unzip Wordpress Zip file] ************************************************
+[Ke30=[4D[K[1;35m [WARNING]: Consider using unarchive module rather than running unzip[0m
+[1;35m[0m
+[KeyJ1dWlkIjogIjViZmU4NTg3LTY4YzAtNDE1Zi05NTljLTcwZjNmOWYxMDkyMSJ9[64D[K[0;33mchanged: [wil-01][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMTNiNi03ZDY3LTAwMDAwMDAwMDAxOSJ9[64D[K
+TASK [Copy wordpress files to webroot] *****************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQxNTUxMjcwLWJlNGUtNGI2Yy05YjIxLTU1NGE1YTQ0OTk4YyJ9[64D[K[0;33mchanged: [wil-01][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMTNiNi03ZDY3LTAwMDAwMDAwMDAxYiJ9[64D[K
+TASK [Remove Index.html] *******************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImM1NWU2NWY3LTQxZDctNGVjYS04ZWY0LWU3YjIyMDQ2Y2EzNSJ9[64D[K[0;32mok: [wil-01][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMTNiNi03ZDY3LTAwMDAwMDAwMDAxZCJ9[64D[K
+TASK [HTML Directory Permissions] **********************************************
+[Ke30=[4D[K[1;35m [WARNING]: Consider using file module with mode rather than running chmod[0m
+[1;35m[0m
+[KeyJ1dWlkIjogIjg2YTc2NTNjLTVlNjMtNDRhNi1hZWI4LTQ3MTJhOWE5NmY1MCJ9[64D[K[0;33mchanged: [wil-01][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMTNiNi03ZDY3LTAwMDAwMDAwMDAxZiJ9[64D[K
+TASK [HTML Directory Owner] ****************************************************
+[Ke30=[4D[K[1;35m [WARNING]: Consider using file module with owner rather than running chown[0m
+[1;35m[0m
+[KeyJ1dWlkIjogIjAzMzg2ZGRiLWMzYjYtNDM3ZS1iMWYxLTliYmFmNWE5MTllMSJ9[64D[K[0;33mchanged: [wil-01][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMTNiNi03ZDY3LTAwMDAwMDAwMDAyMSJ9[64D[K
+TASK [Copy Wordpress Config File in Target Location] ***************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjE3NzVlNTA2LWEzNGUtNDRhMS05NzM3LTc3YzIwOTRiOThmYiJ9[64D[K[0;33mchanged: [wil-01][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMTNiNi03ZDY3LTAwMDAwMDAwMDAyMyJ9[64D[K
+TASK [Restart HTTPD] ***********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjJlZDEzM2RiLTA2M2UtNGYzMS1hN2FiLTQ5MTExODJlZGJjMSJ9[64D[K[0;33mchanged: [wil-01][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjU3YjE2YzA1LTEzMTctNGJhMS1iMmFjLTNmMWE5NTFiZTkzZCJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33mwil-01[0m                     : [0;32mok=15  [0m [0;33mchanged=13  [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

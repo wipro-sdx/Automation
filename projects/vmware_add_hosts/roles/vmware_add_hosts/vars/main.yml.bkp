@@ -1,0 +1,12 @@
+---
+# vars file for vmware_add_hosts
+
+vcenter_hostname: 172.17.66.156
+vcenter_username: Administrator@vsphere.local
+vcenter_password: Wipro@123
+esxi_hostname: '{{ esxi_hostname }}'
+esxi_username: root
+esxi_password: Wipro@123
+esxi_list:
+  - - 172.17.66.103
+    - 172.17.66.104

@@ -1,0 +1,10 @@
+---
+
+- name: Add Static route
+  nxos_command:
+     commands:
+        - conf t
+        - vrf context branch-A
+        - ip route {{prefix}} {{nexthop}}
+        - exit
+        - exit

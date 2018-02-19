@@ -1,0 +1,33 @@
+---
+- vmware_guest:
+    hostname: "172.16.8.16"
+    username: "administrator@vsphere.opendc"
+    password: "Wipro@123"
+    datacenter: opendc-dc1
+    cluster: Nutanix-DC
+    name: "wipro{{item}}"
+    state: poweredon
+    disk:
+    - size_gb: "{{ disk }}"
+      type: thin
+      datastore: Container-DC01
+    hardware:
+      memory_mb: "{{ mem }}"
+      num_cpus: "{{ cpu }}"
+      scsi: lsilogic
+    networks:
+    - name: "{{ vlan }}"
+      device_type: vmxnet3
+#      ip: 192.168.1.100
+#      netmask: 255.255.255.0
+#      gateway: 192.168.1.1
+#      mac: aa:bb:dd:aa:00:14
+#      domain: my_domain
+#      dns_servers:
+#      - 192.168.1.1
+#      - 192.168.1.2
+#    - vlan: 1234
+      type: dhcp          
+    template: Temp1   
+  with_sequence: count="{{ countvar|int }}"
+  register: deploy

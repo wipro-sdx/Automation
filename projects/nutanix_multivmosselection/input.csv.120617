@@ -1,0 +1,5 @@
+servername,disksize,mem,cpu,ip,os
+rhelserver1,50,6000,3,172.17.65.180,rhel
+centosserver1,50,8000,4,172.17.65.93,centos
+rhelserver2,50,6000,3,172.17.65.173,rhel
+centosserver2,50,8000,4,172.17.65.174,centos

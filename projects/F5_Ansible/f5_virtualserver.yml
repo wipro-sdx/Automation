@@ -1,0 +1,29 @@
+---
+- hosts: F5
+  connection: local
+
+  vars: 
+    vip_name: "{{vip_name}}"
+    dest_ip: "{{dest_ip}}"
+    port_num: "{{port_num}}"
+    pool_name: "{{pool_name}}"
+    profile: "{{profile}}" 
+    f5_ip: "{{f5_ip}}" 
+       
+  tasks:
+    - name: Create Virtual Server
+      bigip_virtual_server:
+        validate_certs: "false"
+        server: "{{item}}"
+        user: "admin"
+        password: "Wipro@123"
+        state: "present"
+        partition: "Common"
+        name: "{{vip_name}}"
+        destination: "{{dest_ip}}"
+        port: "{{port_num}}"
+        pool: "{{pool_name}}"
+        all_profiles: 
+           - "{{profile}}"
+      with_items:
+        - "{{f5_ip}}"

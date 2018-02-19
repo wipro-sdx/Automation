@@ -1,0 +1,128 @@
+---
+- hosts: localhost
+  gather_facts: no
+  vars_prompt:
+  - name: target_host
+    prompt: please enter the target host IP
+    private: no
+  tasks:
+    - add_host:
+        name: "{{ target_host }}"
+        groups: nagios_hosts
+- hosts: nagios_hosts
+  tasks:
+    - name: create folder
+      file:
+        path: /root/nagios
+        state: directory
+    - name: copy file to client hosts
+      synchronize:
+        src: /var/lib/awx/projects/nagios/
+        dest: /root/nagios/
+      delegate_to: 172.17.65.22  
+    - name: Creating Nagios User.
+      user:  name=nagios password=nagios
+  #tasks:
+    - name: installing Packages.
+      yum: pkg={{item}} state=installed
+      with_items:
+        - gcc
+        - glibc
+        - glibc-common
+        - openssl
+        - openssl-devel
+        - perl
+        - wget
+        - gd 
+        - gd-devel
+        - make 
+        - net-snmp
+      ignore_errors: yes  
+  #tasks:
+    - name: installing nagios plugins
+      command: "{{ item }} chdir=/root/nagios/nagios-plugins-2.2.1/"
+      with_items:
+        - ./configure
+        - make
+        - make install
+        - chown nagios.nagios /usr/local/nagios
+        - chown -R nagios.nagios /usr/local/nagios/libexec
+  #tasks:
+    - name: installing xinetd Packages.
+      yum: pkg=xinetd state=installed
+  #tasks:
+    - name: installing NRPE.
+      command: "{{ item }} chdir=/root/nagios/nrpe-nrpe-3.2.1/"
+      with_items:
+        - ./configure --enable-command-args
+        - make all
+        - make install
+        - make install-config
+    - name: adding port.
+      command: echo 'nrpe    5666/tcp' >> /etc/services
+    - name: starting NRPE Services
+      command: "{{ item }} chdir=/root/nagios/nrpe-nrpe-3.2.1/"
+      with_items: 
+        - make install-init
+        - systemctl enable nrpe.service
+  #tasks:
+    - name: firewall configuration for port 5666.
+      command: "{{ item }}"
+      with_items:
+        - firewall-cmd --zone=public --add-port=5666/tcp
+        - firewall-cmd --zone=public --add-port=5666/tcp --permanent
+      ignore_errors: yes  
+    - name: configuring NRPE file.
+      command: "{{ item }}"
+      with_items:
+        - cp /usr/local/nagios/etc/nrpe.cfg /usr/local/nagios/etc/nrpe.cfg.bkp
+        - sed -i '/^allowed_hosts=/s/$/,172.17.65.214/' /usr/local/nagios/etc/nrpe.cfg
+        - sed -i 's/^dont_blame_nrpe=.*/dont_blame_nrpe=1/g' /usr/local/nagios/etc/nrpe.cfg
+  #tasks:
+    - name: Starting NRPE Services.
+      service:
+        name: nrpe
+        state: restarted
+  #tasks:
+    - name: checking NRPE Version
+      command: /usr/local/nagios/libexec/check_nrpe -H 127.0.0.1
+      register: NRPE_Version
+    - debug: var=NRPE_Version.stdout_lines
+        
+- hosts: 172.17.65.214
+  vars_prompt:
+    - name: Hostname
+      prompt: "Hostname"
+      private: no
+    - name: ipaddress
+      prompt: "ipaddress"
+      private: no
+  tasks:
+  - name:
+    file:
+      path: /root/tmp
+      state: touch
+      mode: 0644
+  - name: adding host in host file.
+    blockinfile:
+      path: /root/tmp
+      block: |
+        ## Default
+        define host{
+        use                             linux-box               ; Inherit default values from a template
+        host_name                       {{ Hostname }}                  ; The name we're giving to this server
+        alias                           CentOS 7.3                ; A longer name for the server
+        address                         {{ ipaddress }}            ; IP address of Remote Linux host
+        }
+  - name: appending the files
+    shell: cat /root/tmp >> //usr/local/nagios/etc/hosts.cfg
+  - name: removing tmp
+    file:
+      path: /root/tmp
+      state: absent
+  - name: adding host to group
+    shell: sed -i 's/selinux/selinux,{{ Hostname }}/' /usr/local/nagios/etc/hosts_group.cfg
+  - name: Restart nagios service.
+    service:
+      name: nagios
+      state: restarted

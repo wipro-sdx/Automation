@@ -1,0 +1,14 @@
+SSH password: 
+[KeyJ1dWlkIjogIjZiODhhZjJkLWE2MTktNDJiZS05M2Q5LTI3NDdjN2RiZWI4MCJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMzVmNC0wYTNiLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [all] *********************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMzVmNC0wYTNiLTAwMDAwMDAwMDAwZCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjk3MDk4M2YzLWQ2MzUtNDM5Mi1hYTc5LTViZjA4ZmMwMjU1NiJ9[64D[K[0;32mok: [172.16.48.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMzVmNC0wYTNiLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [Create Pool] *************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImNhMDQxNjJmLTMwZjktNDY2NS05NDdhLWZiMmM0YWVlMTdmZSJ9[64D[K[0;33mchanged: [172.16.48.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImViYWZjYzQxLTY5YjMtNGM5Mi05NDk2LWRkNGU0OTc5NGY2YSJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m172.16.48.93[0m               : [0;32mok=2   [0m [0;33mchanged=1   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

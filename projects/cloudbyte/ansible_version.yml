@@ -1,0 +1,13 @@
+---
+- name: Check ansible version
+  hosts: localhost
+  gather_facts: no
+
+  tasks: 
+    - name: Print ansible version 
+      command: ansible --version
+      register: ansibleversion
+
+    - name: print version
+      debug:
+        msg: "Ansible Version: {{ ansibleverison.json }}"

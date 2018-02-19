@@ -1,0 +1,9 @@
+---
+
+- hosts: localhost
+  become: yes
+  become_user: root
+
+  roles:
+  - aws_rds
+

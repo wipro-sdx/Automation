@@ -1,0 +1,7 @@
+---
+- name: Deployment of Ruby app on Openshift
+  shell: /root/SDX-Demo/ruby-app.bash
+  args:
+    executable: /bin/bash
+
+

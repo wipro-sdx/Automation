@@ -1,0 +1,26 @@
+---
+- hosts: F5
+  connection: local
+
+  vars: 
+    sip_name: "{{sip_name}}"
+    sip_ip: "{{sip_ip}}"
+    sip_mask: "{{sip_mask}}"
+    sip_vlan: "{{sip_vlan}}"
+    f5_ip: "{{f5_ip}}" 
+       
+  tasks:
+    - name: Create Self-IP
+      bigip_selfip:
+        validate_certs: "false"
+        server: "{{item}}"
+        user: "admin"
+        password: "Wipro@123"
+        state: "present"
+        partition: "Common"
+        address: "{{sip_ip}}"
+        name: "{{sip_name}}"
+        netmask: "{{sip_mask}}"
+        vlan: "{{sip_vlan}}"
+      with_items:
+        - "{{f5_ip}}"

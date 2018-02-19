@@ -1,0 +1,16 @@
+---
+- hosts: all
+  connection: local
+
+  tasks:
+    - name: Create Pool Member
+      bigip_pool_member:
+        validate_certs: "false"
+        server: "{{f5_ip}}"
+        user: "admin"
+        password: "Wipro@123"
+        state: "present"
+        partition: "Common"
+        pool: "{{pool_name}}"
+        host: "{{node_name}}"
+        port: "{{port_num}}"

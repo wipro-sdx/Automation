@@ -1,0 +1,5 @@
+---
+- name: multi servers windows installation via razor provisioning
+  shell: python /var/lib/awx/projects/razor/code.py
+- pause:
+    seconds: 60

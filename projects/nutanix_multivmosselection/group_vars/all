@@ -1,0 +1,7 @@
+---
+ops: rhel
+servername: testserver
+disksize: 50 
+mem: 8000
+cpu: 4
+ip: 172.17.65.93

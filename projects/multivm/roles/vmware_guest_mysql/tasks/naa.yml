@@ -1,0 +1,10 @@
+---
+- hosts: 172.17.66.156
+  tasks:
+  - name: Get Canonical name
+    local_action:
+      module: vmware_target_canonical_facts
+      hostname: 172.17.65.11
+      username: root
+      password: Wipro@123
+      target_id: 40

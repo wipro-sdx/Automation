@@ -1,0 +1,17 @@
+SSH password: 
+[KeyJ1dWlkIjogImU0ZjhiZmU0LWY1NTgtNDE2Yi04Njg1LTJlMmYyNWNhNWM0MiJ9[64D[K[1;35m [WARNING]: provided hosts list is empty, only localhost is available[0m
+[1;35m[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjg0Y2YwOThkLThlY2YtNDE5My1hM2IwLTdhMTE2NDNmYjJkMiJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzg3Ny01ZjdkLTAwMDAwMDAwMDAwMSJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctYzg3Ny01ZjdkLTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [multivm : Deploy guest from template] ************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImNiNDU2MjBkLTYzMmUtNGRlYy1iYzNhLTY2ZWVmODcxOTA3NyJ9[64D[K[0;33mchanged: [localhost] => (item=1)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImM5ZTM3ZjMyLWUyZmItNGIzMC1hZWE2LWQ5MjdiNjBjMjc2YSJ9[64D[K[0;33mchanged: [localhost] => (item=2)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjViNzk0MmY2LTIzYjctNDM0Zi04YjVkLTc2MTliOTg0ZjBmZiJ9[64D[K[0;33mchanged: [localhost] => (item=3)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjM3ZWFmMDFjLWE2MmItNDM1YS05ZWJhLWIxNjY3MTFkODJlZSJ9[64D[K[0;33mchanged: [localhost] => (item=4)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImNlM2QxMWUyLThmMzItNDJiNi1iOTk2LTI4MTE5NzgyMzNlMSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjNmYTQ1OWJlLWMzNzYtNDllYS05YjcyLTFkNTYyNWE5NzJjYSJ9[64D[K[0;33mchanged: [localhost] => (item=5)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjVjMDg4YzdjLTQ5YTYtNGEzMS1hZTI4LTM4Y2ZkZGEzMTgxYSJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33mlocalhost[0m                  : [0;32mok=1   [0m [0;33mchanged=1   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

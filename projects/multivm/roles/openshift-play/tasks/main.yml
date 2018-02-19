@@ -1,0 +1,4 @@
+---
+- name: Installing Openshift 
+  shell: oc new-project ivy --display-name "ivy"
+  shell: oc new-app /sdx/php+mysql.json -n ivy 

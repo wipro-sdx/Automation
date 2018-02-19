@@ -1,0 +1,3 @@
+Interface,Description,Mode,IP_addr,Mask
+Ethernet1/34,Ansible-Demo1,layer3,6.6.6.6,24
+Ethernet1/35,Ansible-Demo2,layer3,7.7.7.7,24

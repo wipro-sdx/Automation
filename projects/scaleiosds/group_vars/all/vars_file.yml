@@ -1,0 +1,17 @@
+scaleio_version: 2.0-13000.211
+#scaleio_package_path: ~/Github/ansible/scaleio/files
+scaleio_primary_mdm: 172.17.65.86
+scaleio_secondary_mdm: 172.17.65.87
+scaleio_tie_breaker: 172.17.65.88
+scaleio_password: "Wipro@123"
+scaleio_protection_domain_name: "PD01"
+scaleio_storage_pool_name: "SP01"
+#pdm: "{{ hostvars.mdm.ansible_ens192.ipv4.address }}"
+pdm: 172.17.65.86
+#sdm: "{{ hostvars.sds1.ansible_ens192.ipv4.address }}"
+sdm: 172.17.65.87
+#tb: "{{ hostvars.sds2.ansible_ens192.ipv4.address }}"
+tb: 172.17.65.88
+scaleio_package_path: /scaleio-soft
+pdn: "PD01"
+spn: "SP01"

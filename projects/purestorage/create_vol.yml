@@ -1,0 +1,123 @@
+---
+- name: Attach new volume to a new host in a FlashArray
+  hosts: localhost
+  gather_facts: no
+  vars:
+    arrayurl: "{{ arrayurl }}"
+    array_token: "{{ array_token }}"
+    api_version: "{{ api_version }}"
+    iqn: "{{ iqn }}"
+    hostname: "{{ hostname }}"
+    hostname1: Automation-test
+    size: "{{ size }}"
+    volname: "{{ volname }}"
+ 
+  tasks:
+    - name: open RestAPI session
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/auth/session
+        method: POST
+        validate_certs: no
+        return_content: yes
+        body:
+          api_token: "{{ array_token }}"
+        body_format: json
+      register: session
+ 
+    - name: list all hosts
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/host
+        method: GET
+        validate_certs: no
+        HEADER_Cookie: "{{session.set_cookie}}"
+        return_content: yes
+      ignore_errors: yes
+      register: hosts
+ 
+    - name: show hosts data
+      debug: msg="{{ hosts.json }}"
+ 
+    - name: list all volumes
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/volume
+        method: GET
+        validate_certs: no
+        HEADER_Cookie: "{{session.set_cookie}}"
+        return_content: yes
+      ignore_errors: yes
+      register: volumes
+ 
+    - name: show volumes data
+      debug: msg="{{ volumes.json }}"
+ 
+    - name: create new host
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/host/{{ hostname }}
+        method: POST
+        validate_certs: no
+        HEADER_Cookie: "{{session.set_cookie}}"
+        return_content: yes
+        body:
+          iqnlist: ["{{ iqn }}"]
+        body_format: json
+      ignore_errors: yes
+ 
+    - name: create new volume
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/volume/{{ volname }}
+        method: POST
+        validate_certs: no
+        HEADER_Cookie: "{{session.set_cookie}}"
+        return_content: yes
+        body:
+          size: "{{ size }}"
+        body_format: json
+      ignore_errors: yes
+ 
+    - name: attach volume to host
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/host/{{ hostname1 }}/volume/{{ volname }}
+        method: POST
+        validate_certs: no
+        HEADER_Cookie: "{{session.set_cookie}}"
+        return_content: yes
+      ignore_errors: yes
+ 
+    - name: list all hosts
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/host
+        method: GET
+        validate_certs: no
+        HEADER_Cookie: "{{session.set_cookie}}"
+        return_content: yes
+      ignore_errors: yes
+      register: hosts
+ 
+    - name: show hosts data
+      debug: msg="{{ hosts.json }}"
+ 
+    - name: list all volumes
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/volume
+        method: GET
+        validate_certs: no
+        HEADER_Cookie: "{{session.set_cookie}}"
+        return_content: yes
+      ignore_errors: yes
+      register: volumes
+ 
+    - name: show volumes data
+      debug: msg="{{ volumes.json }}"
+ 
+    - name: show host volume attachments
+      uri:
+        url: https://{{ arrayurl }}/api/{{ api_version }}/host/{{ hostname }}/volume
+        method: GET
+        validate_certs: no
+        HEADER_Cookie: "{{session.set_cookie}}"
+        return_content: yes
+      ignore_errors: yes
+      register: attached_volumes
+ 
+    - name: show attached volumes data
+      debug: msg="{{ attached_volumes.json }}"

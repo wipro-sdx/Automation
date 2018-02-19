@@ -1,0 +1,17 @@
+SSH password: 
+[KeyJ1dWlkIjogIjAzMTBmOWJmLWI0MWEtNDliZi1iZWY0LTFjMzEwYWE0ZWNjNSJ9[64D[K[1;35m [WARNING]: provided hosts list is empty, only localhost is available[0m
+[1;35m[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjhlZTUyNTQ5LTY3MTUtNGEzOC05ZDBlLWM3ZmM0NWEyMjhjYSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTE4MC1jZTBkLTAwMDAwMDAwMDAwMSJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctZTE4MC1jZTBkLTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [bulkvm : vmware_guest] ***************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjBmODBlMTA4LWY3MWEtNDIxOS04ZGNlLTU2YzZmYWY0NGNjYSJ9[64D[K[0;32mok: [localhost] => (item=1)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjRmZWVmZmU4LWE4MDMtNDk0YS1iY2Q1LWRmZDJjYTY2NzgyNSJ9[64D[K[0;32mok: [localhost] => (item=2)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjA0OGI2ZmFhLWFmYmYtNDhmMC04MjZjLTJlZDczZTAyYTE4NiJ9[64D[K[0;33mchanged: [localhost] => (item=3)[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjk3OTc1ODIyLTBlY2QtNGEwZC05YWJjLTc4MjlhOTQxN2Q1MSJ9[64D[K[0;31mfailed: [localhost] (item=4) => {"changed": true, "failed": true, "item": "4", "msg": "The number of network adapter settings in the customization specification: 0 does not match the number of network adapters present in the virtual machine: 1."}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQ4YzMxNjI2LTAyZTgtNDgyYi1hNzBmLTFjMDJmYjU2ZjgzOCJ9[64D[K[0;31mfailed: [localhost] (item=5) => {"changed": true, "failed": true, "item": "5", "msg": "The number of network adapter settings in the customization specification: 0 does not match the number of network adapters present in the virtual machine: 1."}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQwMzc5OGJkLWFlNzMtNGI1YS05OGFiLTI0ZDFiZmM5NjMzZiJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjI2NDhlZmQzLTg1OGMtNGMzYi1hODQxLTQ3NWE0YTNjNjZjMyJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : ok=0    changed=0    unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

@@ -1,0 +1,20 @@
+SSH password: 
+[KeyJ1dWlkIjogIjgyOGM4MDdjLTY0NmMtNDFhZC1iZDFiLTUzZTFjNzM1MjFmZCJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMDdhMi1jYThiLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMDdhMi1jYThiLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImQzNWQyMDJhLTg1MmItNDcwYS04MzFkLTRjOGUzOTBlMjFmYSJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMDdhMi1jYThiLTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [add_host] ****************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImRhNTM5ZmVmLTZiMzAtNGI0NC04N2FiLThlZDk1NzY5OTYzZCJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMDdhMi1jYThiLTAwMDAwMDAwMDAwNyJ9[64D[K
+PLAY [nagios_client] ***********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctMDdhMi1jYThiLTAwMDAwMDAwMDA0NyJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImRlZGQyZmNmLWU5NWYtNGJmMi05MTQzLTJjMWYwNTY3MGI1NSJ9[64D[K[1;31mfatal: [172.17.65.172]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 172.17.65.172 port 22: No route to host\r\n", "unreachable": true}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjUyMzUyMDQ1LTA4YWQtNDUxYi05YjZmLWNhYWM1Njk5ZmJiMSJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m127.0.0.1[0m                  : [0;32mok=2   [0m [0;33mchanged=2   [0m unreachable=0    failed=0   
+[0;31m172.17.65.172[0m              : ok=0    changed=0    [1;31munreachable=1   [0m failed=0   
+
+[Ke30=[4D[K

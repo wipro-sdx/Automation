@@ -1,0 +1,68 @@
+---
+ - hosts: CentOS* 
+   become: true
+   tasks:
+    - name: "disable selinux"
+      command: setenforce 0
+    - name: "Install Package"
+      yum: name={{ item }} state=latest
+      with_items:
+        - httpd
+        - unzip
+        - mariadb-server
+        - mariadb
+        - php
+        - php-mysql
+        - php-gd
+        - php-ldap
+        - php-odbc
+        - php-pear
+        - php-xml
+        - php-xmlrpc
+        - php-mbstring
+        - php-snmp
+        - php-soap
+        - curl
+    - name: "start httpd Service"
+      service: name=httpd state=started enabled=yes
+    - name: "start mariadb Service"
+      service: name=mariadb state=started enabled=yes
+    - name: "Set MySQL root password"
+      shell: mysqladmin -u root password rootpassword && touch /var/rootpwd
+      args:
+        creates: /var/rootpwd
+    - name: "Copy mysql commands file into /tmp"
+      get_url:
+        url: https://raw.githubusercontent.com/abhradip/ansible/master/mysqlcommands
+        dest: /tmp/mysqlcommands
+    - name: "Setup database for wordpress"
+      shell: mysql -uroot -prootpassword < /tmp/mysqlcommands && touch /var/donemysqlcmd
+      args:
+        creates: /var/donemysqlcmd
+    - name: "Download Wordpress"
+      get_url:
+        url: https://wordpress.org/latest.zip
+        dest: /tmp/latest.zip
+    - name: "Unzip Wordpress Zip file"
+      shell: unzip /tmp/latest.zip -d /var/wordpress
+      args:
+        creates: /var/wordpress/wordpress/index.php
+    - name: "Copy wordpress files to webroot"
+      shell: cp -r /var/wordpress/wordpress/* /var/www/html
+      args:
+        creates: /var/www/html/index.php
+    - name: "Remove Index.html"
+      shell: rm -f /var/www/html/index.html
+      args:
+        removes: /var/www/html/index.html
+    - name: "HTML Directory Permissions"
+      shell: chmod -R 775 /var/www/html
+    - name: "HTML Directory Owner"
+      shell: chown -R apache:apache /var/www/html
+    - name: "Copy Wordpress Config File in Target Location"
+      get_url:
+        url: https://raw.githubusercontent.com/abhradip/ansible/master/wp-config-sample.php
+        dest: /var/www/html/wp-config.php
+    - name: "Restart HTTPD"
+      shell: systemctl restart httpd
+

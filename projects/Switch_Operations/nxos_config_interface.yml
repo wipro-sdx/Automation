@@ -1,0 +1,24 @@
+---
+
+- hosts: leaf 
+  connection: local
+ 
+  vars: 
+    intf: "{{interface}}"
+    desc: "{{desc}}"
+    int_mode: "{{mode}}"
+    ip_addr: "{{ip_addr}}" 
+    addr_mask: "{{addr_mask}}"  
+  
+  tasks:
+    - name: Put interface description      
+      nxos_interface: 
+         interface: "{{intf}}"
+         description: "{{desc}}"
+         mode: "{{int_mode}}"
+    - name: Configure IPv4 address      
+      nxos_ip_interface:
+         interface: "{{intf}}"
+         version: v4
+         addr: "{{ip_addr}}"
+         mask: "{{addr_mask}}"

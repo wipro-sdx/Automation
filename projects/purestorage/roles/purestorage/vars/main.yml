@@ -1,0 +1,10 @@
+---
+# vars file for purestorage
+arrayurl: 172.17.65.140
+array_token: c1a3985a-a3d7-84c2-5520-52567067cf94
+api_version: "1.11"
+volname: "{{ volname }}"
+size: "{{ size }}"
+iqn: "{{ iqn }}"
+hostname: "{{ hostname }}"
+

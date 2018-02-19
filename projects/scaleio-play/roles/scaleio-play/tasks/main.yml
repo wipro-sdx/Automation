@@ -1,0 +1,34 @@
+---
+- name: Install the ScaleIO Gateway component package on the Linux IM server
+  shell: GATEWAY_ADMIN_PASSWORD=Wipro123 rpm -U /software/EMC-ScaleIO-gateway-2.0-13000.211.x86_64.rpm
+
+- name: Log in to Installation Manager server
+  command: im login --host 172.17.65.85 --port 443 --username admin --password Wipro@123 --no_certificate_validation true
+
+- name: Copy Scaleio component packages to Installation Manager server
+  synchronize:
+    src:  /scaleio-soft/
+    dest: /tmp
+  delegate_to: 172.17.65.22
+
+- name: Upload MDM softwares for scaleio
+  command: im upload_package --path /tmp/EMC-ScaleIO-mdm-2.0-13000.211.el7.x86_64.rpm
+
+- name: Upload SDS softwares for scaleio
+  command: im upload_package --path /tmp/EMC-ScaleIO-sds-2.0-13000.211.el7.x86_64.rpm
+
+- name: Upload SDC softwares for scaleio
+  command: im upload_package --path /tmp/EMC-ScaleIO-sdc-2.0-13000.211.el7.x86_64.rpm
+
+- name: Upload LIA softwares for scaleio
+  command: im upload_package --path /tmp/EMC-ScaleIO-lia-2.0-13000.211.el7.x86_64.rpm
+
+- name: Upload XCACHE softwares for scaleio
+  command: im upload_package --path /tmp/EMC-ScaleIO-xcache-2.0-13000.211.el7.x86_64.rpm
+
+- name: List uploaded scaleio softwares
+  command: im list_packages
+
+- name: install ScaleIO components on respective scaleIO cluster servers based in config CSV file
+  command: im install --path /tmp/ScaleIO_Minimal_Config.csv --mdm_password Wipro123--lia_password Wipro123 --non-interactive
+

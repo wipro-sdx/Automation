@@ -1,0 +1,3 @@
+---
+# defaults file for vmware_add_hosts
+#ip = /root/openshift/roles/vmware_add_hosts/defaults/ipaddress

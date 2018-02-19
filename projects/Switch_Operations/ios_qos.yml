@@ -1,0 +1,28 @@
+---
+
+ - hosts: router 
+   connection: local
+
+   tasks:
+    - name: Video QoS configuration
+      ios_config:
+          authorize: yes
+          auth_pass: Wipro@123
+          lines:
+            - class-map VOICE
+            - policy-map VOICE
+            - class VOICE
+            - set dscp ef
+            - exit
+            - class-map VIDEO
+            - policy-map VIDEO
+            - class VIDEO
+            - set dscp cs1
+            - exit
+            - class-map DATA
+            - policy-map DATA
+            - class DATA
+            - set dscp af11
+            - exit
+
+            

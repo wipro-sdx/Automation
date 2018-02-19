@@ -1,0 +1,5 @@
+---
+- name: Deployment of two tire application on Openshift
+  shell: /root/SDX-Demo/create-app.bash 
+  args:
+    executable: /bin/bash

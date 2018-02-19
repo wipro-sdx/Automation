@@ -1,0 +1,5 @@
+---
+- name: multi servers os installation via expro provisioning
+  shell: python /var/lib/awx/projects/cobbler/code.py 
+- pause:
+    seconds: 1000

@@ -1,0 +1,3 @@
+Name,VIP,Port,Pool,Profile
+HTTPVirtualServer,20.0.0.2,80,Web,http
+HTTPSVirtualServer,20.0.0.3,443,App,http

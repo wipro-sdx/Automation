@@ -1,0 +1,19 @@
+---
+- name: copy resolv.conf
+  template: 
+    src: resolv.conf
+    dest: /etc/resolv.conf
+- name: Subscribing the Redhat Linux server.
+  redhat_subscription:
+    state: present
+    username: Wipro_DCC 
+    password: opendc78901
+    pool: 8a85f98158a4693d0158aa5ba25f5665
+- name: ntpserver package installation
+  yum: name=ntp state=latest
+  tags: ntp
+- name: copy ntp file
+  template: src=ntp.conf dest=/etc/ntp.conf
+  tags: ntp
+  notify: restart ntp
+

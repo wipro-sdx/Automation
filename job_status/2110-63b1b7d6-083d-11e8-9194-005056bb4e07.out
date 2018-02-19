@@ -1,0 +1,105 @@
+    1.448 INFO     Updating inventory 56: CF-113-CoE-NEW
+    1.467 INFO     Reading executable JSON source: /tmp/ansible_tower_launch_8CjAtv/tmptp25F3
+   13.679 INFO     Loaded 39 groups, 5 hosts
+   13.876 INFO     Group "ec2-custom" variables unmodified
+   13.881 INFO     Group "ami-11e84107" variables unmodified
+   13.881 INFO     Group "ami-1f28d965" variables unmodified
+   13.882 INFO     Group "ami-58fc7f22" variables unmodified
+   13.882 INFO     Group "ami-6496321e" variables unmodified
+   13.882 INFO     Group "ec2" variables unmodified
+   13.883 INFO     Group "i-00970457bbdbca84b" variables unmodified
+   13.883 INFO     Group "i-010e51205338e1055" variables unmodified
+   13.883 INFO     Group "i-049a28a768a955789" variables unmodified
+   13.883 INFO     Group "i-0d72df4707a20bb16" variables unmodified
+   13.884 INFO     Group "key_awskey" variables unmodified
+   13.884 INFO     Group "key_centos-aws" variables unmodified
+   13.884 INFO     Group "key_mediaserver" variables unmodified
+   13.885 INFO     Group "key_N-Virgina-GW-A" variables unmodified
+   13.885 INFO     Group "security_group_Controller-A-AviatrixSG-14BTZI28DGGYH" variables unmodified
+   13.885 INFO     Group "security_group_launch-wizard-3" variables unmodified
+   13.886 INFO     Group "security_group_N-Virgina-GW-A" variables unmodified
+   13.886 INFO     Group "security_group_webserver" variables unmodified
+   13.886 INFO     Group "tag_aws-cloudformation-logical-id-AviatrixController" variables unmodified
+   13.886 INFO     Group "tag_aws-cloudformation-stack-id-arn-aws-cloudformation-us-east-1-986182225774-stack-Controller-A-98bdc830-cbab-11e7-a47a-500c28afa0ba" variables unmodified
+   13.887 INFO     Group "tag_aws-cloudformation-stack-name-Controller-A" variables unmodified
+   13.887 INFO     Group "tag__GX_BACKUP_" variables unmodified
+   13.887 INFO     Group "tag_Name-AviatrixController" variables unmodified
+   13.888 INFO     Group "tag_Name-aviatrix-N-Virgina-GW-A-172-31-31-153" variables unmodified
+   13.888 INFO     Group "tag_Name-Cvlt-mediaserver" variables unmodified
+   13.888 INFO     Group "tag_Name-sdx-wrp-10" variables unmodified
+   13.888 INFO     Group "tag_N-Virgina-GW-A-172-31-31-153-gateway" variables unmodified
+   13.889 INFO     Group "tag_Project-Aviatrix" variables unmodified
+   13.889 INFO     Group "type_m3-2xlarge" variables unmodified
+   13.890 INFO     Group "type_m3-medium" variables unmodified
+   13.890 INFO     Group "type_t2-large" variables unmodified
+   13.890 INFO     Group "type_t2-micro" variables unmodified
+   13.891 INFO     Group "us-east-1" variables unmodified
+   13.891 INFO     Group "us-east-1a" variables unmodified
+   13.891 INFO     Group "us-east-1b" variables unmodified
+   13.892 INFO     Group "us-east-1c" variables unmodified
+   13.892 INFO     Group "vpc_id_vpc-0b10e36f" variables unmodified
+   13.892 INFO     Group "vpc_id_vpc-e6c7279d" variables unmodified
+   13.904 INFO     Group "i-077cade0b635ccecc" added
+   13.914 INFO     Group "tag_Name-sdx-wrp-11" added
+   13.927 INFO     Host "aviatrixcontroller" variables unmodified
+   13.928 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" variables unmodified
+   13.928 INFO     Host "cvlt-mediaserver" variables unmodified
+   13.929 INFO     Host "sdx-wrp-10" variables unmodified
+   13.933 INFO     Host "sdx-wrp-11" added
+   13.948 INFO     Host "cvlt-mediaserver" already in group "ami-11e84107"
+   13.953 INFO     Host "aviatrixcontroller" already in group "ami-1f28d965"
+   13.958 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "ami-58fc7f22"
+   13.963 INFO     Host "sdx-wrp-10" already in group "ami-6496321e"
+   13.965 INFO     Host "sdx-wrp-11" added to group "ami-6496321e"
+   13.969 INFO     Host "aviatrixcontroller" already in group "ec2"
+   13.969 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "ec2"
+   13.969 INFO     Host "cvlt-mediaserver" already in group "ec2"
+   13.969 INFO     Host "sdx-wrp-10" already in group "ec2"
+   13.971 INFO     Host "sdx-wrp-11" added to group "ec2"
+   13.975 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "i-00970457bbdbca84b"
+   13.980 INFO     Host "cvlt-mediaserver" already in group "i-010e51205338e1055"
+   13.983 INFO     Host "sdx-wrp-10" already in group "i-049a28a768a955789"
+   13.989 INFO     Host "sdx-wrp-11" added to group "i-077cade0b635ccecc"
+   13.993 INFO     Host "aviatrixcontroller" already in group "i-0d72df4707a20bb16"
+   13.997 INFO     Host "aviatrixcontroller" already in group "key_awskey"
+   14.002 INFO     Host "sdx-wrp-10" already in group "key_centos-aws"
+   14.004 INFO     Host "sdx-wrp-11" added to group "key_centos-aws"
+   14.008 INFO     Host "cvlt-mediaserver" already in group "key_mediaserver"
+   14.012 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "key_N-Virgina-GW-A"
+   14.016 INFO     Host "aviatrixcontroller" already in group "security_group_Controller-A-AviatrixSG-14BTZI28DGGYH"
+   14.020 INFO     Host "cvlt-mediaserver" already in group "security_group_launch-wizard-3"
+   14.026 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "security_group_N-Virgina-GW-A"
+   14.030 INFO     Host "sdx-wrp-10" already in group "security_group_webserver"
+   14.032 INFO     Host "sdx-wrp-11" added to group "security_group_webserver"
+   14.036 INFO     Host "aviatrixcontroller" already in group "tag_aws-cloudformation-logical-id-AviatrixController"
+   14.040 INFO     Host "aviatrixcontroller" already in group "tag_aws-cloudformation-stack-id-arn-aws-cloudformation-us-east-1-986182225774-stack-Controller-A-98bdc830-cbab-11e7-a47a-500c28afa0ba"
+   14.044 INFO     Host "aviatrixcontroller" already in group "tag_aws-cloudformation-stack-name-Controller-A"
+   14.049 INFO     Host "cvlt-mediaserver" already in group "tag__GX_BACKUP_"
+   14.054 INFO     Host "aviatrixcontroller" already in group "tag_Name-AviatrixController"
+   14.062 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "tag_Name-aviatrix-N-Virgina-GW-A-172-31-31-153"
+   14.067 INFO     Host "cvlt-mediaserver" already in group "tag_Name-Cvlt-mediaserver"
+   14.072 INFO     Host "sdx-wrp-10" already in group "tag_Name-sdx-wrp-10"
+   14.079 INFO     Host "sdx-wrp-11" added to group "tag_Name-sdx-wrp-11"
+   14.084 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "tag_N-Virgina-GW-A-172-31-31-153-gateway"
+   14.089 INFO     Host "aviatrixcontroller" already in group "tag_Project-Aviatrix"
+   14.094 INFO     Host "cvlt-mediaserver" already in group "type_m3-2xlarge"
+   14.099 INFO     Host "sdx-wrp-10" already in group "type_m3-medium"
+   14.101 INFO     Host "sdx-wrp-11" added to group "type_m3-medium"
+   14.106 INFO     Host "aviatrixcontroller" already in group "type_t2-large"
+   14.112 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "type_t2-micro"
+   14.117 INFO     Host "aviatrixcontroller" already in group "us-east-1"
+   14.118 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "us-east-1"
+   14.118 INFO     Host "cvlt-mediaserver" already in group "us-east-1"
+   14.118 INFO     Host "sdx-wrp-10" already in group "us-east-1"
+   14.120 INFO     Host "sdx-wrp-11" added to group "us-east-1"
+   14.125 INFO     Host "cvlt-mediaserver" already in group "us-east-1a"
+   14.131 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "us-east-1b"
+   14.135 INFO     Host "aviatrixcontroller" already in group "us-east-1c"
+   14.135 INFO     Host "sdx-wrp-10" already in group "us-east-1c"
+   14.137 INFO     Host "sdx-wrp-11" added to group "us-east-1c"
+   14.142 INFO     Host "aviatrixcontroller" already in group "vpc_id_vpc-0b10e36f"
+   14.142 INFO     Host "cvlt-mediaserver" already in group "vpc_id_vpc-0b10e36f"
+   14.142 INFO     Host "sdx-wrp-10" already in group "vpc_id_vpc-0b10e36f"
+   14.144 INFO     Host "sdx-wrp-11" added to group "vpc_id_vpc-0b10e36f"
+   14.148 INFO     Host "aviatrix-n-virgina-gw-a-172-31-31-153" already in group "vpc_id_vpc-e6c7279d"
+   14.302 INFO     Inventory import completed for group "EC2-Custom" in 12.9s

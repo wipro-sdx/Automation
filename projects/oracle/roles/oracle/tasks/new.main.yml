@@ -1,0 +1,199 @@
+---
+- name: copy Oracle directory
+  synchronize:
+    src:  /root/Oracle11.2.0.4/
+    dest: /root/Oracle11.2.0.4/
+  delegate_to: 172.17.65.22  
+- name: Copy hosts
+  template: src=/var/lib/awx/projects/commvault/roles/commvault/tasks/hosts dest=/etc/hosts
+- name: Copy resolve.conf
+  template: src=/var/lib/awx/projects/oracle/roles/oracle/tasks/resolv.conf dest=/etc/resolv.conf
+- name: Installing Oracle
+  shell: /root/Oracle11.2.0.4/Oracle_automated_Install.sh
+- name: install prerequesties
+  yum: name={{item}} state=installed
+  with_items:
+   - binutils
+   - compat-libcap*
+   - elfutils*
+   - gcc*
+   - glibc*
+   - ksh
+   - libgcc
+   - libstdc*
+   - libstdc++
+   - libstdc++-devel
+   - make
+   - unixODBC
+   - unixODBC-devel
+   - sysstat
+  ignore_errors: True
+- name: adding security limits for nproc
+  pam_limits:
+    domain: oracle
+    limit_type: '-'
+    limit_item: nproc
+    value: 131072
+- name: adding security limits for nofile
+  pam_limits:
+    domain: oracle
+    limit_type: '-'
+    limit_item: nofile
+    value: 131072
+- name: adding security limits for core
+  pam_limits:
+    domain: oracle
+    limit_type: '-'
+    limit_item: core
+    value: unlimited
+- name: adding security limits for memlock
+  pam_limits:
+    domain: oracle
+    limit_type: '-'
+    limit_item: memlock
+    value: 50000000
+- name: Update pamd rule's control in /etc/pam.d/login
+  pamd:
+    name: login
+    type: session
+    control: required
+    module_path: pam_limits.so
+- name: Set kernel.shmmni in /proc and in the sysctl file and reload 
+  sysctl:
+    name: kernel.shmmni
+    value: 4096
+    sysctl_set: yes
+    state: present
+    reload: yes
+- name: Set kernel.shmmni in /proc and in the sysctl file and reload
+  sysctl:
+    name: kernel.shmmax
+    value: 4398046511104
+    sysctl_set: yes
+    state: present
+    reload: yes
+- name: Set kernel.shmmni in /proc and in the sysctl file and reload
+  sysctl:
+    name: kernel.shmall
+    value: 1073741824
+    sysctl_set: yes
+    state: present
+    reload: yes
+- name: Set kernel.shmmni in /proc and in the sysctl file and reload
+  sysctl:
+    name: kernel.sem
+    value: 250 32000 100 128
+    sysctl_set: yes
+    state: present
+    reload: yes
+- name: Set kernel.shmmni in /proc and in the sysctl file and reload
+  sysctl:
+    name: fs.aio-max-nr
+    value: 1048576
+    sysctl_set: yes
+    state: present
+    reload: yes
+- name: Set kernel.shmmni in /proc and in the sysctl file and reload
+  sysctl:
+    name: fs.file-max
+    value: 6815744
+    sysctl_set: yes
+    state: present
+    reload: yes
+- name: Set kernel.shmmni in /proc and in the sysctl file and reload
+  sysctl:
+    name: net.ipv4.ip_local_port_range
+    value: 9000 65500
+    sysctl_set: yes
+    state: present
+    reload: yes
+- name: Set kernel.shmmni in /proc and in the sysctl file and reload
+  sysctl:
+    name: net.core.rmem_default
+    value: 262144
+    sysctl_set: yes
+    state: present
+    reload: yes
+- name: Set kernel.shmmni in /proc and in the sysctl file and reload
+  sysctl:
+    name: net.core.rmem_max
+    value: 4194304
+    sysctl_set: yes
+    state: present
+    reload: yes
+- name: Set kernel.shmmni in /proc and in the sysctl file and reload
+  sysctl:
+    name: net.core.wmem_default
+    value: 262144
+    sysctl_set: yes
+    state: present
+    reload: yes
+- name: Set kernel.shmmni in /proc and in the sysctl file and reload
+  sysctl:
+    name: net.core.wmem_max
+    value: 1048586
+    sysctl_set: yes
+    state: present
+    reload: yes
+- name: create group 
+  group:
+    name: oinstall
+    gid: 54321
+    state: present
+- name: create group
+  group:
+    name: dba
+    gid: 54322
+    state: present
+- name: create group
+  group:
+    name: oper
+    gid: 54323
+    state: present
+- name: create group
+  group:
+    name: asmdba
+    gid: 54327
+    state: present
+- name: create group
+  group:
+    name: asmoper
+    gid: 54328
+    state: present
+- name: create group
+  group:
+    name: asmadmin
+    gid: 54329
+    state: present
+- name: create user oracle
+  user:
+    name: oracle
+    createhome: yes
+    uid: 54321
+    group: oinstall
+    groups: dba,oper,asmadmin
+    home: /home/oracle
+- name: set password for oracle
+  shell: echo "oracle:Oracle123" | chpasswd
+- name: update oracle profile
+  blockinfile:
+    path: /home/oracle/.bash_profile
+    block: |
+      export ORACLE_HOME=/home/oracle/app/oracle/product/11.2.0/dbhome_1
+      export LD_LIBRARY_PATH=:/lib
+      export PATH=/bin:/usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
+      export PATH=$PATH:$ORACLE_HOME/bin
+      export PATH
+      alias orcl='export ORACLE_SID=orcl;sqlplus "/ as sysdba"'
+      export ORACLE_SID=orcl 
+- name: copy Oracle directory
+  synchronize:
+    src:  /root/Oracle11.2.0.4/
+    dest: /home/oracle/Oracle11.2.0.4
+  delegate_to: localhost
+- name: setting permissions
+  file: dest=/home/oracle/Oracle11.2.0.4/ owner=oracle group=oinstall mode=0777 recurse=yes
+- pause:
+    seconds: 30
+- name: install prerequesties
+  shell: yum install binutils compat-libcap* elfutils* pdksh gcc* glibc* libaio* libgcc libstdc* libstdc++ libstdc++-devel make unixODBC unixODBC-devel sysystat -y

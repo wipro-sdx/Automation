@@ -1,0 +1,14 @@
+---
+- hosts: selinux
+  tasks:
+    - name: creating a folder
+      file:
+        path: /root/hardning
+        state: directory
+        mode: 0777
+
+    - name: transfer script to hosts
+      copy: src=/root/openshift/roles/vmware_guest_mysql/tasks/guest_vm/Linux_Hardening/Linux_Hardening.sh dest=/root/hardening/ mode=0777
+
+    - name: Execute the script
+      command: sh /root/hardening/Linux_Hardening.sh

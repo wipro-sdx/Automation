@@ -1,0 +1,14 @@
+---
+
+- hosts: all
+  connection: local
+  vars_prompt:
+  - name: "prefix"
+    prompt: "Enter the Prefix/max"
+    private: no
+  - name: "nexthop"
+    prompt: "Enter the next hop"
+    private: no
+
+  roles:
+  - Static

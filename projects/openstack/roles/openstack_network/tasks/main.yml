@@ -1,0 +1,9 @@
+- name: Create an externally accessible network named 'ext_network'.
+  os_network:
+       state: present
+       auth:
+         auth_url: http://172.17.77.108:35357/v2.0
+         username: admin
+         password: Wipro@123
+         project_name: admin
+       name: ext_network

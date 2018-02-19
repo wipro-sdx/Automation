@@ -1,0 +1,6 @@
+#---
+#disk: 30
+#mem: 1024
+#cpu: 1
+#vlan: VM Network
+#temp: Temp1

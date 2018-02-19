@@ -1,0 +1,8 @@
+---
+
+- hosts: scaleiohost
+  become: yes
+  become_user: root
+
+  roles:
+  - scaleio-pre

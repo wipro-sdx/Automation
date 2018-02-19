@@ -1,0 +1,126 @@
+---
+- name: Create mdm VM from a rhel template
+  vmware_guest:
+    hostname: 172.17.66.156
+    username: administrator@vsphere.local
+    password: Wipro@123
+    validate_certs: no
+    datacenter: Devops
+    name: "{{ server_name }}"
+    state: poweredon
+    template: RHEL7.3_temp
+    disk:
+    - size_gb: 50
+      type: thin
+      datastore: datastore1
+    disk:
+    - size_gb: 100
+      type: thin
+      datastore: datastore1
+    hardware:
+      memory_mb: 8000
+      num_cpus: 3
+      scsi: paravirtual
+    networks:
+    - name: VM Network
+      device_type: vmxnet3
+      type: static
+      ip : 172.17.65.86
+      netmask: 255.255.255.0
+      gateway: 172.17.65.1
+    wait_for_ip_address: no
+  delegate_to: localhost
+  register: deploy
+  when:  server_name == "{{ server_name}}"
+- name: Create a sds1 VM from a template
+  vmware_guest:
+    hostname: 172.17.66.156
+    username: administrator@vsphere.local
+    password: Wipro@123
+    validate_certs: no
+    datacenter: Devops
+    name: "{{ server_name }}"
+    state: poweredon
+    template: RHEL7.3_temp
+    disk:
+    - size_gb: 50
+      type: thin
+      datastore: datastore1
+    disk:
+    - size_gb: 100
+      type: thin
+      datastore: datastore1
+    hardware:
+      memory_mb: 5000
+      num_cpus: 2
+      scsi: paravirtual
+    networks:
+    - name: VM Network
+      device_type: vmxnet3
+      type: static
+      ip : 172.17.65.87
+      netmask: 255.255.255.0
+      gateway: 172.17.65.1
+    wait_for_ip_address: no
+  delegate_to: localhost
+  register: deploy
+  when:  server_name == "{{ server_name }}"
+- name: Create a VM from a rhel template
+  vmware_guest:
+    hostname: 172.17.66.156
+    username: administrator@vsphere.local
+    password: Wipro@123
+    validate_certs: no
+    datacenter: Devops
+    name: "{{ server_name }}"
+    state: poweredon
+    template: RHEL7.3_temp
+    disk:
+    - size_gb: 50
+      type: thin
+      datastore: datastore1
+    hardware:
+      memory_mb: 6000
+      num_cpus: 3
+      scsi: paravirtual
+    networks:
+    - name: VM Network
+      device_type: vmxnet3
+      type: static
+      ip : 172.17.65.91
+      netmask: 255.255.255.0
+      gateway: 172.17.65.1
+    wait_for_ip_address: no
+  delegate_to: localhost
+  register: deploy
+- name: Create a VM from a rhel template
+  vmware_guest:
+    hostname: 172.17.66.156
+    username: administrator@vsphere.local
+    password: Wipro@123
+    validate_certs: no
+    datacenter: Devops
+    name: "{{ server_name }}"
+    state: poweredon
+    template: RHEL7.3_temp
+    disk:
+    - size_gb: 50
+      type: thin
+      datastore: datastore1
+    hardware:
+      memory_mb: 6000
+      num_cpus: 3
+      scsi: paravirtual
+    networks:
+    - name: VM Network
+      device_type: vmxnet3
+      type: static
+      ip : 172.17.65.91
+      netmask: 255.255.255.0
+      gateway: 172.17.65.1
+    wait_for_ip_address: no
+  delegate_to: localhost
+  register: deploy
+
+- pause:
+    seconds: 150

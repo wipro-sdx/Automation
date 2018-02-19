@@ -1,0 +1,3 @@
+Name,IP,Mask,Vlan
+ExternalSelfIP,20.0.0.1,255.255.255.0,External
+InternalSelfIP,10.0.0.1,255.255.255.0,Internal

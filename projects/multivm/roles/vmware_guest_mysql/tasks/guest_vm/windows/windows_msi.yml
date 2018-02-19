@@ -1,0 +1,10 @@
+---
+- hosts: 172.17.65.173
+  tasks:
+    - name: install the package
+      win_package:
+        path: https://www.hass.de/files/nodes/story/45/npp.7.3.2.installer.x86.msi
+        state: absent
+        productid: auto
+          
+

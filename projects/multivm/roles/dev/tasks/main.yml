@@ -1,0 +1,10 @@
+---
+- name: copy ntp file
+  template: src=ntp.conf dest=/etc/ntp.conf
+  tags: ntp
+- name: copy resolv.conf
+  template: src=resolv.conf dest=/etc/resolv.conf
+  tags: dns
+- name: copy motd
+  template: src=motd dest=/etc/motd
+  tags: motd

@@ -1,0 +1,27 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Create a VM from a template
+      vsphere_guest:
+        validate_certs: no
+        vcenter_hostname: 172.17.66.156
+        username: administrator@vsphere.local
+        password: Wipro@123
+        folder: /Devops/Testvms
+        name: test1
+        state: poweredon
+        template: RHEL7.3_temp
+      disk:
+      - size_gb: 20
+        type: thin
+        datastore: datastore1
+      hardware:
+      - memory_mb: 1024
+        num_cpus: 1
+        scsi: paravirtual
+      networks:
+      - name: VM Network
+        mac: 00:50:56:87:a6:b1
+     wait_for_ip_address: yes
+   delegate_to: localhost
+   register: deploy

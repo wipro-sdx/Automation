@@ -1,0 +1,13 @@
+SSH password: 
+[KeyJ1dWlkIjogIjRiMGFlMjQwLTYwODctNDM2MC1iMGFmLWQ2OTQ3ZmZlOWNhNyJ9[64D[K[1;35m [WARNING]: provided hosts list is empty, only localhost is available[0m
+[1;35m[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjMzYmM5ZDE3LThjZDEtNDk5MS05OGI5LTUwZWI3ODZjMTNhYSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNGE2MC1mOGQ3LTAwMDAwMDAwMDAwMSJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNGE2MC1mOGQ3LTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [bulkvm : vmware_guest] ***************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQ2MjQ4MzAzLWYyM2ItNDg1Ni04MzRiLWQ0Y2JkYWRlYmM4MiJ9[64D[K[0;31mfatal: [localhost]: FAILED! => {"failed": true, "msg": "'countvar' is undefined"}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImZmOTM0OWY0LTY5MTctNDkxYi04YmM3LTA5ZTNiOWYyZjYyNCJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : ok=0    changed=0    unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

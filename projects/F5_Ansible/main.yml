@@ -1,0 +1,7 @@
+---
+- hosts: all
+  connection: local
+ 
+  tasks:
+    - shell: python f5_bulkprov_v3.py
+

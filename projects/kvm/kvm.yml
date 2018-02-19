@@ -1,0 +1,30 @@
+---
+- hosts: localhost
+  gather_facts: no
+  vars_prompt:
+    - name: source_host
+      prompt: please enter the source kvm IP
+      private: no
+    - name: target_host
+      prompt: please enter the target kvm IP
+      private: no 
+  tasks:
+    - add_host:
+        name: "{{ source_host }}"
+        groups: source_server 
+    - add_host:
+        name: "{{ target_host }}"
+        groups: target_server
+  
+- hosts: source_server
+  become: yes
+  become_user: root
+  #gather_facts: no
+
+  roles:
+  - sourcekvm 
+
+- hosts: target_server
+
+  roles:
+  - targetkvm

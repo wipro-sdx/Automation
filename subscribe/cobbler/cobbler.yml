@@ -1,0 +1,9 @@
+---
+
+- hosts: cobbler
+  become: yes
+  become_user: root
+
+  roles:
+  - cobbler
+...

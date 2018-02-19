@@ -1,0 +1,15 @@
+---
+- hosts: leaf
+  connection: local
+  
+  vars:
+   vlan_id: "{{vlan_id}}"
+   state: "{{state}}"
+   vlan_name: "{{vlan_name}}"
+ 
+  tasks: 
+   - name: VLAN Creation 
+     nxos_vlan: 
+       vlan_id: "{{vlan_id}}"
+       admin_state: "{{state}}"
+       name: "{{vlan_name}}"

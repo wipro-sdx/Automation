@@ -1,0 +1,10 @@
+systemname: sdx-falck
+profile: ESXI-6.0-x86_64
+interface: eno2
+mac: a8:1e:84:7b:c1:69
+ipaddr: 172.17.66.103
+netmask: 255.255.255.0
+gw: 172.17.66.1
+powaddr: 172.17.64.35
+powuser: admin
+powpass: admin

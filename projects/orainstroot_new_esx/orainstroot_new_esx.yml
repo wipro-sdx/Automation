@@ -1,0 +1,12 @@
+---
+
+- hosts: oracle_new
+  become_user: root
+  become: yes
+  tasks:
+  - name: Running orainstRoot.sh as root
+    shell: /bin/sh /home/oracle/app/oraInventory/orainstRoot.sh
+  - name: Running root.sh as root
+    shell: /bin/sh /home/oracle/app/oracle/product/11.2.0/dbhome_1/root.sh
+  - name: Copy listner.ora
+    template: src=/var/lib/awx/projects/orainstroot_new_esx/roles/orainstroot_new_esx/templates/listener.ora dest=/home/oracle/app/oracle/product/11.2.0/dbhome_1/network/admin/listener.ora

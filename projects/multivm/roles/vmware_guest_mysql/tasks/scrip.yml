@@ -1,0 +1,8 @@
+---
+- hosts: 172.17.66.156
+  tasks:
+    - name: storage to be created
+      win_copy:
+        src: '/root/openshift/roles/vmware_guest_mysql/tasks/power_shell.ps1'
+        dest: 'C:\script\'
+      script: 'C:\script\power_shell.ps1' 

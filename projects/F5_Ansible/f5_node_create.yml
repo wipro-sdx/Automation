@@ -1,0 +1,25 @@
+---
+- hosts: F5
+  connection: local
+   #validate_certs: False 
+
+  vars: 
+    node_name: "{{node_name}}"
+    addr: "{{addr}}" 
+    node_state: "{{node_state}}"
+    f5_ip: "{{f5_ip}}"
+ 
+  tasks:
+    - name: Create Node
+      bigip_node:
+         validate_certs: "false"
+         server: "{{item}}"
+         user: "admin"
+         password: "Wipro@123"
+         state: "present"
+         partition: "Common"
+         host: "{{addr}}"
+         name: "{{node_name}}"
+         session_state: "{{node_state}}"
+      with_items: 
+         - "{{f5_ip}}"

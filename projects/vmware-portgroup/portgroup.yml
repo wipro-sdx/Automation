@@ -1,0 +1,12 @@
+---
+- hosts: 172.17.65.11
+  tasks:
+  - name: Create a portgroup with vlan
+    local_action:
+      module: vmware_portgroup
+      hostname: 172.17.65.11
+      username: root
+      password: Wipro@123
+      switch_name: "{{ switch_name }}"
+      portgroup_name: "{{ portgroup_name }}"
+      vlan_id: "{{ vlanid }}" 

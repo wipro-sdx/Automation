@@ -1,0 +1,12 @@
+- name: create new volume
+     uri:
+       url: https://{{ arrayurl }}/api/{{ api_version }}/volume/{{ volname }}
+       method: POST
+       validate_certs: no
+       HEADER_Cookie: "{{session.set_cookie}}"
+       return_content: yes
+       body:
+         size: 10G
+       body_format: json
+     ignore_errors: yes
+

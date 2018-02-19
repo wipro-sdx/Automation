@@ -1,0 +1,11 @@
+---
+- name: adding cobbler system
+  shell: cobbler system add --name={{systemname}}  --profile={{profile}}
+- name: assigning interface to systen
+  shell: cobbler system edit --name={{systemname}} --interface={{interface}} --mac={{mac}} --ip-address={{ipaddr}} --netmask={{netmask}}--static=1
+- name: adding gw to cobbler system
+  shell: cobbler system edit --name={{systemname}} --gateway={{gw}} --hostname={{systemname}}
+- name: adding fencing details
+  shell: cobbler system edit --name={{systemname}} --power-type=ipmilan --power-address={{powaddr}} --power-user={{powuser}} --power-pass={{powpass}}
+- name: power on server
+  shell: cobbler system poweron --name={{systemname}}

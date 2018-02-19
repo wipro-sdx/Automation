@@ -1,0 +1,64 @@
+---
+- name: Create a VM from a rhel template
+  vmware_guest:
+    hostname: 172.16.8.15
+    username: administrator@vsphere.opendc
+    password: W3lc0me!7
+    validate_certs: no
+    esxi_hostname: 
+    datacenter: 
+    name: "{{ servername }}"
+    state: poweredon
+    template: 
+    disk:
+    - size_gb: "{{ disksize }}"
+      type: thin
+      datastore: 
+    hardware:
+      memory_mb: "{{ mem }}"
+      num_cpus: "{{ cpu }}"
+      scsi: paravirtual
+    networks:
+    - name: VM Network
+      device_type: vmxnet3
+      type: static
+      ip : "{{ ip }}"
+      netmask: 255.255.255.0
+      gateway: 172.17.65.1
+    wait_for_ip_address: no
+  delegate_to: localhost
+  register: deploy
+  when:  ops == "rhel"
+- name: Create a centos VM from a template
+  vmware_guest:
+    hostname: 172.16.8.15
+    username: administrator@vsphere.opendc
+    password: W3lc0me!7
+    validate_certs: no
+    esxi_hostname: 
+    datacenter: 
+    name: "{{ servername }}"
+    state: poweredon
+    template: 
+    disk:
+    - size_gb: "{{ disksize }}"
+      type: thin
+      datastore: 
+    hardware:
+      memory_mb: "{{ mem }}"
+      num_cpus: "{{ cpu }}"
+      scsi: paravirtual
+    networks:
+    - name: VM Network
+      device_type: vmxnet3
+      type: static
+      ip : "{{ ip }}"
+      netmask: 255.255.255.0
+      gateway: 172.17.65.1
+    wait_for_ip_address: no
+  delegate_to: localhost
+  register: deploy
+  when:  ops == "centos"
+
+- pause:
+    seconds: 5 

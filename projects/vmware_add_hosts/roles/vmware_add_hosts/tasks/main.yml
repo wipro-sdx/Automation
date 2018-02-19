@@ -1,0 +1,29 @@
+---
+# tasks file for vmware_add_hosts
+- name: Add ESXi Host to vCenter
+  vmware_host:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter_name: Devops
+    cluster_name: Openshift
+    esxi_hostname: '{{ esxi_hostname }}'
+    esxi_username: '{{ esxi_username }}'
+    esxi_password: '{{ esxi_password }}'
+    state: present
+#  with_items:
+#    - "{{ esxi_list }}"
+  delegate_to: localhost
+- name: Add ESXi Host to vCenter
+  vmware_host:
+    hostname: '{{ vcenter_hostname }}'
+    username: '{{ vcenter_username }}'
+    password: '{{ vcenter_password }}'
+    datacenter_name: Devops
+    cluster_name: Openshift
+    esxi_hostname: '{{ esxi_hostname1 }}'
+    esxi_username: '{{ esxi_username }}'
+    esxi_password: '{{ esxi_password }}'
+    state: present
+  delegate_to: localhost
+  ignore_errors: True

@@ -1,0 +1,26 @@
+---
+#- name: Copy hosts
+#  template: src=/var/lib/awx/projects/commvault/roles/commvault/tasks/hosts dest=/etc/hosts
+#  ignore_errors: True  
+- name: Copy commvault.rb file 
+  template: src=/var/lib/awx/projects/commvault_new_esx/roles/commvault_new_esx/tasks/commvault.rb dest=/tmp/commvault.rb
+- name: copy Commvault directory
+  synchronize:
+    src:  /root/Oracle11.2.0.4/Lin_Commvault_binaries/Linux-Oracle/
+    dest: /root/commvault/
+  delegate_to: 172.17.65.22
+- name: Installing Commvault
+  shell: /root/commvault/DownloadPackageLocationAug/silent_install -p /root/commvault/UnixCustomPackage/pkg/default.xml
+  ignore_errors: True
+- name: Registering and applying Backup Policy
+  shell: /usr/bin/ruby /tmp/commvault.rb "{{ server_name }}" "{{ bkp }}"
+  ignore_errors: True
+
+
+#- name: Appending /etc/hosts file in backup server
+#  win_lineinfile:
+#    path: C:\Windows\System32\drivers\etc\hosts
+#    line: 172.17.65.91  {{ server_name }}
+#- name: Appending /etc/hosts file in backup server
+#  shell: /usr/bin/ruby /var/tmp/dns.rb 172.17.65.91 "{{ server_name }}"
+

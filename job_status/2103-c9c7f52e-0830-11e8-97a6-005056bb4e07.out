@@ -1,0 +1,49 @@
+    1.453 INFO     Updating inventory 56: CF-113-CoE-NEW
+    1.472 INFO     Reading executable JSON source: /tmp/ansible_tower_launch_OpHTjn/tmpLslGQt
+    3.014 ERROR    Failed to load JSON from: 
+Traceback (most recent call last):
+  File "/usr/bin/tower-manage", line 9, in <module>
+    load_entry_point('ansible-tower==3.1.4', 'console_scripts', 'tower-manage')()
+  File "/lib/python2.7/site-packages/awx/__init__.py", line 105, in manage
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/django/core/management/__init__.py", line 354, in execute_from_command_line
+    utility.execute()
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/django/core/management/__init__.py", line 346, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/django/core/management/base.py", line 394, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/django/core/management/base.py", line 445, in execute
+    output = self.handle(*args, **options)
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/django/core/management/base.py", line 661, in handle
+    return self.handle_noargs(**options)
+  File "/lib/python2.7/site-packages/awx/main/management/commands/inventory_import.py", line 1290, in handle_noargs
+  File "/lib/python2.7/site-packages/awx/main/management/commands/inventory_import.py", line 499, in load_inventory_source
+  File "/lib/python2.7/site-packages/awx/main/management/commands/inventory_import.py", line 503, in load_inventory_source
+  File "/lib/python2.7/site-packages/awx/main/management/commands/inventory_import.py", line 392, in load
+  File "/lib/python2.7/site-packages/awx/main/management/commands/inventory_import.py", line 380, in command_to_json
+RuntimeError: ['bwrap', '--unshare-pid', '--dev-bind', '/', '/', '--bind', '/tmp/ansible_tower_launch_OpHTjn/tmpkuMww1', '/etc/tower', '--bind', '/tmp/ansible_tower_launch_OpHTjn/tmpCz_WAa', '/tmp', '--bind', '/tmp/ansible_tower_launch_OpHTjn/tmpJdIvdc', '/var/lib/awx', '--bind', '/tmp/ansible_tower_launch_OpHTjn/tmpS3Dxux', '/var/lib/awx/job_status', '--bind', '/tmp/ansible_tower_launch_OpHTjn/tmp75Zmnj', '/var/lib/awx/projects', '--bind', '/tmp/ansible_tower_launch_OpHTjn/tmp7Z9qJZ', '/var/log', '--bind', '/tmp/ansible_tower_launch_OpHTjn', '/tmp/ansible_tower_launch_OpHTjn', '--bind', '/var/lib/awx/venv/ansible', '/var/lib/awx/venv/ansible', '--bind', '/var/lib/awx/venv/tower', '/var/lib/awx/venv/tower', '--chdir', '/tmp/ansible_tower_launch_OpHTjn', '/tmp/ansible_tower_launch_OpHTjn/tmpLslGQt', '--list'] failed (rc=1) with output: Traceback (most recent call last):
+  File "/tmp/ansible_tower_launch_OpHTjn/tmpLslGQt", line 1432, in <module>
+    Ec2Inventory()
+  File "/tmp/ansible_tower_launch_OpHTjn/tmpLslGQt", line 179, in __init__
+    self.do_api_calls_update_cache()
+  File "/tmp/ansible_tower_launch_OpHTjn/tmpLslGQt", line 477, in do_api_calls_update_cache
+    self.get_instances_by_region(region)
+  File "/tmp/ansible_tower_launch_OpHTjn/tmpLslGQt", line 522, in get_instances_by_region
+    conn = self.connect(region)
+  File "/tmp/ansible_tower_launch_OpHTjn/tmpLslGQt", line 493, in connect
+    conn = self.connect_to_aws(ec2, region)
+  File "/tmp/ansible_tower_launch_OpHTjn/tmpLslGQt", line 511, in connect_to_aws
+    conn = module.connect_to_region(region, **connect_args)
+  File "/var/lib/awx/venv/ansible/lib/python2.7/site-packages/boto/ec2/__init__.py", line 66, in connect_to_region
+    return region.connect(**kw_params)
+  File "/var/lib/awx/venv/ansible/lib/python2.7/site-packages/boto/regioninfo.py", line 187, in connect
+    return self.connection_cls(region=self, **kw_params)
+  File "/var/lib/awx/venv/ansible/lib/python2.7/site-packages/boto/ec2/connection.py", line 103, in __init__
+    profile_name=profile_name)
+  File "/var/lib/awx/venv/ansible/lib/python2.7/site-packages/boto/connection.py", line 1100, in __init__
+    provider=provider)
+  File "/var/lib/awx/venv/ansible/lib/python2.7/site-packages/boto/connection.py", line 569, in __init__
+    host, config, self.provider, self._required_auth_capability())
+  File "/var/lib/awx/venv/ansible/lib/python2.7/site-packages/boto/auth.py", line 997, in get_auth_handler
+    'Check your credentials' % (len(names), str(names)))
+boto.exception.NoAuthHandlerFound: No handler was ready to authenticate. 1 handlers were checked. ['HmacAuthV4Handler'] Check your credentials
+

@@ -1,0 +1,35 @@
+    1.330 INFO     Updating inventory 56: CF-113-CoE-NEW
+    1.348 INFO     Reading executable JSON source: /tmp/ansible_tower_launch_Plm7OE/tmpyxAu_N
+    4.480 ERROR    Failed to load JSON from: 
+Traceback (most recent call last):
+  File "/usr/bin/tower-manage", line 9, in <module>
+    load_entry_point('ansible-tower==3.1.4', 'console_scripts', 'tower-manage')()
+  File "/lib/python2.7/site-packages/awx/__init__.py", line 105, in manage
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/django/core/management/__init__.py", line 354, in execute_from_command_line
+    utility.execute()
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/django/core/management/__init__.py", line 346, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/django/core/management/base.py", line 394, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/django/core/management/base.py", line 445, in execute
+    output = self.handle(*args, **options)
+  File "/var/lib/awx/venv/tower/lib/python2.7/site-packages/django/core/management/base.py", line 661, in handle
+    return self.handle_noargs(**options)
+  File "/lib/python2.7/site-packages/awx/main/management/commands/inventory_import.py", line 1290, in handle_noargs
+  File "/lib/python2.7/site-packages/awx/main/management/commands/inventory_import.py", line 499, in load_inventory_source
+  File "/lib/python2.7/site-packages/awx/main/management/commands/inventory_import.py", line 503, in load_inventory_source
+  File "/lib/python2.7/site-packages/awx/main/management/commands/inventory_import.py", line 392, in load
+  File "/lib/python2.7/site-packages/awx/main/management/commands/inventory_import.py", line 380, in command_to_json
+RuntimeError: ['bwrap', '--unshare-pid', '--dev-bind', '/', '/', '--bind', '/tmp/ansible_tower_launch_Plm7OE/tmpByM1X2', '/etc/tower', '--bind', '/tmp/ansible_tower_launch_Plm7OE/tmpgraiUb', '/tmp', '--bind', '/tmp/ansible_tower_launch_Plm7OE/tmpRwZ1AC', '/var/lib/awx', '--bind', '/tmp/ansible_tower_launch_Plm7OE/tmpCxqk5X', '/var/lib/awx/job_status', '--bind', '/tmp/ansible_tower_launch_Plm7OE/tmpZ7RWI2', '/var/lib/awx/projects', '--bind', '/tmp/ansible_tower_launch_Plm7OE/tmp3afuwm', '/var/log', '--bind', '/tmp/ansible_tower_launch_Plm7OE', '/tmp/ansible_tower_launch_Plm7OE', '--bind', '/var/lib/awx/venv/ansible', '/var/lib/awx/venv/ansible', '--bind', '/var/lib/awx/venv/tower', '/var/lib/awx/venv/tower', '--chdir', '/tmp/ansible_tower_launch_Plm7OE', '/tmp/ansible_tower_launch_Plm7OE/tmpyxAu_N', '--list'] failed (rc=1) with output: Traceback (most recent call last):
+  File "/tmp/ansible_tower_launch_Plm7OE/tmpyxAu_N", line 1432, in <module>
+    Ec2Inventory()
+  File "/tmp/ansible_tower_launch_Plm7OE/tmpyxAu_N", line 179, in __init__
+    self.do_api_calls_update_cache()
+  File "/tmp/ansible_tower_launch_Plm7OE/tmpyxAu_N", line 479, in do_api_calls_update_cache
+    self.get_rds_instances_by_region(region)
+  File "/tmp/ansible_tower_launch_Plm7OE/tmpyxAu_N", line 566, in get_rds_instances_by_region
+    self.add_rds_instance(instance, region)
+  File "/tmp/ansible_tower_launch_Plm7OE/tmpyxAu_N", line 849, in add_rds_instance
+    hostname = instance.tags.get(self.hostname_variable[4:], None)
+AttributeError: 'DBInstance' object has no attribute 'tags'
+

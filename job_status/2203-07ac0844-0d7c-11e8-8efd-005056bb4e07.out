@@ -1,0 +1,17 @@
+SSH password: 
+[KeyJ1dWlkIjogIjRhNTEyMjU4LWQwNTEtNGU3Ny1iNDZiLTJiZmQ1ZGQwZmQ0NSJ9[64D[K[1;35m [WARNING]: provided hosts list is empty, only localhost is available[0m
+[1;35m[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjI5MDM1MzVmLWIwMGEtNDcxZC04NjdjLWI3NGJlMGVlZDk3MSJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNzA3MS0wYmVkLTAwMDAwMDAwMDAwMSJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNzA3MS0wYmVkLTAwMDAwMDAwMDAwNiJ9[64D[K
+TASK [bulkvm : vmware_guest] ***************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjFkMTE5NTk2LWIwYzctNDg5Zi04OTIxLTMyMDY5MmNhMmFhMiJ9[64D[K[0;31mfailed: [localhost] (item=1) => {"changed": true, "failed": true, "item": "1", "msg": "The number of network adapter settings in the customization specification: 0 does not match the number of network adapters present in the virtual machine: 1."}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjlhZWZmYzE2LTkyMjUtNDcyNC1hZmExLTBhYjBiMTQzMzExZSJ9[64D[K[0;31mfailed: [localhost] (item=2) => {"changed": true, "failed": true, "item": "2", "msg": "The number of network adapter settings in the customization specification: 0 does not match the number of network adapters present in the virtual machine: 1."}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjUwNjY5NWYyLTJjYWYtNGIwZC05MWFhLTNkMDJhMzFmN2FjOSJ9[64D[K[0;31mfailed: [localhost] (item=3) => {"changed": true, "failed": true, "item": "3", "msg": "The number of network adapter settings in the customization specification: 0 does not match the number of network adapters present in the virtual machine: 1."}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjk4ZTE5YzM1LWVhM2YtNDc1MC04OGQ0LTM3MDk4OGI4NDJmYyJ9[64D[K[0;31mfailed: [localhost] (item=4) => {"changed": true, "failed": true, "item": "4", "msg": "The number of network adapter settings in the customization specification: 0 does not match the number of network adapters present in the virtual machine: 1."}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAzNWU0M2QzLTk2MzctNGM3ZC1hNGE3LWNkY2NlMTU2NmUxMiJ9[64D[K[0;31mfailed: [localhost] (item=5) => {"changed": true, "failed": true, "item": "5", "msg": "The number of network adapter settings in the customization specification: 0 does not match the number of network adapters present in the virtual machine: 1."}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjYwZjg5ZjU0LWIzMWItNDBhNC1hYTllLWRiYTQ3YmZmYjVhYiJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjQ1ZDM0OTIyLTFiZjMtNGY3Yy05ZTBhLWZjMTVlMDA0NTFjMCJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : ok=0    changed=0    unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

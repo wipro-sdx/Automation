@@ -1,0 +1,19 @@
+---
+- hosts: F5
+  connection: local
+   #validate_certs: False 
+
+  vars: 
+    server_addr: "{{server_addr}}"
+    f5_ip: "{{f5_ip}}" 
+  tasks:
+    - name: Config NTP
+      bigip_device_ntp:
+        ntp_servers:
+          - "{{server_addr}}"
+        validate_certs: "false"
+        server: "{{item}}"
+        user: "admin"
+        password: "Wipro@123"
+      with_items: 
+         - "{{f5_ip}}"

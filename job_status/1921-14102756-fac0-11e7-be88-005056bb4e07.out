@@ -1,0 +1,24 @@
+SSH password: 
+SUDO password[defaults to SSH password]: 
+[KeyJ1dWlkIjogIjNiN2Q5ZjBjLTI3NzQtNGFlOS1iMGZmLTNjNGY1ZjJiZDI1MCJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOWQyZC00YzU2LTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [oracle] ******************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOWQyZC00YzU2LTAwMDAwMDAwMDAwNyJ9[64D[K
+TASK [commvault_bkp : Copy commvault.rb file] **********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImU5MDMyOTM2LTM1ODAtNDY5MC1hODYzLTU1OGE3MjM4YTExZCJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOWQyZC00YzU2LTAwMDAwMDAwMDAwOSJ9[64D[K
+TASK [commvault_bkp : copy Commvault directory] ********************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjcxZWUwY2NjLWNkYjctNDJhOC1iZmQyLTY5MWM5ZmY4OWM5YSJ9[64D[K[0;33mchanged: [172.17.65.93 -> 172.17.65.22][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOWQyZC00YzU2LTAwMDAwMDAwMDAwYiJ9[64D[K
+TASK [commvault_bkp : Installing Commvault] ************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImUxMWYwOGY3LWI0MDYtNGYxNi04NzdmLWRkZTc4NmYzYzg3MyJ9[64D[K[0;33mchanged: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOWQyZC00YzU2LTAwMDAwMDAwMDAwZCJ9[64D[K
+TASK [commvault_bkp : Registering and applying Backup Policy] ******************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjM5MTFiMzVlLTQyZTgtNGI5Yy1hNWRlLTliMjRhMzdkZTliZCJ9[64D[K[0;36mskipping: [172.17.65.93][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctOWQyZC00YzU2LTAwMDAwMDAwMDAwZiJ9[64D[K
+TASK [commvault_bkp : Registering and applying Backup Policy] ******************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQyZDQwNGI1LTliMDQtNDVhOS1hYTZiLTk0ZDRiY2M5NGQ2OSJ9[64D[K[0;31mfatal: [172.17.65.93]: FAILED! => {"changed": true, "cmd": "/usr/bin/ruby /tmp/commvault.rb \"Oradbserver0116\" Gold", "delta": "0:00:03.182801", "end": "2018-01-16 18:51:12.500788", "failed": true, "rc": 1, "start": "2018-01-16 18:51:09.317987", "stderr": "/usr/share/ruby/net/http.rb:878:in `initialize': No route to host - connect(2) (Errno::EHOSTUNREACH)\n\tfrom /usr/share/ruby/net/http.rb:878:in `open'\n\tfrom /usr/share/ruby/net/http.rb:878:in `block in connect'\n\tfrom /usr/share/ruby/timeout.rb:52:in `timeout'\n\tfrom /usr/share/ruby/net/http.rb:877:in `connect'\n\tfrom /usr/share/ruby/net/http.rb:862:in `do_start'\n\tfrom /usr/share/ruby/net/http.rb:851:in `start'\n\tfrom /usr/share/ruby/net/http.rb:582:in `start'\n\tfrom /tmp/commvault.rb:40:in `<main>'", "stderr_lines": ["/usr/share/ruby/net/http.rb:878:in `initialize': No route to host - connect(2) (Errno::EHOSTUNREACH)", "\tfrom /usr/share/ruby/net/http.rb:878:in `open'", "\tfrom /usr/share/ruby/net/http.rb:878:in `block in connect'", "\tfrom /usr/share/ruby/timeout.rb:52:in `timeout'", "\tfrom /usr/share/ruby/net/http.rb:877:in `connect'", "\tfrom /usr/share/ruby/net/http.rb:862:in `do_start'", "\tfrom /usr/share/ruby/net/http.rb:851:in `start'", "\tfrom /usr/share/ruby/net/http.rb:582:in `start'", "\tfrom /tmp/commvault.rb:40:in `<main>'"], "stdout": "", "stdout_lines": []}[0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjQ5MTc1YTEwLWNkMDUtNGZmOC1hMWU4LWMwMjhmMmFmNDRkMCJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;31m172.17.65.93[0m               : [0;32mok=3   [0m [0;33mchanged=3   [0m unreachable=0    [0;31mfailed=1   [0m
+
+[Ke30=[4D[K

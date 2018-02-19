@@ -1,0 +1,15 @@
+---
+- name: Deploy guest from template
+  vsphere_guest:
+    vcenter_hostname: 172.17.66.156
+    username: administrator@vsphere.local
+    password: Wipro@123
+    guest: "{{ item }}"
+    from_template: yes
+    template_src: RHEL7.3_temp
+    cluster: Openshift
+    esxi:
+      datacenter: Devops
+      hostname: 172.17.65.11
+  with_items: "{{ serverlist }}"
+    

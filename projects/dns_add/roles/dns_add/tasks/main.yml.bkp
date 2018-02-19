@@ -1,0 +1,7 @@
+---
+- name: add
+  nsupdate: 
+    server: 172.16.30.150 
+    zone: "{{ domain }}" 
+    record: "{{ server_name }}" 
+    value: "{{ ip }}"

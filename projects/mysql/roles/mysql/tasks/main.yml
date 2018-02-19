@@ -1,0 +1,23 @@
+---
+# tasks file for mysql-server
+- name: copy resolv.conf file
+  template: src=/var/lib/awx/projects/mysql/roles/mysql/tasks/resolv.conf dest=/etc/resolv.conf
+- name: Install the software required for Mysql
+  yum:
+    name: "{{ item }}" 
+    state: latest
+
+  with_items:
+    - mariadb
+    - mariadb-server
+    - mariadb-libs
+    - MySQL-python
+
+- name: Enable and starting Mysql service
+  service: 
+    name: mariadb
+    state: started
+    enabled: yes
+    
+- include: mysql_secure_installation.yaml 
+- include: mysql_create_db.yml

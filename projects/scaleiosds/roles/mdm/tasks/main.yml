@@ -1,0 +1,33 @@
+---
+# task that will copy mdm software to host
+# we're using one central repository in files where we can place all our rpm's.
+# our version is coming from group_vars all
+
+#- name: show vars
+#  debug: var={{ scaleio_version }}
+
+- name: upload mdm software to mdm hosts
+  copy: src={{ scaleio_package_path }}/EMC-ScaleIO-mdm-{{ scaleio_version }}.el7.x86_64.rpm dest=/opt/EMC-ScaleIO-mdm.x86_64.rpm
+
+# now install software using yum
+- name: install mdm software on master mdm host
+  shell: MDM_ROLE_IS_MANAGER=1 /usr/bin/rpm -i /opt/EMC-ScaleIO-mdm.x86_64.rpm
+  when: inventory_hostname == "172.17.65.86"
+- name: install mdm software on slave mdm host
+  shell: MDM_ROLE_IS_MANAGER=1 rpm -i /opt/EMC-ScaleIO-mdm.x86_64.rpm
+  when: inventory_hostname == "172.17.65.87"
+- name: install mdm software on tie breaker  host
+  shell: MDM_ROLE_IS_MANAGER=2 rpm -i /opt/EMC-ScaleIO-mdm.x86_64.rpm
+  when: inventory_hostname == "172.17.65.88"
+#  yum: name=/opt/EMC-ScaleIO-mdm.x86_64.rpm state=present
+
+# now we're going to configure mdm, we need ip address of mdm hosts
+# primary and secondary ip's have been configured in play of playbook
+- name: Install primary MDM
+  # debug: msg="primary and secondary MDM ip {{ pdm }} & {{ sdm }}"
+  # inventory hostname is hostname we're currently looping
+  # debug: var=inventory_hostname
+#  command: scli --add_primary_mdm --primary_mdm_ip {{ pdm }} --mdm_management_ip {{ pdm }},{{ sdm }} --accept_license
+  command: scli --create_mdm_cluster --master_mdm_ip {{ pdm }} --master_mdm_management_ip {{ pdm }} --master_mdm_name mdm  --accept_license --approve_certificate --use_nonsecure_communication
+  register: result
+  when: inventory_hostname == "172.17.65.86"

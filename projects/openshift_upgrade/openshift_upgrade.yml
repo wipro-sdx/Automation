@@ -1,0 +1,13 @@
+---
+
+- hosts: nodes
+  become: yes
+  become_user: root
+
+  roles:
+    - openshift_upgrade_pre
+
+- hosts: localhost
+  
+  roles:
+    - openshift_upgrade_play

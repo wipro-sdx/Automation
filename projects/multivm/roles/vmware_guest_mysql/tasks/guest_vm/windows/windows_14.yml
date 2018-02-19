@@ -1,0 +1,9 @@
+---
+- hosts: 172.17.65.175
+  tasks:
+    - name: unencrypted passwd to third party SMB server
+      win_acl_inheritance:
+        path: GPO_name\Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options\Microsoft network client:Sendunencryptedpasswordtothird-partySMBservers
+        state: present
+
+

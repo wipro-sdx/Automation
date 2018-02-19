@@ -1,0 +1,5 @@
+---
+- name: creating razor tag 
+  shell: /usr/local/bin/razor create-tag --name {{ tagname }} --rule '["in", ["fact", "macaddress"], "{{ mac }}"]'
+- name: creating razor policy
+  shell: /usr/local/bin/razor create-policy --name {{ policyname }} --repo Win2012 --task windows --broker noop --enabled --hostname "{{ servername }}" --root-password secret --max-count 20 --tag {{ tagname }} --node-metadata key=value

@@ -1,0 +1,14 @@
+SSH password: 
+[KeyJ1dWlkIjogIjRhOTlkMWU0LTI3MDQtNGQ4Mi04NDFhLWIyOWU0OWVhNGNlNiJ9[64D[K[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmVhZS1hYjZhLTAwMDAwMDAwMDAwMiJ9[64D[K
+PLAY [localhost] ***************************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmVhZS1hYjZhLTAwMDAwMDAwMDAwZCJ9[64D[K
+TASK [Gathering Facts] *********************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogImQzNjVhZjg2LTRmNTMtNDFlNC04YjIzLTc3YTA3NTA3ZWM1NSJ9[64D[K[0;32mok: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogIjAwNTA1NmJiLTRlMDctNmVhZS1hYjZhLTAwMDAwMDAwMDAwNCJ9[64D[K
+TASK [Spin Centos_Small] *******************************************************
+[Ke30=[4D[K[KeyJ1dWlkIjogIjA5Nzc2ZThmLTdkODQtNDk2OS1hZDJhLWQ1YWFmZDEyM2NjMSJ9[64D[K[0;33mchanged: [127.0.0.1][0m
+[Ke30=[4D[K[KeyJ1dWlkIjogImE4MDBjYjA2LWJkODAtNDNiNy1iYjM0LTlmZmRhZjQ1NWVhOCJ9[64D[K
+PLAY RECAP *********************************************************************
+[0;33m127.0.0.1[0m                  : [0;32mok=2   [0m [0;33mchanged=1   [0m unreachable=0    failed=0   
+
+[Ke30=[4D[K

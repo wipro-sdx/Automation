@@ -1,0 +1,25 @@
+---
+- hosts: 172.17.66.156
+  vars:
+    item:
+      - test1 test2
+  tasks:
+  - name: Create a VM from a template
+    vmware_guest:
+      hostname: 172.17.66.156
+      username: administrator@vsphere.local
+      password: Wipro@123
+      validate_certs: no
+      datacenter: Devops
+      name: "{{ item }}"# Test_vm_for_delete
+      state: absent
+      force: yes
+    delegate_to: localhost
+    with_items:
+      - test1
+      - test2
+      - test3
+      - test4
+
+      
+

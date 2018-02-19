@@ -1,0 +1,40 @@
+---
+- name: Disable all repo
+  shell: subscription-manager repos --disable=*
+- name: Enable specific repository
+  shell: subscription-manager repos --enable={{ item }}
+  with_items:
+   - rhel-7-server-rpms
+   - rhel-7-server-extras-rpms
+   - rhel-7-server-ose-3.5-rpms
+   - rhel-7-fast-datapath-rpms
+- name: install wget git net-tools bind-utils iptables-services
+  yum: name={{item}} state=installed
+  with_items:
+   - wget
+   - git
+   - net-tools
+   - bind-utils
+   - iptables-services
+   - bridge-utils
+   - bash-completion
+- name: copy networkmanager.conf
+  copy: src=NetworkManager.conf dest=/etc/NetworkManager/NetworkManager.conf
+- name: Installation of docker 
+  yum: 
+    name: docker
+    state: latest
+- name: copy the docker-storage-setup to all nodes
+  copy:
+    src: docker-storage-setup
+    dest: /etc/sysconfig/docker-storage-setup
+    owner: root
+    group: root
+    mode: 0644
+- name: configuring docker
+  shell: /usr/bin/docker-storage-setup 
+- name: Start the docker
+  service:
+    name: docker
+    state: started
+    enabled: yes

@@ -1,0 +1,37 @@
+---
+- hosts: 172.17.66.156
+  tasks:
+  - name: Create a VM from a template
+    vmware_guest:
+      hostname: 172.17.66.156
+      username: administrator@vsphere.local
+      password: Wipro@123
+      validate_certs: no
+      datacenter: Devops
+      name: Test_Windows
+      state: poweredon
+      template: Win2K12 
+      customization:
+        hostname: windows12k
+        password: Wipro@123
+      disk:
+      - size_gb: 100
+        type: thin
+        datastore: datastore1
+      hardware:
+        memory_mb: 6048
+        num_cpus: 2
+        scsi: paravirtual
+      networks:
+      - name: VM Network
+        device_type: vmxnet3
+        type: static
+        ip : 172.17.65.215
+        netmask: 255.255.255.0
+        gateway: 172.17.65.1
+      wait_for_ip_address: yes
+    delegate_to: localhost
+    register: deploy
+  
+  - pause:
+      seconds: 45

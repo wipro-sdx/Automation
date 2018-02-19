@@ -1,0 +1,8 @@
+- name: Disable 3.5 repo
+  shell: subscription-manager repos --disable="rhel-7-server-ose-3.5-rpms"
+- name: Enable specific 3.6 repository
+  shell: subscription-manager repos --enable="rhel-7-server-ose-3.6-rpms"
+- name: upgarde of atomic-openshift-utils
+  yum:
+    name: atomic-openshift-utils
+    state: latest

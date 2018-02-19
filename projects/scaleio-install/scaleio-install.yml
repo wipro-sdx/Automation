@@ -1,0 +1,10 @@
+---
+
+- hosts: im
+  become: yes
+  become_user: root
+
+  roles:
+    - subscribe
+    - scaleio-pre
+    - scaleio-install
