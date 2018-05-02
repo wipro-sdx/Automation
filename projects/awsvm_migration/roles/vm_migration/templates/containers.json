@@ -1,0 +1,9 @@
+[
+  {
+    "Description": "centos vm OVA 2G",
+    "Format": "ova",
+    "UserBucket": {
+        "S3Bucket": "awsvmmig",
+        "S3Key": "{{ vmname }}.ova"
+    }
+}]

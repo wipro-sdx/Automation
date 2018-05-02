@@ -1,0 +1,9 @@
+---
+
+- hosts: openstack_inv
+  become: yes
+  become_user: root
+
+  roles:
+  - test_playbook
+

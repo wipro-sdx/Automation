@@ -1,0 +1,6 @@
+---
+- hosts: vcenter_172.17.66.156
+  gather_facts: False
+
+  roles:
+  - vm_migration

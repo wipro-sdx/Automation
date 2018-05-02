@@ -2,7 +2,8 @@
 
 - name: create user
   mysql_user:
-    name: "{{ db_user }}"
+#    name: "{{ db_user }}"
+    name: "{{ db_admin }}"
     host: "{{ item }}"
     password: "{{ db_password }}"
     state: present

@@ -1,0 +1,12 @@
+
+- hosts: osp
+  gather_facts: no
+  vars:
+    sah_cluster: "{{ cluster }}"
+  tasks:
+    - name: Get Sahara Cluster Details
+      shell: |
+        source /root/keystonerc_sahara
+        openstack dataprocessing cluster show {{ sah_cluster }} 
+      register: sahara_cluster
+    - debug: var="{{ sahara_cluster.stdout_lines | from_json).QueueUrls | last }}"

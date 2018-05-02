@@ -1,0 +1,10 @@
+
+- hosts: osp
+  gather_facts: no
+  tasks:
+    - name: Get Sahara Cluster Details
+      shell: |
+        source /root/keystonerc_sahara
+        openstack dataprocessing cluster list
+      register: sahara_cluster
+    - debug: var=sahara_cluster.stdout_lines.Name

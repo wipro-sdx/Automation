@@ -1,0 +1,27 @@
+---
+- hosts: localhost
+  gather_facts: no
+  vars_prompt:
+    - name: vm_ip
+      prompt: please enter vm ip to be migrated
+      private: no
+
+  tasks:
+    - add_host:
+        name: "{{ vm_ip }}"
+        groups: source_vm
+
+
+- hosts: source_vm
+  become: yes
+  become_user: root
+  #gather_facts: no
+
+  roles:
+  - vm_preperation
+
+- hosts: vcenter_172.17.66.156
+  gather_facts: False
+
+  roles:
+  - vm_migration

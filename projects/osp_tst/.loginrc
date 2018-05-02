@@ -1,0 +1,8 @@
+unset OS_SERVICE_TOKEN
+    export OS_USERNAME=eldho_telecom
+    export OS_PASSWORD=eldho123
+    export OS_AUTH_URL=http://172.17.67.207:5000/v2.0
+    export PS1='[\u@\h \W(keystone_sahara)]\$ '
+
+export OS_TENANT_NAME='BigData implimentation for Telecom'
+export OS_REGION_NAME=RegionOne

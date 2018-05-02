@@ -1,0 +1,19 @@
+---
+- name: Provision virtual machine 
+  azure_rm_virtualmachine:
+    client_id: 17d5ff7f-76f0-43b0-adf2-7834bf25df8b
+    secret: Mgyh19eGn4YPLhTr7aejrVhSzXzKUuKQPijVlxQ+Weo=
+    subscription_id: 711f04d4-728e-4a00-8410-6a40e0a4e730
+    tenant: b34b5c2a-9fb8-44fe-ad29-805ccd0a118d
+    name: "{{ servername }}"
+    resource_group: SDX-RG-05
+    vm_size: Standard_D4
+    image: 
+      offer: CentOS
+      publisher: OpenLogic
+      sku: '7.1'
+      version: latest
+    admin_username: sdxuser
+    admin_password: Wipro@123456
+   #storage_account: sdxrg05disks232
+    state: present

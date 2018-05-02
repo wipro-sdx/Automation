@@ -1,2 +1,2 @@
 servername,disksize,mem,cpu,ip,os
-hpoo,100,4096,4,172.17.65.,centos
+spacewalk,100,4096,4,172.17.73.62,rhel

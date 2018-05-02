@@ -1,0 +1,63 @@
+---
+ - hosts: all 
+   tasks:
+    - name: "disable selinux"
+      command: setenforce 0
+    - name: "Install Package"
+      yum: name={{ item }} state=latest
+      with_items:
+        - httpd
+        - unzip
+        - mariadb-server
+        - mariadb
+        - php
+        - php-mysql
+        - php-gd
+        - php-ldap
+        - php-odbc
+        - php-pear
+        - php-xml
+        - php-xmlrpc
+        - php-mbstring
+        - php-snmp
+        - php-soap
+        - curl
+        - rsync
+    - name: "start httpd Service"
+      service: name=httpd state=started enabled=yes
+    - name: "start mariadb Service"
+      service: name=mariadb state=started enabled=yes
+    - name: "Set MySQL root password"
+      shell: mysqladmin -u root password rootpassword && touch /var/rootpwd
+      args:
+        creates: /var/rootpwd
+    - name: "Copy mysql commands file into /tmp"
+      synchronize:
+        src: /root/download/
+        dest: /tmp/
+      delegate_to: 172.17.65.22
+    - name: "Setup database for wordpress"
+      shell: mysql -uroot -prootpassword < /tmp/mysqlcommands && touch /var/donemysqlcmd
+      args:
+        creates: /var/donemysqlcmd
+    - name: "Unzip Wordpress Zip file"
+      shell: unzip /tmp/wordpress-4.9.5.zip -d /var/wordpress
+      args:
+        creates: /var/wordpress/wordpress/index.php
+    - name: "Copy wordpress files to webroot"
+      shell: cp -r /var/wordpress/wordpress/* /var/www/html
+      args:
+        creates: /var/www/html/index.php
+    - name: "Remove Index.html"
+      shell: rm -f /var/www/html/index.html
+      args:
+        removes: /var/www/html/index.html
+    - name: "Copy Wordpress Config File in Target Location"
+      command: mv /tmp/wp-config-sample.php /var/www/html/wp-config.php
+    - name: "HTML Directory Permissions"
+      shell: chmod -R 775 /var/www/html
+    - name: "HTML Directory Owner"
+      shell: chown -R apache:apache /var/www/html
+    - name: "Restart HTTPD"
+      shell: systemctl restart httpd
+

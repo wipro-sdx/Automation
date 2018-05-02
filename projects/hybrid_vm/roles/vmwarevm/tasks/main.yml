@@ -1,0 +1,60 @@
+- name: Create a VM from a rhel template
+  vmware_guest:
+    hostname: 172.16.8.15
+    username: administrator@vsphere.opendc
+    password: W3lc0me!7
+    validate_certs: no
+    esxi_hostname: 172.16.4.29
+    datacenter: opendc-dc1
+    name: "{{ servername }}"
+    state: poweredon
+    template: oracle11g_template3
+    disk:
+    - size_gb: "{{ disksize }}"
+      type: thin
+      datastore: openstack_datastore
+    hardware:
+      memory_mb: "{{ mem }}"
+      num_cpus: "{{ cpu }}"
+      scsi: paravirtual
+    networks:
+    - name: Devops|Devops-APP|db
+      device_type: vmxnet3
+      type: static
+      ip : "{{ ip }}"
+      netmask: 255.255.255.0
+      gateway: 172.16.103.1
+    wait_for_ip_address: no
+  delegate_to: localhost
+  register: deploy
+  when:  (ops == "rhel" and env == "vmware")
+- name: Create a centos VM from a template
+  vmware_guest:
+    hostname: 172.16.8.15
+    username: administrator@vsphere.opendc
+    password: W3lc0me!7
+    validate_certs: no
+    esxi_hostname: 172.16.4.29
+    datacenter: opendc-dc1
+    name: "{{ servername }}"
+    state: poweredon
+    template: Centos7_Template1
+    disk:
+    - size_gb: "{{ disksize }}"
+      type: thin
+      datastore: openstack_datastore
+    hardware:
+      memory_mb: "{{ mem }}"
+      num_cpus: "{{ cpu }}"
+      scsi: paravirtual
+    networks:
+    - name: Devops|Devops-APP|db
+      device_type: vmxnet3
+      type: static
+      ip : "{{ ip }}"
+      netmask: 255.255.255.0
+      gateway: 172.16.103.1
+    wait_for_ip_address: no
+  delegate_to: localhost
+  register: deploy
+  when:  (ops == "centos" and env == "vmware")

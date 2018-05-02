@@ -1,0 +1,21 @@
+---
+- name: Deploy an openstack instance
+  os_server:
+    state: present
+    auth:
+      auth_url: http://172.16.35.100:5000/v2.0/
+      username: automation
+      password: Wipro@123
+      project_name: automation
+    name: "{{ servername }}"
+    availability_zone: nova
+    image: CentOS7-new
+    key_name: automation-key
+    timeout: 250
+    flavor: m1.small
+    security_groups: automationsg
+    #auto_ip: yes
+    floating_ips:
+      - 172.16.35.193
+   
+

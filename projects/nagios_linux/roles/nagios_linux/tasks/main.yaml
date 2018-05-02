@@ -23,6 +23,10 @@
     state: absent
 - name: adding host to group
   shell: sed -i 's/selinux/selinux,{{ client_hostname }}/' /usr/local/nagios/etc/hosts_group.cfg
+  when: env == "devops"
+- name: adding host to group
+  shell: sed -i 's/nagios/nagios,{{ client_hostname }}/' /usr/local/nagios/etc/hosts_group.cfg
+  when: env == "linux"
 - name: Restart nagios service.
   service:
      name: nagios

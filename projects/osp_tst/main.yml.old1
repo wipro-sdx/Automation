@@ -1,0 +1,15 @@
+
+- hosts: osp 
+  gather_facts: no
+  tasks:
+    - name: Source login credentials
+      os_auth:
+        auth:
+          auth_url: http://172.17.67.207:5000/v2.0 
+          username: eldho_telecom
+          password: eldho123
+
+    - name: Get Sahara Cluster Details
+      shell: openstack dataprocessing cluster list
+      register: sahara_cluster 
+    - debug: var=sahara_cluster

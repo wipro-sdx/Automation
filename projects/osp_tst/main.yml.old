@@ -1,0 +1,11 @@
+
+- hosts: osp 
+  gather_facts: no
+  tasks:
+   - name: Source login credentials
+     shell: source /root/keystonerc_sahara 
+
+   - name: Get Sahara Cluster Details
+     shell: openstack dataprocessing cluster list
+     register: sahara_cluster 
+   - debug: var=sahara_cluster

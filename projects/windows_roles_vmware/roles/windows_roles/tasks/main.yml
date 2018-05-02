@@ -1,0 +1,37 @@
+---
+- include_vars: win_cred.yml
+- 
+#  name: "Mounting Image"
+#  win_disk_image:
+#    image_path: C:\SW_DVD9_Windows_Svr_Std_and_DataCtr_2012_R2_64Bit_English_-2_Core_MLF_X19-31419.iso
+#    state: present
+#  register: disk_image_out
+
+  name: "Mounting ISO Image"
+  win_shell: "(Mount-DiskImage -ImagePath \"C:\\SW_DVD9_Windows_Svr_Std_and_DataCtr_2012_R2_64Bit_English_-2_Core_MLF_X19-31419.iso\" -StorageType ISO -PassThru | Get-Volume).DriveLetter"
+  register: disk_image_out
+
+# reference: https://social.technet.microsoft.com/Forums/windows/en-US/0ace95cd-762a-47d0-b05f-05ef932e8714/mountdiskimage-get-driveletter-and-run-install?forum=winserverpowershell
+
+-
+  name: Display drive letter of mounted ISO image
+  debug: msg={{disk_image_out.stdout_lines}}
+
+
+
+- name: Install NET-Framework-Core from file
+  win_feature:
+    name: NET-Framework-Core
+    source: E:\sources\sxs
+    state: present
+- name: Install IIS Web-Server with sub features and management tools
+  win_feature:
+    name: Web-Server
+    state: present
+    restart: True
+    include_sub_features: True
+    include_management_tools: True
+- name: reboot windows
+  win_reboot:
+    shutdown_timeout: 100
+    reboot_timeout: 100

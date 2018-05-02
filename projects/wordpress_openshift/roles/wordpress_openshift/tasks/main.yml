@@ -1,0 +1,5 @@
+---
+- name: Deployment of two tire application on Openshift
+  shell: /root/SDX-Demo/app-wordpress-ephemeral.bash
+  args:
+    executable: /bin/bash

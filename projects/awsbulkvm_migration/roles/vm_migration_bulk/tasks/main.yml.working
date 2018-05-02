@@ -1,0 +1,29 @@
+---
+- include_vars: win_cred.yml
+- name: creating vm ova file
+  win_command: ovftool vi://administrator:Wipro@123@172.17.66.156/Devops/vm/{{ vmname }} {{ vmname }}.ova
+- name: copy containers.json template
+  win_template:
+    src:  /var/lib/awx/projects/awsvm_migration/roles/vm_migration/templates/containers.json
+    dest: C:\Users\Administrator\containers.json
+- name: copying  ova file to s3
+  win_command: aws s3 cp {{ vmname }}.ova s3://awsvmmig/{{ vmname }}.ova
+- name: importing ova in aws
+  win_command: aws ec2 import-image  --license-type BYOL --disk-containers file://containers.json
+  register: importid
+- debug: msg="{{ (importid.stdout|from_json).ImportTaskId}}"
+  ignore_errors: True
+- debug: msg="{{ (importid.stdout|from_json).ImportTaskId[0]}}"
+  ignore_errors: True
+- pause:
+    seconds: 900
+- name: status of tasks
+  win_command: aws ec2 describe-import-image-tasks --import-task-ids {{ (importid.stdout|from_json).ImportTaskId }}
+  register: statusimport
+- debug: msg="{{ (statusimport.stdout|from_json).ImportImageTasks[0].ImageId}}"
+- pause:
+    seconds: 30
+- name: Launch instance from ami
+  win_command: aws ec2 run-instances --image-id {{ (statusimport.stdout|from_json).ImportImageTasks[0].ImageId}} --count 1 --instance-type t2.micro --key-name ng1 --security-group-ids sg-4b35e532 --subnet-id subnet-694b2220
+  register: instancedetails
+- debug: var=instancedetails.stdout_lines

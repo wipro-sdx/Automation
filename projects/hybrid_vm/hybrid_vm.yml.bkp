@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  become: yes
+  become_user: root
+
+  roles:
+  - hybrid_vm
+
+- hosts: vcenter_172.17.66.156
+  gather_facts: False
+
+  roles:
+  - vmwarevm

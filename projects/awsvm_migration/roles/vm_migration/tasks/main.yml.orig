@@ -1,0 +1,14 @@
+---
+- include_vars: win_cred.yml
+- name: creating vm ova file
+  win_command: ovftool vi://administrator:Wipro@123@172.17.66.156/Devops/vm/{{ vmname }} {{ vmname }}.ova
+- name: copy containers.json template
+  win_template:
+    src:  /var/lib/awx/projects/awsvm_migration/roles/vm_migration/templates/containers.json
+    dest: C:\Users\Administrator\containers.json
+- name: copying  ova file to s3
+  win_command: aws s3 cp {{ vmname }}.ova s3://awsvmmig/{{ vmname }}.ova
+- name: importing ova in aws
+  win_command: aws ec2 import-image  --license-type BYOL --disk-containers file://containers.json
+  register: importid
+- debug: msg="{{ (importid.stdout|from_json).ImportTaskId}}"

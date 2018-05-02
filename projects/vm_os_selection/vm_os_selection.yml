@@ -1,4 +1,4 @@
-- hosts: 172.17.66.156 
+- hosts: localhost
   gather_facts: False
   tasks:
 

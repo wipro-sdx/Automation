@@ -1,0 +1,51 @@
+---
+- 
+  name: "Mounting Image"
+  win_disk_image:
+    image_path: C:\SW_DVD9_Windows_Svr_Std_and_DataCtr_2012_R2_64Bit_English_-2_Core_MLF_X19-31419.iso
+    state: present
+  register: disk_image_out
+
+-
+  name: Get location of mounted image
+  win_shell: "echo ${\"{{disk_image_out.mount_path}}\"%?}"
+#  win_shell: "echo ${{disk_image_out.mount_path}}:~0,-1%"
+#  win_command: "echo $\\\"{{disk_image_out.mount_path}}\\\":~0,-1%\""
+  register: result
+#echo "${x%?}"
+#"echo \"{{usesectinfo.stdout}}\" | awk '{print ($2)}'"
+
+-
+  name: Display mounting image status
+  debug: msg="{{result}}"
+
+#- name: "Save location log"
+#  local_action:
+#    copy content="{{disk_image_out.mount_path}}" dest="/tmp/disk.log"
+#- name: copy 
+#  win_copy:
+#    src:  /tmp/disk.log
+#    dest: C:\Users\Administrator\disk.log
+#- debug: msg="{{ lookup('file', 'file=C:\Users\Administrator\disk.log delimiter=:') }}"
+
+#- name: Display file
+#  win_command: "type C:\\Users\\Administrator\\disk.log"
+#  register: result
+
+#- debug: msg="{{result}}" 
+
+#    debug: msg="{{ lookup('file', 'file=/tmp/disk.log delimiter=:') }}"
+#- debug: msg="The atomic number of Lithium is {{ lookup('{{disk_image_out.mount_path}} delimiter=:') }}"
+#- debug: msg="{{ disk_image_out.mount_path }}"
+#- name: Install NET-Framework-Core from file
+#  win_feature:
+#   name: NET-Framework-Core
+#    source: {{ disk_image_out.mount_path }}\sources\sxs
+#    state: present
+#- name: Install IIS Web-Server with sub features and management tools
+#  win_feature:
+#    name: Web-Server
+#    state: present
+#    restart: True
+#    include_sub_features: True
+#    include_management_tools: True

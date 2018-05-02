@@ -1,0 +1,18 @@
+---
+- include_vars: aws_cred.yml
+- name: Create a Ec2 
+  ec2:
+    aws_access_key: AKIAIVTGUHE6OZJPAY7A
+    aws_secret_key: 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
+    region: ap-southeast-1
+    key_name: "{{ key }}"
+    instance_type: "{{ inst_type }}"
+    image: "{{ amiid }}"
+    group: "{{ secgr }}"
+    wait: yes
+    count: 1
+    instance_tags:
+      Name: "{{ servername }}"
+    vpc_subnet_id: subnet-694b2220
+    assign_public_ip: no
+  when:  env == "aws"

@@ -1,0 +1,8 @@
+---
+- include_vars: win_cred.yml
+- name: status of tasks
+  win_command: aws ec2 describe-import-image-tasks --import-task-ids import-ami-fh993fa1
+  register: importid
+#- debug: msg="{{importid.ImportImageTasks[0].Status}}"
+- debug: msg={{ (importid.stdout|from_json).ImportImageTasks[0].ImageId}}
+- debug: msg="{{ (importid.stdout|from_json).ImportImageTasks[0].Status}}"

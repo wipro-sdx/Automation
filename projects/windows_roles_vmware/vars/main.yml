@@ -1,0 +1,9 @@
+---
+ansible_user=administrator
+ansible_password=Wipro@123
+#ansible_password=Comm@123
+ansible_ssh_port=5986
+ansible_connection=winrm
+ansible_winrm_transport = ssl
+ansible_winrm_server_cert_validation=ignore
+

@@ -1,0 +1,11 @@
+---
+# tasks file for mysql-server
+- name: copy resolv.conf file
+  template: src=/var/lib/awx/projects/test_playbook/roles/test_playbook/templates/resolv.conf dest=/tmp/resolv.conf
+- name: Install the software required for telnet
+  yum:
+    name: "{{ item }}"
+    state: latest
+
+  with_items:
+    - telnet 

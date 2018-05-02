@@ -1,0 +1,11 @@
+---
+- name: copying prep script to vm
+  copy:
+    src: /var/lib/awx/projects/awsvm_migration/roles/vm_preperation/templates/prep.sh
+    dest: /tmp/prep.sh
+    mode: 0755
+- name: execute the script in vm
+  shell: /tmp/prep.sh
+- name: shuting down vm
+  pause:
+    seconds: 90

@@ -1,0 +1,27 @@
+---
+- hosts: localhost
+  gather_facts: no
+  vars_prompt:
+    - name: env
+      prompt: please enter enviornment
+      private: no
+
+  tasks:
+  - include_role:
+      name: ec2
+    when: "env == 'aws'"
+  - include_role:
+      name: azurevm
+    when: "env == 'azure'"
+  - include_role:
+      name: openstackvm
+    when: "env == 'openstack'"
+
+
+- hosts: ESX_172.16.8.15
+  gather_facts: False
+
+  tasks:
+  - include_role:
+      name: vmwarevm
+    when: "env == 'vmware'"

@@ -1,0 +1,58 @@
+---
+# These tasks install http and the php modules.
+
+- name: Install httpd and php
+  yum: name={{ item }} state=present
+  with_items:
+   - httpd
+   - php
+   - php-mysql
+
+
+- name: http service state
+  service: name=httpd state=started enabled=yes
+
+- name: 4. install Hello World PHP script
+  template: src=index.php.j2 dest=/var/www/html/index.php
+- name: Install MariaDB package
+  yum: name={{ item }} state=installed
+  with_items:
+   - mariadb-server
+   - MySQL-python
+
+#- name: Configure SELinux to start mysql on any port
+#  seboolean: name=mysql_connect_any state=true persistent=yes
+
+#- name: Create Mysql configuration file
+#  template: src=my.cnf.j2 dest=/etc/my.cnf
+#  notify:
+#  - restart mariadb
+
+- name: Create MariaDB log file
+  file: path=/var/log/mysqld.log state=touch owner=mysql group=mysql mode=0775
+
+- name: Create MariaDB PID directory
+  file: path=/var/run/mysqld state=directory owner=mysql group=mysql mode=0775
+
+- name: Start MariaDB Service
+  service: name=mariadb state=started enabled=yes
+
+- name: Create Application Database
+  mysql_db: name={{ dbname }} state=present
+
+- mysql_user:
+    name: "{{ dbuser }}"
+    password: "{{ upassword }}"
+    priv: '*.*:ALL'
+    state: present
+#- name: Create Application DB User
+#  mysql_user: name={{ dbuser }} password={{ upassword }} priv='*.*:ALL' host='%' state=present
+
+- name:  Copy  data
+  copy: src=dump.sql dest=/tmp/dump.sql
+
+- name: install insert script
+  template: src=insert.php.j2 dest=/var/www/html/insert.php mode=0664
+
+- name:  Insert data
+  shell: cat /tmp/dump.sql | mysql -u {{ dbuser }} -p{{ upassword }} {{ dbname }}

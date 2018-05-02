@@ -21,4 +21,4 @@
     
 - include: mysql_secure_installation.yaml 
 - include: mysql_create_db.yml
-  when: db == "mysql"
+#  when: db_name == "mysql"
