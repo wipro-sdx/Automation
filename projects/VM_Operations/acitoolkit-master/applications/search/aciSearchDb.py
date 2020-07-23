@@ -613,13 +613,13 @@ class SearchIndexLookup(object):
         items that have that term.
         :param unranked_results:
         """
-        master_items = set()
+        main_items = set()
         for results in unranked_results:
             if results[1] is not None:
-                master_items = master_items | results[1]
+                main_items = main_items | results[1]
 
         self.ranked_items = {}
-        for item in master_items:
+        for item in main_items:
             # self.ranked_items[item] = [0, 0, set()]  # score, sub-score, matching terms
             self.ranked_items[item] = {'pscore': 0, 'sscore': 0, 'terms': set()}  # score, sub-score, matching terms
 
@@ -631,7 +631,7 @@ class SearchIndexLookup(object):
         #
         # For example, if there was a 'cav' match and an 'av' match, then the score would be 4 + 2 = 6
         #
-        for atk_obj in master_items:
+        for atk_obj in main_items:
             for result in unranked_results:
                 if result[1] is not None:
                     if atk_obj in result[1]:
